@@ -5,7 +5,7 @@
 - [HTML](#HTML)
 - [CSS](#CSS)
 - [JAVASCRIPT](#JavaScript)
-- [React.js](#React.js)
+- [React.js](#Reactjs)
 
 
 
