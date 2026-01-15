@@ -6,8 +6,9 @@
 - [CSS](#CSS)
 - [JAVASCRIPT](#JavaScript)
 - [React.js](#Reactjs)
-
-
+- [Backend](#Backend)
+- [Full Stack Projects](#Full-Stack-Projects)
+- [System & Web Concepts](#System-Web-Concepts)
 
 
 ---
@@ -130,7 +131,7 @@
 
 ---
 
-# 🧠 PHASE 3 — Backend (Month 4)
+# Backend 
 
 ## 6️⃣ Backend Basics
 
@@ -171,9 +172,8 @@ Choose **MongoDB**
 
 ---
 
-# 🔐 PHASE 4 — Full Stack + Advanced (Month 5)
 
-## 8️⃣ Full Stack Projects
+## Full Stack Projects
 
 Combine **React + Node + DB**
 
@@ -192,7 +192,7 @@ Each project must have:
 
 ---
 
-## 9️⃣ System & Web Concepts
+## System & Web Concepts
 
 * Authentication (JWT)
 * Cookies vs localStorage
