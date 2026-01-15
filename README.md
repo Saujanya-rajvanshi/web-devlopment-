@@ -8,7 +8,8 @@
 - [React.js](#Reactjs)
 - [Backend](#Backend)
 - [Full Stack Projects](#Full-Stack-Projects)
-- [System & Web Concepts](#System-Web-Concepts)
+- [System & Web Concepts](#System-and-Web-Concepts)
+- [Interviews Internships](#Interviews-Internships)
 
 
 ---
@@ -192,7 +193,7 @@ Each project must have:
 
 ---
 
-## System & Web Concepts
+## System and Web Concepts
 
 * Authentication (JWT)
 * Cookies vs localStorage
@@ -201,7 +202,7 @@ Each project must have:
 
 ---
 
-# 🚀 PHASE 5 — Interviews & Internships (Month 6)
+# Interviews Internships 
 
 ## 🔎 Interview Preparation
 
