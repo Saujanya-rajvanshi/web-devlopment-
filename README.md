@@ -514,7 +514,150 @@ User → Frontend → Backend → Database
 
 ---
 
-### How browsers render HTML/CSS/JS
+## How browsers render HTML/CSS/JS
+
+When you enter a website URL, the browser follows **multiple internal steps** to show the page on your screen.
+
+### HTML Parsing → DOM Creation
+* Browser downloads the **HTML file**
+* Reads HTML **top to bottom**
+* Converts HTML tags into nodes
+* Builds a tree-like structure called **DOM (Document Object Model)**
+
+📌 Example:
+
+```html
+<h1>Hello</h1>
+<p>World</p>
+```
+
+Becomes:
+
+```
+Document
+ ├── h1
+ └── p
+```
+
+➡ DOM represents the **structure of the webpage**
+
+---
+
+### CSS Parsing → CSSOM Creation
+
+* Browser downloads **CSS files**
+* Parses CSS rules
+* Creates **CSSOM (CSS Object Model)**
+
+📌 CSSOM contains:
+
+* Styles
+* Selectors
+* Inheritance rules
+* Specificity & cascading logic
+
+➡ CSSOM represents **how elements should look**
+
+---
+
+### Render Tree Construction
+
+* Browser combines **DOM + CSSOM**
+* Builds the **Render Tree**
+
+⚠️ Important:
+
+* Only **visible elements** are included
+* Elements like `display: none` are excluded
+
+➡ Render Tree = **What to render + how to render**
+
+---
+
+### Layout (Reflow)
+
+* Browser calculates:
+
+  * Width
+  * Height
+  * Position of every element
+* Based on:
+
+  * Screen size
+  * CSS rules
+  * Parent–child relationships
+
+📌 Called **Reflow**
+📌 Expensive operation (slow if frequent)
+
+---
+
+### Painting
+
+* Browser paints pixels:
+
+  * Text
+  * Colors
+  * Images
+  * Borders
+  * Shadows
+
+➡ Each visual layer is drawn on screen
+
+---
+
+### Compositing
+
+* Browser splits page into layers
+* GPU combines layers
+* Improves performance (used for animations)
+
+---
+
+### JavaScript Execution
+
+* JavaScript runs **after parsing**
+* JS can:
+
+  * Change HTML (DOM)
+  * Change CSS (CSSOM)
+* Causes:
+
+  * Reflow (layout recalculation)
+  * Repaint (redrawing)
+
+📌 JS is **blocking by default**
+
+* `async` → loads independently
+* `defer` → executes after DOM is ready
+
+---
+
+### Repaint vs Reflow
+
+| Action              | Reflow | Repaint |
+| ------------------- | ------ | ------- |
+| Change color        | ❌      | ✅       |
+| Change width/height | ✅      | ✅       |
+| Add/remove element  | ✅      | ✅       |
+
+---
+
+## Complete Flow (Important for Interviews)
+
+**HTML → DOM**
+**CSS → CSSOM**
+**DOM + CSSOM → Render Tree**
+**Render Tree → Layout → Paint → Composite**
+
+---
+
+## Performance Tips
+
+* Avoid frequent DOM changes
+* Use `transform` & `opacity` for animations
+* Load JS using `defer`
+* Minimize reflows
 
 ---
 
