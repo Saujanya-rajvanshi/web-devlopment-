@@ -15,11 +15,341 @@
 ---
 
 # Foundations 
-> Don’t skip. This saves months later.
+- [Computer basics](#Computer-basics)
+- [How the web works](#How-the-web-works)
+- []()
 
-## Prerequisites
-### Computer basics
-### How the web works (client–server, HTTP, browser)
+###### Computer basics
+---
+## 🖥️ Computer Basics
+
+### 🔹 What is a Computer?
+A computer is an **electronic machine** that: Takes **input** , **Processes** data , Produces **output** , Stores data
+
+👉 In web dev:
+* Input → form data
+* Process → JS / backend logic
+* Output → webpage
+
+---
+### 🔹 Hardware Basics 
+#### CPU (Processor)
+* Brain of the computer
+* Executes code (JS, Node, backend)
+* Faster CPU → faster builds & servers
+
+#### RAM
+* Temporary memory
+* Stores running programs (VS Code, browser, server)
+* Web dev minimum: **8 GB RAM**
+
+#### Storage (HDD / SSD)
+* Stores OS, code, projects
+* SSD preferred (faster load & compile)
+---
+
+### 🔹 Software Basics
+#### System Software
+* Operating System (Windows / Linux / macOS)
+* Manages files, memory, CPU
+
+#### Application Software
+* Browser (Chrome, Firefox)
+* Code editor (VS Code)
+* Git, Node.js
+---
+
+### 🔹 Operating System Concepts (Important)
+
+#### File System
+* Files & folders
+* Path:
+
+  ```
+  C:\Projects\WebApp\index.html
+  ```
+* **Extensions:**
+* `.html` → structure
+* `.css` → style
+* `.js` → logic
+
+#### Processes
+* Running programs
+* Browser tabs = processes
+* Node server = process
+
+---
+
+### 🔹 Internet & Networking Basics 
+
+#### Client–Server Model
+```
+Browser (Client) → Request → Server
+Browser ← Response ← Server
+```
+
+#### IP Address
+* Unique address of a computer
+* Example: `192.168.1.1`
+
+#### Domain Name
+* Human-friendly name
+* Example: `google.com`
+
+#### DNS
+* Converts domain → IP
+
+---
+
+### 🔹 Web Basics (Core for Web Dev)
+
+#### What is a Website?
+**A collection of :**
+* HTML files
+* CSS files
+* JS files
+
+#### What is a Web App?
+* Dynamic website
+* Uses backend + database
+* Example: Instagram, Amazon
+
+---
+
+### 🔹 Programming Basics Required
+
+#### Logic & Flow
+* Variables
+* Conditions (`if`)
+* Loops
+* Functions
+
+#### Data Types
+* Number
+* String
+* Boolean
+* Array
+* Object
+
+---
+
+### 🔹 Databases (Basic Idea)
+
+#### What is a Database?
+* Stores data permanently
+
+#### Examples
+* SQL → MySQL
+* NoSQL → MongoDB
+
+---
+
+### 🔹 Security Basics (Web Dev Level)
+* Password hashing
+* HTTPS
+* Authentication
+* Authorization
+
+---
+
+### 🔹 Tools You MUST Know
+
+| Tool    | Purpose            |
+| ------- | ------------------ |
+| Browser | Run & test website |
+| VS Code | Write code         |
+| Git     | Version control    |
+| GitHub  | Store & share code |
+| Node.js | Backend runtime    |
+
+---
+
+### 🔹 How Computer Executes Web Code
+1. You write code in VS Code
+2. Save files on disk
+3. Browser reads HTML
+4. CSS styles page
+5. JS runs logic
+6. Backend handles requests
+7. Database stores data
+
+---
+
+###### How the web works 
+---
+## 🌐 How the web works (client–server, HTTP, browser)
+
+### Client–Server Model
+
+The web works on a **client–server architecture**.
+
+**Client**
+
+* User’s device (browser: Chrome, Edge, Firefox)
+* Sends requests
+
+**Server**
+
+* Powerful computer
+* Stores websites, APIs, databases
+* Sends responses
+
+* **Example :**
+
+```
+Browser (Client) → Request → Server
+Browser ← Response ← Server
+```
+
+---
+
+### Role of the Browser
+
+A **browser** is a client application that:
+
+* Sends HTTP requests
+* Receives responses
+* Renders web pages
+
+Browser responsibilities:
+
+* Parses **HTML**
+* Applies **CSS**
+* Executes **JavaScript**
+* Displays content to the user
+
+---
+
+### What Happens When You Enter a URL
+
+Example:
+
+```
+https://www.example.com
+```
+
+Step-by-step:
+
+1. Browser checks **cache**
+2. Browser asks **DNS server** for IP address
+3. DNS returns server IP
+4. Browser sends **HTTP request** to server
+5. Server processes request
+6. Server sends **HTTP response**
+7. Browser renders the webpage
+
+---
+
+### HTTP (HyperText Transfer Protocol)
+
+HTTP is a **communication protocol** used on the web.
+
+It defines:
+
+* How requests are sent
+* How responses are returned
+
+---
+
+### HTTP Request
+
+An HTTP request contains:
+
+* **Method** (GET, POST, etc.)
+* **URL**
+* **Headers**
+* **Body** (optional)
+
+Common methods:
+
+| Method | Use         |
+| ------ | ----------- |
+| GET    | Fetch data  |
+| POST   | Send data   |
+| PUT    | Update data |
+| DELETE | Remove data |
+
+---
+
+### HTTP Response
+
+An HTTP response contains:
+
+* **Status Code**
+* **Headers**
+* **Body** (HTML / JSON)
+
+Common status codes:
+
+| Code | Meaning      |
+| ---- | ------------ |
+| 200  | OK           |
+| 404  | Not Found    |
+| 500  | Server Error |
+| 401  | Unauthorized |
+
+---
+
+### HTTPS (Secure HTTP)
+
+HTTPS = HTTP + **Encryption (SSL/TLS)**
+
+Provides:
+
+* Secure data transfer
+* Data privacy
+* Protection from hackers
+
+Used for:
+
+* Login pages
+* Payments
+* Forms
+
+---
+
+### Static vs Dynamic Websites
+
+**Static Website**
+
+* Fixed content
+* Only HTML + CSS
+* Example: Portfolio site
+
+**Dynamic Website**
+
+* Content changes
+* Uses backend + database
+* Example: Instagram, Amazon
+
+---
+
+### Backend Role
+
+Backend:
+
+* Handles business logic
+* Connects to database
+* Sends response to client
+
+Example stack:
+
+* Node.js / Python / Java
+* Database: MySQL / MongoDB
+
+---
+
+### Complete Web Flow (One Line)
+
+```
+User → Browser → HTTP Request → Server → Database → HTTP Response → Browser → User
+```
+
+---
+
+
+
+
 
 ## Learn
 ### Internet, DNS, HTTP/HTTPS
