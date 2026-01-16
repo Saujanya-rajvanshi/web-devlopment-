@@ -17,7 +17,7 @@
 # Foundations 
 - [Computer basics](#Computer-basics)
 - [How the web works](#How-the-web-works)
-- []()
+- [Internet DNS HTTP HTTPS](#Internet-DNS-HTTP-HTTPS)
 
 ###### Computer basics
 ---
@@ -330,11 +330,116 @@ User → Browser → HTTP Request → Server → Database → HTTP Response → 
 ---
 
 
+### Internet DNS HTTP HTTPS
+
+* **Internet**: Global network
+* **DNS**: Name → IP converter
+* **HTTP**: Data transfer protocol
+* **HTTPS**: Secure HTTP
+
+---
+
+## 🌐 Internet
+
+The **Internet** is a global network of interconnected computers and servers.
+
+### Key Points
+
+* Uses **TCP/IP protocol**
+* Connects devices worldwide
+* Enables services like:
+
+  * Websites
+  * Email
+  * Cloud services
+  * Video streaming
+
+### Basic Flow
+
+```
+Device → ISP → Internet → Server → Response
+```
+
+---
+
+## 🌍 DNS (Domain Name System)
+
+DNS converts **domain names into IP addresses**.
+
+### Why DNS?
+
+Humans remember:
+
+```
+www.google.com
+```
+
+Computers understand:
+
+```
+142.250.195.46
+```
+
+### DNS Working Steps
+
+1. User enters URL
+2. Browser checks cache
+3. Queries DNS server
+4. DNS returns IP address
+5. Browser connects to server
+
+📌 DNS = Internet’s **phonebook**
+
+---
+
+## 📡 HTTP (HyperText Transfer Protocol)
+
+HTTP is a **protocol** for communication between client and server.
+
+### Features
+
+* Stateless
+* Request–response based
+* Fast but **not secure**
+
+### Common HTTP Methods
+
+* GET → Fetch data
+* POST → Send data
+* PUT → Update data
+* DELETE → Remove data
+
+### Common Status Codes
+
+* 200 → OK
+* 404 → Not Found
+* 500 → Server Error
+
+---
+
+## 🔐 HTTPS (Secure HTTP)
+
+HTTPS = HTTP + **SSL/TLS encryption**
+
+### Why HTTPS?
+
+* Encrypts data
+* Prevents data theft
+* Ensures data integrity
+
+### Differences: HTTP vs HTTPS
+
+| Feature     | HTTP | HTTPS |
+| ----------- | ---- | ----- |
+| Security    | ❌ No | ✅ Yes |
+| Encryption  | ❌ No | ✅ Yes |
+| Port        | 80   | 443   |
+| Certificate | ❌ No | ✅ SSL |
+
+---
 
 
 
-## Learn
-### Internet, DNS, HTTP/HTTPS
 ### What is frontend vs backend
 ### How browsers render HTML/CSS/JS
 
