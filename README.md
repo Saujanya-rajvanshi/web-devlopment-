@@ -201,8 +201,6 @@ Browser (Client) → Request → Server
 Browser ← Response ← Server
 ```
 
----
-
 ### Role of the Browser
 
 A **browser** is a client application that:
@@ -217,8 +215,6 @@ Browser responsibilities:
 * Applies **CSS**
 * Executes **JavaScript**
 * Displays content to the user
-
----
 
 ### What Happens When You Enter a URL
 
@@ -238,8 +234,6 @@ Step-by-step:
 6. Server sends **HTTP response**
 7. Browser renders the webpage
 
----
-
 ### HTTP (HyperText Transfer Protocol)
 
 HTTP is a **communication protocol** used on the web.
@@ -248,8 +242,6 @@ It defines:
 
 * How requests are sent
 * How responses are returned
-
----
 
 ### HTTP Request
 
@@ -269,8 +261,6 @@ Common methods:
 | PUT    | Update data |
 | DELETE | Remove data |
 
----
-
 ### HTTP Response
 
 An HTTP response contains:
@@ -288,8 +278,6 @@ Common status codes:
 | 500  | Server Error |
 | 401  | Unauthorized |
 
----
-
 ### HTTPS (Secure HTTP)
 
 HTTPS = HTTP + **Encryption (SSL/TLS)**
@@ -306,8 +294,6 @@ Used for:
 * Payments
 * Forms
 
----
-
 ### Static vs Dynamic Websites
 
 **Static Website**
@@ -322,8 +308,6 @@ Used for:
 * Uses backend + database
 * Example: Instagram, Amazon
 
----
-
 ### Backend Role
 
 Backend:
@@ -336,8 +320,6 @@ Example stack:
 
 * Node.js / Python / Java
 * Database: MySQL / MongoDB
-
----
 
 ### Complete Web Flow (One Line)
 
