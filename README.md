@@ -18,6 +18,8 @@
 - [Computer basics](#Computer-basics)
 - [How the web works](#How-the-web-works)
 - [Internet DNS HTTP HTTPS](#Internet-DNS-HTTP-HTTPS)
+- [What is frontend vs backend](What-is-frontend-vs-backend)
+- [How browsers render HTML/CSS/JS](#How-browsers-render-HTMLCSSJS)
 
 ###### Computer basics
 ---
@@ -441,6 +443,77 @@ HTTPS = HTTP + **SSL/TLS encryption**
 
 
 ### What is frontend vs backend
+
+## 🖥️ Frontend (Client Side)
+
+**Frontend** is everything the **user sees and interacts with** in a website or web app.
+*  **Examples** -> Buttons, Forms, Text, Images, Layout & design
+
+🔹Technologies
+* **HTML** → Structure
+* **CSS** → Styling
+* **JavaScript** → Interactivity
+* Frameworks/Libraries: React, Angular, Vue
+
+🔹 Responsibilities
+* UI/UX design
+* Responsive layouts
+* User interaction handling
+* Sending requests to backend
+
+📌 Runs in the **browser**
+
+---
+
+## ⚙️ Backend (Server Side)
+**Backend** is everything that happens **behind the scenes**.
+* Examples -> User authentication, Database operations, Business logic, APIs
+
+🔹**Technologies**
+* Languages : JavaScript (Node.js),  Python, Java, PHP
+* Frameworks : Express, Django, Spring Boot
+* Databases : MySQL, MongoDB, PostgreSQL
+
+🔹**Responsibilities**
+* Process requests
+* Handle logic
+* Store & retrieve data
+* Security & authentication
+
+📌 Runs on the **server**
+
+---
+
+## 🔄 Frontend vs Backend (Table)
+
+| Feature         | Frontend         | Backend          |
+| --------------- | ---------------- | ---------------- |
+| Runs on         | Browser          | Server           |
+| User visible    | ✅ Yes            | ❌ No             |
+| Main goal       | UI & interaction | Logic & data     |
+| Languages       | HTML, CSS, JS    | JS, Python, Java |
+| Database access | ❌ No             | ✅ Yes            |
+
+---
+
+## 🔁 How They Work Together
+
+```
+User → Frontend → Backend → Database
+                     ↓
+                 Response
+```
+
+---
+
+#### Simple Analogy
+🍽️ **Restaurant**
+* Frontend → Menu & waiter
+* Backend → Kitchen
+* Database → Store room
+
+---
+
 ### How browsers render HTML/CSS/JS
 
 ---
