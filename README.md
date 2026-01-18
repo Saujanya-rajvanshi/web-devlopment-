@@ -666,8 +666,102 @@ Document
 
 # HTML 
 
-- [html roadmap.sh](https://roadmap.sh/html)
+- [html roadmap.sh](https://roadmap.sh/html) 
+- [Headings tag](#Headings-tag)
+- [Paragraph tag](#Paragraph-tag)
+- [new line tag](#Break)
+- [Horizontal Line](#Horizontal-Line)
+- [Comments](#Comments)
+- [Images](#Images)
 
+structure of website <br>
+HTML (HyperText Markup Language) is the standard markup language used to create and structure web pages.
+
+<img width="814" height="696" alt="image" src="https://github.com/user-attachments/assets/7c9a1ea7-32df-47c4-8778-be7523096245" />
+
+#### boiler plate code 
+```html
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!--body of html-->
+</body>
+</html>
+```
+* **<html> :** Encloses the entire HTML document, serving as the root element for all HTML content.
+* **<head> :** Contains header information about the webpage, including title, meta tags, and linked stylesheets. It is part of the document's structure but is not displayed on the webpage.
+* **<title> :** Used within the <head> section to define the title of the HTML document. It appears in the browser tab or window and provides a brief description of the webpage's content.
+* **<body> :** Encloses the visible content of the webpage, such as text, images, audio, videos, and links. All elements within this tag are displayed on the actual webpage when viewed in a browser.
+
+### Headings tag
+The HTML heading tags are used to create headings for the content of a webpage. <br>
+* paired tag
+
+```html
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+```
+
+### Paragraph tag
+HTML <p> tags are used to write paragraph statements on a webpage. They start with the <p> tag and end with </p>.
+* paired tag
+```html
+<p> Content... </p>
+```
+
+### Break 
+The HTML <br> tag is used to insert a single line break and does not require a closing tag. In HTML, the break tag is written as <br>.
+* single tag
+```html
+<br>
+```
+
+### Horizontal Line
+The HTML <hr> tag is used to divide a page into sections by creating a horizontal line that spans from the left to the right side of the page. This is an empty tag and does not require a closing tag or any additional attributes.
+```html
+<hr>
+```
+
+### Comments
+HTML comments are annotations in your code that are not displayed in the browser. They are enclosed within <!-- and --> tags and are primarily used for documentation, explanation, or temporarily disabling code during debugging.
+
+Single-line comment:
+```html
+<!-- This is a single-line comment -->
+```
+Multi-line comment:
+```html
+<!--
+This is a multi-line comment
+spanning multiple lines
+-->
+```
+### Images
+The <img> tag is used to insert an image into a webpage. The source of the image is specified within the src attribute, like this: <img src="source_of_image">.
+```html
+<img src="geeks.png">
+```
+
+### Source Code
+1. **View HTML Source Code of Entire Page**
+* ctrl + u on the page, or right-click on the page and select the "view page source" option.
+* This will open a new tab that shows the HTML source code for that entire page.
+2. **Inspect an HTML Element on a Page**
+* right-click on the page and select the "Inspect" option.
+* This lets you see the HTML and CSS behind that element.
+
+* by going on on a website device icon <img width="39" height="32" alt="image" src="https://github.com/user-attachments/assets/c932b376-68ea-4ea1-a830-6bec5f611867" /> you can view how website looks on other device.
+
+
+
+ 
 **Must know**
 
 * Semantic tags
