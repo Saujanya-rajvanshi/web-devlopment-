@@ -681,13 +681,13 @@ HTML (HyperText Markup Language) is the standard markup language used to create 
 
 #### boiler plate code 
 ```html
-<!DOCTYPE html> 
-<html lang="en">
-<head>
-    <title>Document</title>
-</head>
+<!DOCTYPE html>      <--tell browser you are using html 5-->
+<html lang="en">         <--root of an html-->
+<head>        <--container for meta data -->
+    <title>Document</title>      <-- title-->
+</head>   
 <body>
-    <!--body of html-->
+    <!--body of html , container of all data rendered by browser -->
 </body>
 </html>
 ```
@@ -751,13 +751,21 @@ The <img> tag is used to insert an image into a webpage. The source of the image
 
 ### Source Code
 1. **View HTML Source Code of Entire Page**
-* ctrl + u on the page, or right-click on the page and select the "view page source" option.
+* **ctrl + u** on the page, **or right-click**on the page and select the **"view page source"** option.
 * This will open a new tab that shows the HTML source code for that entire page.
 2. **Inspect an HTML Element on a Page**
-* right-click on the page and select the "Inspect" option.
+* **right-click** on the page and select the **"Inspect"** option.
 * This lets you see the HTML and CSS behind that element.
 
 * by going on on a website device icon <img width="39" height="32" alt="image" src="https://github.com/user-attachments/assets/c932b376-68ea-4ea1-a830-6bec5f611867" /> you can view how website looks on other device.
+
+* **name = "viewport"** for responsive of site on other device.
+
+#### important points
+
+* on vs code we can select a tag and get it know with mdn
+* **index.html** -> homepage (ny default) if not you will have to specify the homepage
+* **!** -> emit boiler plate code
 
 
 
