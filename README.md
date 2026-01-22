@@ -27,7 +27,6 @@
 ---
 ## 🖥️ Computer Basics
 
-### 🔹 What is a Computer?
 A computer is an **electronic machine** that: Takes **input** , **Processes** data , Produces **output** , Stores data
 
 👉 In web dev:
