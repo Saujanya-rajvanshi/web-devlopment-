@@ -34,8 +34,7 @@ A computer is an **electronic machine** that: Takes **input** , **Processes** da
 * Process → JS / backend logic
 * Output → webpage
 
----
-### 🔹 Hardware Basics 
+### Hardware Basics 
 #### CPU (Processor)
 * Brain of the computer
 * Executes code (JS, Node, backend)
@@ -49,9 +48,8 @@ A computer is an **electronic machine** that: Takes **input** , **Processes** da
 #### Storage (HDD / SSD)
 * Stores OS, code, projects
 * SSD preferred (faster load & compile)
----
 
-### 🔹 Software Basics
+### Software Basics
 #### System Software
 * Operating System (Windows / Linux / macOS)
 * Manages files, memory, CPU
@@ -60,9 +58,8 @@ A computer is an **electronic machine** that: Takes **input** , **Processes** da
 * Browser (Chrome, Firefox)
 * Code editor (VS Code)
 * Git, Node.js
----
 
-### 🔹 Operating System Concepts (Important)
+### Operating System Concepts (Important)
 
 #### File System
 * Files & folders
@@ -81,9 +78,7 @@ A computer is an **electronic machine** that: Takes **input** , **Processes** da
 * Browser tabs = processes
 * Node server = process
 
----
-
-### 🔹 Internet & Networking Basics 
+### Internet & Networking Basics 
 
 #### Client–Server Model
 ```
@@ -102,9 +97,7 @@ Browser ← Response ← Server
 #### DNS
 * Converts domain → IP
 
----
-
-### 🔹 Web Basics (Core for Web Dev)
+### Web Basics (Core for Web Dev)
 
 #### What is a Website?
 **A collection of :**
@@ -117,9 +110,7 @@ Browser ← Response ← Server
 * Uses backend + database
 * Example: Instagram, Amazon
 
----
-
-### 🔹 Programming Basics Required
+### Programming Basics Required
 
 #### Logic & Flow
 * Variables
@@ -134,9 +125,7 @@ Browser ← Response ← Server
 * Array
 * Object
 
----
-
-### 🔹 Databases (Basic Idea)
+### Databases (Basic Idea)
 
 #### What is a Database?
 * Stores data permanently
@@ -145,17 +134,13 @@ Browser ← Response ← Server
 * SQL → MySQL
 * NoSQL → MongoDB
 
----
-
-### 🔹 Security Basics (Web Dev Level)
+### Security Basics (Web Dev Level)
 * Password hashing
 * HTTPS
 * Authentication
 * Authorization
 
----
-
-### 🔹 Tools You MUST Know
+### Tools You MUST Know
 
 | Tool    | Purpose            |
 | ------- | ------------------ |
@@ -165,9 +150,7 @@ Browser ← Response ← Server
 | GitHub  | Store & share code |
 | Node.js | Backend runtime    |
 
----
-
-### 🔹 How Computer Executes Web Code
+### How Computer Executes Web Code
 1. You write code in VS Code
 2. Save files on disk
 3. Browser reads HTML
