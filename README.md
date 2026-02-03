@@ -19,7 +19,6 @@
 - [How the web works](#How-the-web-works)
 - [Internet DNS HTTP HTTPS](#Internet-DNS-HTTP-HTTPS)
 - [What is frontend vs backend](#What-is-frontend-vs-backend)
-- [Internet DNS HTTP HTTPS](#Internet-DNS-HTTP-HTTPS)
 - [How browsers render HTML/CSS/JS](#How-browsers-render-HTMLCSSJS)
 
 
