@@ -176,7 +176,26 @@ A web application is a program that runs in a browser and has three formal chara
 * It is as interactive as a desktop application
 * It works with a Content Management System <br> <br>
 
-Traditionally, a website was just a collection of static pages. A website becomes a web application when it includes both static and dynamic pages. This is why most modern websites today are actually examples of web applications.
+Traditionally, a website was just a collection of static pages. A website becomes a web application when it includes both static and dynamic pages. This is why most modern websites today are actually examples of web applications. <br> <br>
+
+When a user makes a request on a website, several parts of the application work together. These include: 
+* User interface
+* Middleware systems
+* Databases
+* Servers
+* Browser.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 🌐 Static vs Dynamic Web Pages (clear + exam-ready)
 
