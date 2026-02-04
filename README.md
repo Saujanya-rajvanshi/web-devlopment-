@@ -164,6 +164,89 @@ Browser ← Response ← Server
 ---
 ## 🌐 How the web works (client–server, HTTP, browser)
 
+##### **things to keep in mind while building web app :** 
+* Customer perspective: The app should be simple, pleasing, and solve real user problems.
+* Business perspective: It must stay aligned with its product/market fit.
+* Engineering perspective: It should be scalable, reliable, and capable of handling high traffic.
+
+#### websites and web applications
+A web application is a program that runs in a browser and has three formal characteristics:
+
+* It addresses a particular problem, even if it’s simply finding some information
+* It is as interactive as a desktop application
+* It works with a Content Management System <br> <br>
+
+Traditionally, a website was just a collection of static pages. A website becomes a web application when it includes both static and dynamic pages. This is why most modern websites today are actually examples of web applications.
+
+### 🌐 Static vs Dynamic Web Pages (clear + exam-ready)
+
+## Static Web Pages
+
+**Definition:** <br>
+A static page shows the **same content to every user**. It does **not change automatically**.  <br>
+
+**Technologies used:**  <br>
+
+* HTML
+* CSS
+* (Optional) basic JavaScript (no backend)  <br>
+
+**How it works:**  <br>
+
+* Browser requests page
+* Server sends **already written file**
+* No processing on server  <br>
+
+**Example:**  <br>
+
+* Portfolio website * Company info page * Documentation page  <br>
+
+**Features:**  <br>
+
+* Fast loading * Simple to build * No database * Content changes only if developer edits the file  <br>
+
+**Example flow:**  <br>
+
+```
+Browser → index.html → Display
+```
+
+---
+
+## Dynamic Web Pages  
+
+**Definition:**  <br>
+A dynamic page shows **different content based on user, time, or data**.  <br>
+
+**Technologies used:**  <br>
+
+* Frontend: HTML, CSS, JS
+* Backend: Node.js, PHP, Java, Python
+* Database: MySQL, MongoDB  <br>
+
+**How it works:**  <br>
+
+* Browser sends request
+* Server **processes logic**
+* Fetches data from database
+* Generates page dynamically  <br>
+
+**Example:**  <br>
+
+* Instagram feed * Amazon product page * Login dashboard  <br>
+
+**Features:**  <br>
+
+* Content changes dynamically * Uses database * Personalized output * Slower than static (but powerful)  <br>
+
+**Example flow:**  <br>
+
+```
+Browser → Server → Database → Server → Browser
+```
+
+
+
 ### Client–Server Model
 
 The web works on a **client–server architecture**.
