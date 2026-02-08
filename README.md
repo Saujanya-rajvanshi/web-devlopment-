@@ -37,7 +37,7 @@ A computer is an **electronic machine** that: Takes **input** , **Processes** da
 * Storage (HDD / SSD) -> Stores OS, code, projects ; SSD preferred (faster load & compile)
 * Software Basics
     * System Software -> Operating System (Windows / Linux / macOS) ; Manages files, memory, CPU
-* Application Software -> Browser (Chrome, Firefox) ; Code editor (VS Code) ; Git, Node.js
+    * Application Software -> Browser (Chrome, Firefox) ; Code editor (VS Code) ; Git, Node.js
 
 ### Operating System Concepts (Important)
 
@@ -58,75 +58,34 @@ A computer is an **electronic machine** that: Takes **input** , **Processes** da
 
 ### Internet & Networking Basics 
 
-#### Client–Server Model
-```
-Browser (Client) → Request → Server
-Browser ← Response ← Server
-```
-
-#### IP Address
-* Unique address of a computer
-* Example: `192.168.1.1`
-
-#### Domain Name
-* Human-friendly name
-* Example: `google.com`
-
-#### DNS
-* Converts domain → IP
+* Client–Server Model
+    * Browser (Client) → Request → Server
+    * Browser ← Response ← Server
+* IP Address : Unique address of a computer , Example: `192.168.1.1`
+* Domain Name : Human-friendly name , Example: `google.com`
+* DNS : Converts domain → IP
 
 ### Web Basics (Core for Web Dev)
 
-#### What is a Website?
-**A collection of :**
-* HTML files
-* CSS files
-* JS files
-
-#### What is a Web App?
-* Dynamic website
-* Uses backend + database
-* Example: Instagram, Amazon
+* What is a Website? : **A collection of :** HTML files, CSS files, JS files
+* What is a Web App? : Dynamic website, Uses backend + database, Example: Instagram, Amazon
 
 ### Programming Basics Required
 
-#### Logic & Flow
-* Variables
-* Conditions (`if`)
-* Loops
-* Functions
-
-#### Data Types
-* Number
-* String
-* Boolean
-* Array
-* Object
+* Logic & Flow : Variables, Conditions (`if`), Loops, Functions
+* Data Types : Number, String, Boolean, Array, Object
 
 ### Databases (Basic Idea)
 
-#### What is a Database?
-* Stores data permanently
-
-#### Examples
-* SQL → MySQL
-* NoSQL → MongoDB
+* What is a Database? : Stores data permanently
+    * SQL → MySQL
+    * NoSQL → MongoDB
 
 ### Security Basics (Web Dev Level)
 * Password hashing
 * HTTPS
 * Authentication
 * Authorization
-
-### Tools You MUST Know
-
-| Tool    | Purpose            |
-| ------- | ------------------ |
-| Browser | Run & test website |
-| VS Code | Write code         |
-| Git     | Version control    |
-| GitHub  | Store & share code |
-| Node.js | Backend runtime    |
 
 ### How Computer Executes Web Code
 1. You write code in VS Code
