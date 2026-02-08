@@ -27,55 +27,34 @@
 ## 🖥️ Computer Basics
 
 A computer is an **electronic machine** that: Takes **input** , **Processes** data , Produces **output** , Stores data
-
-👉 In web dev:
 * Input → form data
 * Process → JS / backend logic
 * Output → webpage
 
 ### Hardware Basics 
-#### CPU (Processor)
-* Brain of the computer
-* Executes code (JS, Node, backend)
-* Faster CPU → faster builds & servers
-
-#### RAM
-* Temporary memory
-* Stores running programs (VS Code, browser, server)
-* Web dev minimum: **8 GB RAM**
-
-#### Storage (HDD / SSD)
-* Stores OS, code, projects
-* SSD preferred (faster load & compile)
-
-### Software Basics
-#### System Software
-* Operating System (Windows / Linux / macOS)
-* Manages files, memory, CPU
-
-#### Application Software
-* Browser (Chrome, Firefox)
-* Code editor (VS Code)
-* Git, Node.js
+* CPU (Processor) -> Executes code (JS, Node, backend), Faster CPU → faster builds & servers
+* RAM -> Temporary memory ; Stores running programs (VS Code, browser, server) ; Web dev minimum: **8 GB RAM**
+* Storage (HDD / SSD) -> Stores OS, code, projects ; SSD preferred (faster load & compile)
+* Software Basics
+    * System Software -> Operating System (Windows / Linux / macOS) ; Manages files, memory, CPU
+* Application Software -> Browser (Chrome, Firefox) ; Code editor (VS Code) ; Git, Node.js
 
 ### Operating System Concepts (Important)
 
-#### File System
-* Files & folders
-* Path:
-
+* File System -> Files & folders ; Path:
   ```
   C:\Projects\WebApp\index.html
   ```
-* **Extensions:**
-* `.html` → structure
-* `.css` → style
-* `.js` → logic
 
-#### Processes
-* Running programs
-* Browser tabs = processes
-* Node server = process
+    * **Extensions:**
+        * `.html` → structure
+        * `.css` → style
+        * `.js` → logic
+
+* Processes
+    * Running programs
+    * Browser tabs = processes
+    * Node server = process
 
 ### Internet & Networking Basics 
 
