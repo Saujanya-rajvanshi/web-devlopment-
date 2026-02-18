@@ -11,7 +11,6 @@
 - [System & Web Concepts](#System-and-Web-Concepts)
 - [Interviews Internships](#Interviews-Internships)
 
-@$mongo7%&shagun
 ---
 
 # Foundations 
@@ -933,22 +932,20 @@ Choose **MongoDB**
 
 ## Full Stack Projects
 
-Combine **React + Node + DB**
+#### beautician booking real life use project 
+* git hub repo : https://github.com/Saujanya-rajvanshi/beautician-frontend-clean
+* deployed project : https://beautician-frontend-clean.vercel.app/
 
-📌 MUST PROJECTS (Choose 3)
 
-* Full auth app
-* Job portal
-* Expense tracker
-* Blog platform
 
-Each project must have:
 
-* Live deployment
-* Clean README
-* Screenshots
 
----
+
+
+
+
+
+
 
 ## System and Web Concepts
 
