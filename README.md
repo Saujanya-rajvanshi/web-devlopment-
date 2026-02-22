@@ -686,7 +686,12 @@ Document
 
 # HTML 
 
-- [html roadmap.sh](https://roadmap.sh/html) 
+HTML is the **standard markup language** used to structure web pages. <br>
+It defines the **structure**, not the design (CSS) or logic (JS). <br><br>
+
+- [html roadmap.sh](https://roadmap.sh/html)
+- [Types of Elements](#Types-of-Elements)
+- [Text and Content Tags](#Text-and-Content-Tags)
 - [Headings tag](#Headings-tag)
 - [Paragraph tag](#Paragraph-tag)
 - [new line tag](#Break)
@@ -694,10 +699,8 @@ Document
 - [Comments](#Comments)
 - [Images](#Images)
 
-structure of website <br>
-HTML (HyperText Markup Language) is the standard markup language used to create and structure web pages.
-
 <img width="814" height="696" alt="image" src="https://github.com/user-attachments/assets/7c9a1ea7-32df-47c4-8778-be7523096245" />
+
 
 #### boiler plate code 
 ```html
@@ -716,9 +719,31 @@ HTML (HyperText Markup Language) is the standard markup language used to create 
 * **<title> :** Used within the <head> section to define the title of the HTML document. It appears in the browser tab or window and provides a brief description of the webpage's content.
 * **<body> :** Encloses the visible content of the webpage, such as text, images, audio, videos, and links. All elements within this tag are displayed on the actual webpage when viewed in a browser.
 
-### Headings tag
+
+
+## Types of Elements
+
+### 1. Container Tags
+
+Have opening & closing tag
+`<p></p>`, `<div></div>`
+
+### 2. Empty (Void) Tags
+
+No closing tag
+`<br>`, `<hr>`, `<img>`, `<input>`, `<meta>`, `<link>`
+
+
+
+
+## Text and Content Tags
+
+### Headings
+
 The HTML heading tags are used to create headings for the content of a webpage. <br>
 * paired tag
+* h1 = most important
+* Used for SEO structure
 
 ```html
 <h1></h1>
@@ -729,12 +754,47 @@ The HTML heading tags are used to create headings for the content of a webpage. 
 <h6></h6>
 ```
 
-### Paragraph tag
+### Paragraph
+
 HTML <p> tags are used to write paragraph statements on a webpage. They start with the <p> tag and end with </p>.
 * paired tag
 ```html
 <p> Content... </p>
 ```
+
+
+### Line Break & Horizontal Rule
+
+```html
+<br>
+<hr>
+```
+
+### Text Formatting Tags
+
+| Tag            | Meaning                   |
+| -------------- | ------------------------- |
+| `<b>`          | Bold (visual only)        |
+| `<strong>`     | Important text (semantic) |
+| `<i>`          | Italic                    |
+| `<em>`         | Emphasized                |
+| `<u>`          | Underline                 |
+| `<mark>`       | Highlight                 |
+| `<small>`      | Smaller text              |
+| `<del>`        | Deleted                   |
+| `<ins>`        | Inserted                  |
+| `<sub>`        | Subscript                 |
+| `<sup>`        | Superscript               |
+| `<code>`       | Inline code               |
+| `<pre>`        | Preserves formatting      |
+| `<blockquote>` | Block quote               |
+| `<q>`          | Inline quote              |
+
+---
+
+
+
+
 
 ### Break 
 The HTML <br> tag is used to insert a single line break and does not require a closing tag. In HTML, the break tag is written as <br>.
@@ -787,9 +847,6 @@ The <img> tag is used to insert an image into a webpage. The source of the image
 * **index.html** -> homepage (ny default) if not you will have to specify the homepage
 * **!** -> emit boiler plate code
 
-
-
- 
 **Must know**
 
 * Semantic tags
@@ -800,6 +857,324 @@ The <img> tag is used to insert an image into a webpage. The source of the image
 
 * Resume page
 * Blog layout
+
+
+
+
+
+
+
+
+
+
+
+# 4️⃣ Semantic HTML (Very Important 🔥)
+
+Used for meaningful structure (SEO + accessibility)
+
+| Tag            | Use                 |
+| -------------- | ------------------- |
+| `<header>`     | Top section         |
+| `<nav>`        | Navigation          |
+| `<main>`       | Main content        |
+| `<section>`    | Section             |
+| `<article>`    | Independent content |
+| `<aside>`      | Sidebar             |
+| `<footer>`     | Bottom section      |
+| `<figure>`     | Image container     |
+| `<figcaption>` | Image caption       |
+
+---
+
+# 5️⃣ Links & Navigation
+
+### Anchor Tag
+
+```html
+<a href="https://google.com" target="_blank">Visit</a>
+```
+
+Attributes:
+
+* `href`
+* `target`
+* `download`
+* `rel="noopener"`
+
+---
+
+# 6️⃣ Images & Media
+
+### Image
+
+```html
+<img src="image.jpg" alt="description">
+```
+
+Important attributes:
+
+* `src`
+* `alt`
+* `width`
+* `height`
+* `loading="lazy"`
+
+---
+
+### Audio
+
+```html
+<audio controls>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+```
+
+---
+
+### Video
+
+```html
+<video controls width="400">
+    <source src="video.mp4" type="video/mp4">
+</video>
+```
+
+---
+
+# 7️⃣ Lists
+
+### Ordered List
+
+```html
+<ol>
+  <li>Item</li>
+</ol>
+```
+
+### Unordered List
+
+```html
+<ul>
+  <li>Item</li>
+</ul>
+```
+
+### Description List
+
+```html
+<dl>
+  <dt>Term</dt>
+  <dd>Description</dd>
+</dl>
+```
+
+---
+
+# 8️⃣ Tables (Advanced Structure)
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+Important Tags:
+
+| Tag       | Meaning         |
+| --------- | --------------- |
+| `<table>` | Table container |
+| `<tr>`    | Table row       |
+| `<th>`    | Header cell     |
+| `<td>`    | Data cell       |
+| `<thead>` | Header group    |
+| `<tbody>` | Body            |
+| `<tfoot>` | Footer          |
+| `colspan` | Merge columns   |
+| `rowspan` | Merge rows      |
+
+---
+
+# 9️⃣ Forms (Very Important 🔥🔥🔥)
+
+```html
+<form action="/submit" method="POST">
+  <input type="text">
+</form>
+```
+
+### Input Types
+
+| Type     | Use                |
+| -------- | ------------------ |
+| text     | Text input         |
+| password | Password           |
+| email    | Email validation   |
+| number   | Numbers            |
+| tel      | Phone              |
+| url      | URL                |
+| date     | Date picker        |
+| file     | Upload             |
+| checkbox | Multiple selection |
+| radio    | Single selection   |
+| range    | Slider             |
+| color    | Color picker       |
+| submit   | Submit             |
+| reset    | Reset              |
+
+---
+
+### Other Form Tags
+
+| Tag          | Use             |
+| ------------ | --------------- |
+| `<label>`    | Input label     |
+| `<textarea>` | Multi-line      |
+| `<select>`   | Dropdown        |
+| `<option>`   | Dropdown item   |
+| `<fieldset>` | Group inputs    |
+| `<legend>`   | Field title     |
+| `<datalist>` | Suggestion list |
+| `<button>`   | Button          |
+
+---
+
+# 🔟 HTML Global Attributes
+
+Available on all elements:
+
+* `id`
+* `class`
+* `style`
+* `title`
+* `hidden`
+* `tabindex`
+* `contenteditable`
+* `draggable`
+* `data-*`
+
+---
+
+# 1️⃣1️⃣ Meta Tags (SEO + Responsive)
+
+```html
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="...">
+<meta name="keywords" content="...">
+<meta name="author" content="...">
+```
+
+---
+
+# 1️⃣2️⃣ Embedding External Content
+
+### Iframe
+
+```html
+<iframe src="https://example.com"></iframe>
+```
+
+---
+
+# 1️⃣3️⃣ HTML Entities
+
+| Symbol | Entity   |
+| ------ | -------- |
+| <      | `&lt;`   |
+| >      | `&gt;`   |
+| &      | `&amp;`  |
+| "      | `&quot;` |
+| ©      | `&copy;` |
+
+---
+
+# 1️⃣4️⃣ Advanced & Modern Tags
+
+| Tag          | Use              |
+| ------------ | ---------------- |
+| `<canvas>`   | Graphics         |
+| `<svg>`      | Vector graphics  |
+| `<progress>` | Progress bar     |
+| `<meter>`    | Measurement      |
+| `<details>`  | Toggle           |
+| `<summary>`  | Title of details |
+| `<template>` | Hidden template  |
+| `<noscript>` | If JS disabled   |
+
+---
+
+# 1️⃣5️⃣ HTML Best Practices (Advanced)
+
+✅ Use semantic tags
+✅ Always use `alt` in images
+✅ Use proper heading hierarchy
+✅ Use labels for forms
+✅ Avoid inline styles
+✅ Use accessibility attributes (`aria-*`)
+
+---
+
+# 💡 HTML vs CSS vs JS
+
+| Technology | Role      |
+| ---------- | --------- |
+| HTML       | Structure |
+| CSS        | Styling   |
+| JavaScript | Behavior  |
+
+---
+
+If you want, next we can:
+
+1. 🔥 Make HTML Interview Notes
+2. 🔥 Make Advanced Form Validation Notes
+3. 🔥 Start CSS Notes
+4. 🔥 Build a Complete HTML Project Step-by-Step
+
+You are building strong foundation now. Good start 💪
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
