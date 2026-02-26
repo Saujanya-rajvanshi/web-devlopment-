@@ -689,23 +689,6 @@ Document
 HTML is the **standard markup language** used to structure web pages. <br>
 It defines the **structure**, not the design (CSS) or logic (JS). <br><br>
 
-- [html roadmap.sh](https://roadmap.sh/html)
-- [Types of Elements](#Types-of-Elements)
-- [Types of tags](#Types-of-tags)
-- [Text and Content Tags](#Text-and-Content-Tags)
-- [Headings tag](#Headings-tag)
-- [Paragraph tag](#Paragraph-tag)
-- [new line tag](#Break)
-- [Horizontal Line](#Horizontal-Line)
-- [Comments](#Comments)
-- [Images](#Images)
-
-Here is your **GitHub-ready Markdown roadmap with internal links** (perfect for README.md):
-
----
-
-# Complete HTML Roadmap
-
 ## Table of Contents
 
 * [Web Fundamentals](#web-fundamentals)
@@ -730,7 +713,7 @@ Here is your **GitHub-ready Markdown roadmap with internal links** (perfect for 
 * [Real-World Page Structure Patterns](#real-world-page-structure-patterns)
 * [HTML Project Building](#html-project-building)
 
----
+
 
 # HTML Document Structure
 <img width="814" height="696" alt="image" src="https://github.com/user-attachments/assets/7c9a1ea7-32df-47c4-8778-be7523096245" />
