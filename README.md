@@ -1843,8 +1843,327 @@ a {
 }
 ```
 
+
+
+
+
+# table
+
+# 1. What is a Table?
+
+An HTML table is used to display **tabular data** (data arranged in rows and columns).
+
+Tables should be used for:
+
+* Data representation
+* Reports
+* Timetables
+* Comparison charts
+
+Do NOT use tables for layout design.
+
 ---
 
+# 2. Basic Table Structure
+
+## Core Elements
+
+* `<table>` → Table container
+* `<tr>` → Table row
+* `<th>` → Table header cell
+* `<td>` → Table data cell
+
+## Basic Example
+
+```html
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Saujanya</td>
+    <td>20</td>
+  </tr>
+</table>
+```
+
+---
+
+# 3. Table Sections (Semantic Structure)
+
+Used for better organization.
+
+* `<caption>` → Table title
+* `<thead>` → Header section
+* `<tbody>` → Body section
+* `<tfoot>` → Footer section
+
+## Example
+
+```html
+<table>
+  <caption>Student Marks</caption>
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Marks</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Rahul</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td>Total</td>
+      <td>90</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+---
+
+# 4. Column Grouping
+
+## `<colgroup>` and `<col>`
+
+Used to apply styles to entire columns.
+
+```html
+<table>
+  <colgroup>
+    <col style="background-color: lightgray;">
+    <col>
+  </colgroup>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+</table>
+```
+
+---
+
+# 5. Merging Cells
+
+## 1. `colspan`
+
+Merges columns.
+
+```html
+<td colspan="2">Merged Cell</td>
+```
+
+## 2. `rowspan`
+
+Merges rows.
+
+```html
+<td rowspan="2">Merged Cell</td>
+```
+
+---
+
+# 6. Advanced Example (Colspan + Rowspan)
+
+```html
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Marks</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Sita</td>
+    <td>Math</td>
+    <td>90</td>
+  </tr>
+  <tr>
+    <td>Science</td>
+    <td>85</td>
+  </tr>
+</table>
+```
+
+---
+
+# 7. Table Attributes (Old vs Modern)
+
+Old HTML attributes (avoid in modern practice):
+
+* `border`
+* `cellpadding`
+* `cellspacing`
+* `align`
+* `width`
+
+Modern practice: Use CSS instead.
+
+---
+
+# 8. Styling Tables with CSS
+
+## Basic Styling
+
+```css
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+```
+
+---
+
+# 9. Important CSS Properties
+
+* `border-collapse`
+* `border-spacing`
+* `table-layout`
+* `vertical-align`
+* `padding`
+* `text-align`
+* `background-color`
+
+## Fixed Layout
+
+```css
+table {
+  table-layout: fixed;
+}
+```
+
+---
+
+# 10. Accessibility (Very Important)
+
+## 1. Use `<th>` for headers
+
+## 2. Use `scope`
+
+```html
+<th scope="col">Name</th>
+<th scope="row">Total</th>
+```
+
+## 3. Use `<caption>` for description
+
+Improves screen reader support.
+
+---
+
+# 11. Responsive Tables
+
+Problem: Table overflows on small screens.
+
+Solution:
+
+```css
+.table-container {
+  overflow-x: auto;
+}
+```
+
+```html
+<div class="table-container">
+  <table>
+    ...
+  </table>
+</div>
+```
+
+---
+
+# 12. Sticky Header (Modern UI)
+
+```css
+thead {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+```
+
+---
+
+# 13. Content Model Rules
+
+* `<table>` can contain:
+
+  * `<caption>`
+  * `<colgroup>`
+  * `<thead>`
+  * `<tbody>`
+  * `<tfoot>`
+  * `<tr>`
+
+* `<tr>` can contain:
+
+  * `<th>`
+  * `<td>`
+
+* `<td>` and `<th>` can contain:
+
+  * Flow content (text, images, lists, etc.)
+
+---
+
+# 14. Nested Tables
+
+Tables can be placed inside `<td>`, but avoid unless necessary.
+
+---
+
+# 15. Best Practices
+
+* Use tables only for tabular data
+* Always use semantic sections
+* Avoid inline styling
+* Use CSS for design
+* Maintain clean structure
+* Add accessibility attributes
+
+---
+
+# 16. Real-World Use Cases
+
+* Dashboard data
+* Marksheets
+* Reports
+* Financial statements
+* Comparison pricing tables
+
+---
+
+# Final Level Check
+
+If you understand:
+
+* Structure
+* Sections
+* Merging
+* Styling
+* Accessibility
+* Responsiveness
+
+Then your table knowledge is complete for frontend development.
+
+---
 
 
 
