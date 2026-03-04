@@ -687,13 +687,24 @@ Document
 # HTML 
 
 HTML is the **standard markup language** used to structure web pages. <br>
-It defines the **structure**, not the design (CSS) or logic (JS). <br><br>
+
+* HTML = HyperText Markup Language
+* Used to structure web content
+* Not a programming language
+* Uses elements (tags)
+* Web works on **Client–Server model**
+* Browser sends **HTTP request**
+* Server returns **HTML response**
+* HTML → structure
+* CSS → styling
+* JS → behavior
+* Everything runs inside a **browser rendering engine**
 
 ## Table of Contents
 
 * [Web Fundamentals](#web-fundamentals)
-* [HTML Document Structure](#html-document-structure)
-* [Elements, Tags & Content Model](#elements-tags--content-model)
+* [HTML Document Structure](#HTML-Document-Structure)
+* [Elements, Tags & Content Model](#Elements--Tags--Content-Model)
 * [Text & Typography Elements](#text--typography-elements)
 * [Links & Navigation](#links--navigation)
 * [Images & Multimedia](#images--multimedia)
@@ -736,6 +747,311 @@ It defines the **structure**, not the design (CSS) or logic (JS). <br><br>
 * **<title> :** Used within the <head> section to define the title of the HTML document. It appears in the browser tab or window and provides a brief description of the webpage's content.
 * **<body> :** Encloses the visible content of the webpage, such as text, images, audio, videos, and links. All elements within this tag are displayed on the actual webpage when viewed in a browser.
 
+
+## Elements, Tags & Content Model
+
+* Element = opening + content + closing
+* Void elements → no closing (`<img>`, `<br>`)
+* Nested properly (no overlapping)
+* Content categories:
+
+  * Flow content
+  * Phrasing content
+  * Heading content
+  * Interactive content
+  * Embedded content
+
+---
+
+## 4️⃣ Text & Typography Elements
+
+* Headings: `<h1>`–`<h6>`
+* Paragraph: `<p>`
+* Inline semantics:
+
+  * `<strong>` importance
+  * `<em>` emphasis
+  * `<mark>` highlight
+  * `<small>` side comments
+  * `<code>` code
+  * `<pre>` preformatted
+  * `<blockquote>` long quotes
+  * `<q>` short quotes
+* Avoid using `<b>` and `<i>` for meaning.
+
+---
+
+## 5️⃣ Links & Navigation
+
+```html
+<a href="url">Text</a>
+```
+
+* `href` → destination
+* `target="_blank"`
+* Relative vs Absolute URLs
+* Fragment links (`#id`)
+* Navigation often built with `<nav>`
+
+---
+
+## 6️⃣ Images & Multimedia
+
+```html
+<img src="img.jpg" alt="desc">
+```
+
+Important:
+
+* `alt` required for accessibility
+* `<figure>` + `<figcaption>`
+* `<audio>` and `<video>`
+* `<source>` for multiple formats
+* Use correct file formats (web-optimized)
+
+---
+
+## 7️⃣ Lists
+
+* `<ul>` unordered
+* `<ol>` ordered
+* `<dl>` description list
+* `<li>` list item
+
+Lists are structural — not just visual.
+
+---
+
+## 8️⃣ Tables
+
+Structure:
+
+* `<table>`
+* `<tr>` row
+* `<th>` header
+* `<td>` cell
+* `<thead>`, `<tbody>`, `<tfoot>`
+* `colspan`, `rowspan`
+
+Use tables for **data only**, not layout.
+
+---
+
+## 9️⃣ Forms & Input Controls
+
+```html
+<form action="" method="POST">
+```
+
+Core:
+
+* `<input>` types (text, email, password, radio, checkbox, file, date, number)
+* `<label>` improves accessibility
+* `<textarea>`
+* `<select>` + `<option>`
+* `required`, `pattern`, `placeholder`
+* GET vs POST
+
+Form validation can be native (HTML5).
+
+---
+
+## 🔟 Semantic HTML & Page Layout
+
+HTML5 layout elements:
+
+* `<header>`
+* `<nav>`
+* `<main>`
+* `<section>`
+* `<article>`
+* `<aside>`
+* `<footer>`
+
+Purpose:
+
+* Meaningful structure
+* Better SEO
+* Better accessibility
+
+---
+
+## 1️⃣1️⃣ Global Attributes
+
+Common global attributes:
+
+* `id`
+* `class`
+* `style`
+* `title`
+* `hidden`
+* `data-*`
+* `tabindex`
+* `contenteditable`
+* `lang`
+
+Apply to most elements.
+
+---
+
+## 1️⃣2️⃣ Metadata & SEO
+
+Inside `<head>`:
+
+* `<meta charset>`
+* `<meta name="description">`
+* `<meta name="viewport">`
+* `<title>`
+* Open Graph tags (for social sharing)
+* Favicon `<link>`
+
+Helps search engines understand content.
+
+---
+
+## 1️⃣3️⃣ Accessibility (A11Y)
+
+* Always use `alt` in images
+* Use `<label>` for inputs
+* Proper heading hierarchy
+* Use semantic elements
+* ARIA roles only when needed
+* Keyboard navigation support
+
+Accessibility = usability.
+
+---
+
+## 1️⃣4️⃣ HTML Entities & Symbols
+
+Used for reserved characters:
+
+* `&lt;`
+* `&gt;`
+* `&amp;`
+* `&copy;`
+* `&nbsp;`
+
+Prevents parsing errors.
+
+---
+
+## 1️⃣5️⃣ Embedding External Content
+
+* `<iframe>`
+* `<embed>`
+* `<object>`
+* `<script>`
+* `<link>`
+
+Be careful with:
+
+* Security
+* Performance
+* Sandbox attributes
+
+---
+
+## 1️⃣6️⃣ HTML5 APIs (Canvas, SVG, Media)
+
+Canvas:
+
+```html
+<canvas></canvas>
+```
+
+Used with JavaScript for drawing.
+
+SVG:
+
+```html
+<svg></svg>
+```
+
+Vector graphics (scalable).
+
+Media:
+
+* `<audio>`
+* `<video>`
+
+APIs extend HTML beyond static content.
+
+---
+
+## 1️⃣7️⃣ Best Practices & Validation
+
+* Use semantic elements
+* Close tags properly
+* Avoid inline styles
+* Keep structure clean
+* Validate using W3C validator
+* Separate HTML, CSS, JS
+
+---
+
+## 1️⃣8️⃣ Performance Basics
+
+* Optimize images
+* Minimize DOM depth
+* Avoid unnecessary elements
+* Use lazy loading (`loading="lazy"`)
+* Defer scripts
+
+HTML structure affects performance.
+
+---
+
+## 1️⃣9️⃣ Browser Rendering & DOM Basics
+
+* Browser parses HTML → builds **DOM tree**
+* CSSOM built separately
+* Combined → Render Tree
+* Reflow & Repaint affect performance
+
+DOM = in-memory representation of HTML.
+
+---
+
+## 2️⃣0️⃣ Real-World Page Structure Patterns
+
+Typical structure:
+
+```html
+<header>
+<nav></nav>
+</header>
+<main>
+  <section>
+  <article>
+</main>
+<footer>
+```
+
+Patterns:
+
+* Hero section
+* Card layouts
+* Sidebar layout
+* Grid structure
+
+---
+
+## 2️⃣1️⃣ HTML Project Building
+
+When building projects:
+
+1. Plan structure first
+2. Use semantic layout
+3. Add accessibility
+4. Validate
+5. Optimize
+6. Then style with CSS
+
+Think:
+Structure → Meaning → Accessibility → Performance
+
+---
 
 
 
