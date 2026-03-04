@@ -704,7 +704,7 @@ HTML is the **standard markup language** used to structure web pages. <br>
 
 * [Web Fundamentals](#web-fundamentals)
 * [HTML Document Structure](#HTML-Document-Structure)
-* [Elements, Tags & Content Model](#Elements--Tags--Content-Model)
+* [Elements, Tags & Content Model](#Elements-Tags-and-Content-Model)
 * [Text & Typography Elements](#text--typography-elements)
 * [Links & Navigation](#links--navigation)
 * [Images & Multimedia](#images--multimedia)
@@ -748,7 +748,7 @@ HTML is the **standard markup language** used to structure web pages. <br>
 * **<body> :** Encloses the visible content of the webpage, such as text, images, audio, videos, and links. All elements within this tag are displayed on the actual webpage when viewed in a browser.
 
 
-## Elements, Tags & Content Model
+## Elements Tags and Content Model
 
 * Element = opening + content + closing
 * Void elements → no closing (`<img>`, `<br>`)
