@@ -705,6 +705,9 @@ HTML is the **standard markup language** used to structure web pages. <br>
 * [Web Fundamentals](#web-fundamentals)
 * [HTML Document Structure](#HTML-Document-Structure)
 * [Elements, Tags & Content Model](#Elements-Tags-and-Content-Model)
+    * [Elements](#Elements)
+    * [Tags](#Tags)
+    * [Content Model](#Content-Model)
 * [Text & Typography Elements](#text--typography-elements)
 * [Links & Navigation](#links--navigation)
 * [Images & Multimedia](#images--multimedia)
@@ -748,7 +751,12 @@ HTML is the **standard markup language** used to structure web pages. <br>
 * **<body> :** Encloses the visible content of the webpage, such as text, images, audio, videos, and links. All elements within this tag are displayed on the actual webpage when viewed in a browser.
 
 
-## Elements Tags and Content Model
+# Elements Tags and Content Model
+
+# Elements
+
+HTML is made of **elements**.
+An element usually consists of:
 
 * Element = opening + content + closing
 * Void elements → no closing (`<img>`, `<br>`)
@@ -760,6 +768,190 @@ HTML is the **standard markup language** used to structure web pages. <br>
   * Heading content
   * Interactive content
   * Embedded content
+
+```
+<tagname> Content </tagname>
+```
+
+It can include:
+
+* Opening tag
+* Content
+* Closing tag
+* Attributes (inside opening tag)
+
+Example:
+
+```html
+<p class="text">Hello</p>
+```
+
+## Types of Elements
+
+### 1. Container Elements (Normal Elements)
+
+* Have **opening and closing tags**
+* Can contain text or other elements
+* Can be nested
+
+Examples:
+
+```html
+<p></p>
+<div></div>
+<section></section>
+<article></article>
+```
+
+Structure:
+
+```html
+<tag> Content </tag>
+```
+
+### 2. Empty (Void) Elements
+
+* Do **not** have a closing tag
+* Cannot contain content
+* Self-contained
+
+Examples:
+
+```html
+<br>
+<hr>
+<img>
+<input>
+<meta>
+<link>
+```
+
+Structure:
+
+```html
+<tag>
+```
+
+Note: In HTML5, no `/` is required like `<br />` (though it still works).
+
+# Tags
+
+Tags can be categorized based on purpose.
+
+#### Types of Tags
+
+## 1. Semantic Tags (Meaning-Based)
+
+These describe the **meaning** of content, not just appearance.
+
+### Text Semantics
+
+* `<h1>`–`<h6>` → Headings
+* `<p>` → Paragraph
+* `<a>` → Link
+* `<blockquote>` → Quoted content
+* `<cite>` → Citation
+* `<time>` → Date/time value
+
+### Content Grouping
+
+* `<ul>` / `<ol>` → Lists
+* `<table>` → Tabular data
+* `<form>` → Form container
+
+### Media
+
+* `<img>` → Image
+* `<audio>` → Audio
+* `<video>` → Video
+
+Semantic HTML improves:
+
+* SEO
+* Accessibility
+* Code readability
+
+## 2. Structural Tags (Layout & Page Structure)
+
+Define the structure of the webpage.
+
+* `<html>` → Root
+* `<head>` → Metadata
+* `<body>` → Visible content
+* `<header>` → Top section
+* `<main>` → Main content
+* `<section>` → Thematic grouping
+* `<article>` → Independent content
+* `<aside>` → Sidebar
+* `<footer>` → Bottom section
+* `<nav>` → Navigation
+
+These create a meaningful page layout.
+
+## 3. Formatting Tags (Presentation-Level)
+
+Change visual style or emphasize text.
+
+### Non-semantic formatting
+
+* `<b>` → Bold (visual only)
+* `<i>` → Italic (visual only)
+* `<u>` → Underline
+
+### Semantic formatting
+
+* `<strong>` → Important text
+* `<em>` → Emphasized text
+
+### Technical formatting
+
+* `<sup>` → Superscript
+* `<sub>` → Subscript
+* `<pre>` → Preserves spacing
+* `<code>` → Inline code
+* `<mark>` → Highlighted text
+* `<small>` → Smaller text
+
+Important distinction:
+
+* `<b>` is visual.
+* `<strong>` adds meaning.
+
+# Content Model
+
+HTML elements follow rules about what they can contain.
+
+### Main Content Categories
+
+1. Flow Content
+   Most elements allowed inside `<body>`.
+
+2. Phrasing Content
+   Inline elements like `<span>`, `<a>`, `<strong>`.
+
+3. Sectioning Content
+   `<section>`, `<article>`, `<nav>`, `<aside>`.
+
+4. Heading Content
+   `<h1>`–`<h6>`.
+
+5. Embedded Content
+   `<img>`, `<video>`, `<iframe>`.
+
+6. Interactive Content
+   `<button>`, `<input>`, `<a>`.
+
+Understanding content model prevents invalid nesting.
+
+Example of invalid structure:
+
+```html
+<p>
+  <div></div>   <!-- Not allowed -->
+</p>
+```
+
+
 
 ---
 
@@ -1052,205 +1244,6 @@ Think:
 Structure → Meaning → Accessibility → Performance
 
 ---
-
-
-
-
-
-
-
-
-
-
-  
-# Elements, Tags & Content Model
-
-HTML is made of **elements**.
-An element usually consists of:
-
-```
-<tagname> Content </tagname>
-```
-
-It can include:
-
-* Opening tag
-* Content
-* Closing tag
-* Attributes (inside opening tag)
-
-Example:
-
-```html
-<p class="text">Hello</p>
-```
-
-## Types of Elements
-
-### 1. Container Elements (Normal Elements)
-
-* Have **opening and closing tags**
-* Can contain text or other elements
-* Can be nested
-
-Examples:
-
-```html
-<p></p>
-<div></div>
-<section></section>
-<article></article>
-```
-
-Structure:
-
-```html
-<tag> Content </tag>
-```
-
-### 2. Empty (Void) Elements
-
-* Do **not** have a closing tag
-* Cannot contain content
-* Self-contained
-
-Examples:
-
-```html
-<br>
-<hr>
-<img>
-<input>
-<meta>
-<link>
-```
-
-Structure:
-
-```html
-<tag>
-```
-
-Note: In HTML5, no `/` is required like `<br />` (though it still works).
-
-
-# Types of Tags
-
-Tags can be categorized based on purpose.
-
-## 1. Semantic Tags (Meaning-Based)
-
-These describe the **meaning** of content, not just appearance.
-
-### Text Semantics
-
-* `<h1>`–`<h6>` → Headings
-* `<p>` → Paragraph
-* `<a>` → Link
-* `<blockquote>` → Quoted content
-* `<cite>` → Citation
-* `<time>` → Date/time value
-
-### Content Grouping
-
-* `<ul>` / `<ol>` → Lists
-* `<table>` → Tabular data
-* `<form>` → Form container
-
-### Media
-
-* `<img>` → Image
-* `<audio>` → Audio
-* `<video>` → Video
-
-Semantic HTML improves:
-
-* SEO
-* Accessibility
-* Code readability
-
-## 2. Structural Tags (Layout & Page Structure)
-
-Define the structure of the webpage.
-
-* `<html>` → Root
-* `<head>` → Metadata
-* `<body>` → Visible content
-* `<header>` → Top section
-* `<main>` → Main content
-* `<section>` → Thematic grouping
-* `<article>` → Independent content
-* `<aside>` → Sidebar
-* `<footer>` → Bottom section
-* `<nav>` → Navigation
-
-These create a meaningful page layout.
-
-## 3. Formatting Tags (Presentation-Level)
-
-Change visual style or emphasize text.
-
-### Non-semantic formatting
-
-* `<b>` → Bold (visual only)
-* `<i>` → Italic (visual only)
-* `<u>` → Underline
-
-### Semantic formatting
-
-* `<strong>` → Important text
-* `<em>` → Emphasized text
-
-### Technical formatting
-
-* `<sup>` → Superscript
-* `<sub>` → Subscript
-* `<pre>` → Preserves spacing
-* `<code>` → Inline code
-* `<mark>` → Highlighted text
-* `<small>` → Smaller text
-
-Important distinction:
-
-* `<b>` is visual.
-* `<strong>` adds meaning.
-
-# Content Model (Very Important Concept)
-
-HTML elements follow rules about what they can contain.
-
-### Main Content Categories
-
-1. Flow Content
-   Most elements allowed inside `<body>`.
-
-2. Phrasing Content
-   Inline elements like `<span>`, `<a>`, `<strong>`.
-
-3. Sectioning Content
-   `<section>`, `<article>`, `<nav>`, `<aside>`.
-
-4. Heading Content
-   `<h1>`–`<h6>`.
-
-5. Embedded Content
-   `<img>`, `<video>`, `<iframe>`.
-
-6. Interactive Content
-   `<button>`, `<input>`, `<a>`.
-
-Understanding content model prevents invalid nesting.
-
-Example of invalid structure:
-
-```html
-<p>
-  <div></div>   <!-- Not allowed -->
-</p>
-```
-
-
-
 
 
 ### heading tag 
