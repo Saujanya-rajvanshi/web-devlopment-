@@ -13,6 +13,24 @@
 
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Foundations 
 - [Computer basics](#Computer-basics)
 - [How the web works](#How-the-web-works)
@@ -21,279 +39,219 @@
 - [How browsers render HTML/CSS/JS](#How-browsers-render-HTMLCSSJS)
 
 
-###### Computer basics
----
-## 🖥️ Computer Basics
+## Computer Basics
 
-A computer is an **electronic machine** that: Takes **input** , **Processes** data , Produces **output** , Stores data
-* Input → form data
-* Process → JS / backend logic
-* Output → webpage
+A **computer** is an electronic machine that:
 
-### Hardware Basics 
-* CPU (Processor) -> Executes code (JS, Node, backend), Faster CPU → faster builds & servers
-* RAM -> Temporary memory ; Stores running programs (VS Code, browser, server) ; Web dev minimum: **8 GB RAM**
-* Storage (HDD / SSD) -> Stores OS, code, projects ; SSD preferred (faster load & compile)
-* Software Basics
-    * System Software -> Operating System (Windows / Linux / macOS) ; Manages files, memory, CPU
-    * Application Software -> Browser (Chrome, Firefox) ; Code editor (VS Code) ; Git, Node.js
+* Takes **input**
+* **Processes** data
+* Produces **output**
+* **Stores** information
 
-### Operating System Concepts (Important)
-
-* File System -> Files & folders ; Path:
-  ```
-  C:\Projects\WebApp\index.html
-  ```
-
-    * **Extensions:**
-        * `.html` → structure
-        * `.css` → style
-        * `.js` → logic
-
-* Processes
-    * Running programs
-    * Browser tabs = processes
-    * Node server = process
-
-### Internet & Networking Basics 
-
-* Client–Server Model
-    * Browser (Client) → Request → Server
-    * Browser ← Response ← Server
-* IP Address : Unique address of a computer , Example: `192.168.1.1`
-* Domain Name : Human-friendly name , Example: `google.com`
-* DNS : Converts domain → IP
-
-### Web Basics (Core for Web Dev)
-
-* What is a Website? : **A collection of :** HTML files, CSS files, JS files
-* What is a Web App? : Dynamic website, Uses backend + database, Example: Instagram, Amazon
-
-### Programming Basics Required
-
-* Logic & Flow : Variables, Conditions (`if`), Loops, Functions
-* Data Types : Number, String, Boolean, Array, Object
-
-### Databases (Basic Idea)
-
-* What is a Database? : Stores data permanently
-    * SQL → MySQL
-    * NoSQL → MongoDB
-
-### Security Basics (Web Dev Level)
-* Password hashing
-* HTTPS
-* Authentication
-* Authorization
-
-### How Computer Executes Web Code
-1. You write code in VS Code
-2. Save files on disk
-3. Browser reads HTML
-4. CSS styles page
-5. JS runs logic
-6. Backend handles requests
-7. Database stores data
-
----
-
-###### How the web works 
----
-## 🌐 How the web works (client–server, HTTP, browser)
-
-##### **things to keep in mind while building web app :** 
-* Customer perspective: The app should be simple, pleasing, and solve real user problems.
-* Business perspective: It must stay aligned with its product/market fit.
-* Engineering perspective: It should be scalable, reliable, and capable of handling high traffic.
-
-#### websites and web applications
-A web application is a program that runs in a browser and has three formal characteristics:
-
-* It addresses a particular problem, even if it’s simply finding some information
-* It is as interactive as a desktop application
-* It works with a Content Management System <br> <br>
-
-Traditionally, a website was just a collection of static pages. A website becomes a web application when it includes both static and dynamic pages. This is why most modern websites today are actually examples of web applications. <br> <br>
-
-When a user makes a request on a website, several parts of the application work together. These include: 
-* User interface
-* Middleware systems
-* Databases
-* Servers
-* Browser.
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 🌐 Static vs Dynamic Web Pages (clear + exam-ready)
-
-## Static Web Pages
-
-**Definition:** <br>
-A static page shows the **same content to every user**. It does **not change automatically**.  <br>
-
-**Technologies used:**  <br>
-
-* HTML
-* CSS
-* (Optional) basic JavaScript (no backend)  <br>
-
-**How it works:**  <br>
-
-* Browser requests page
-* Server sends **already written file**
-* No processing on server  <br>
-
-**Example:**  <br>
-
-* Portfolio website * Company info page * Documentation page  <br>
-
-**Features:**  <br>
-
-* Fast loading * Simple to build * No database * Content changes only if developer edits the file  <br>
-
-**Example flow:**  <br>
+### Basic Flow
 
 ```
-Browser → index.html → Display
+Input → Processing → Output → Storage
 ```
+
+Example in web development:
+
+```
+User Input (Form) → JavaScript/Backend → Webpage Output
+```
+
+### Hardware Components
+
+**CPU (Processor)**
+
+* Executes instructions and program code
+* Handles calculations and logic
+
+**RAM (Memory)**
+
+* Temporary memory for running programs
+* Stores browser tabs, editor, and server processes
+
+**Storage (HDD / SSD)**
+
+* Permanent storage for OS, files, and projects
+* SSD is faster than HDD
+
+### Software Types
+
+**System Software**
+
+* Operating systems (Windows, Linux, macOS)
+* Manages hardware and system resources
+
+**Application Software**
+
+* Programs used by users
+* Examples: Browser, VS Code, Git
+
+### File System Basics
+
+Files are organized in folders with a **path**.
+
+Example:
+
+```
+C:\Projects\WebApp\index.html
+```
+
+Common web file extensions:
+
+```
+.html → HTML structure
+.css  → CSS styling
+.js   → JavaScript logic
+```
+
+
+### Processes
+
+A **process** is a running program.
+
+Examples:
+
+* Browser tabs
+* Node.js server
+* Code editor
 
 ---
 
-## Dynamic Web Pages  
+## How the Web Works
 
-**Definition:**  <br>
-A dynamic page shows **different content based on user, time, or data**.  <br>
+The web follows a **client–server architecture**.
 
-**Technologies used:**  <br>
+### Client
 
-* Frontend: HTML, CSS, JS
-* Backend: Node.js, PHP, Java, Python
-* Database: MySQL, MongoDB  <br>
+The **client** is the user’s device.
 
-**How it works:**  <br>
+Examples:
 
-* Browser sends request
-* Server **processes logic**
-* Fetches data from database
-* Generates page dynamically  <br>
+* Browser
+* Mobile app
 
-**Example:**  <br>
+Responsibilities:
 
-* Instagram feed * Amazon product page * Login dashboard  <br>
+* Sends requests
+* Displays responses
 
-**Features:**  <br>
+### Server
 
-* Content changes dynamically * Uses database * Personalized output * Slower than static (but powerful)  <br>
+A **server** is a computer that:
 
-**Example flow:**  <br>
+* Stores websites and applications
+* Processes requests
+* Sends responses
+
+### Basic Web Flow
+
+```
+Browser → Request → Server
+Browser ← Response ← Server
+```
+
+
+## Static vs Dynamic Web Pages
+
+### Static Web Pages
+
+* Same content for every user
+* No server-side processing
+
+Technologies:
+
+```
+HTML
+CSS
+Basic JavaScript
+```
+
+Example:
+
+```
+Portfolio website
+Documentation site
+```
+
+Flow:
+
+```
+Browser → HTML file → Display
+```
+
+### Dynamic Web Pages
+
+* Content changes based on user or data
+* Uses backend and database
+
+Technologies:
+
+```
+Frontend → HTML, CSS, JS
+Backend → Node.js / Python / Java
+Database → MySQL / MongoDB
+```
+
+Flow:
 
 ```
 Browser → Server → Database → Server → Browser
 ```
 
-
-
-### Client–Server Model
-
-The web works on a **client–server architecture**.
-
-**Client**
-
-* User’s device (browser: Chrome, Edge, Firefox)
-* Sends requests
-
-**Server**
-
-* Powerful computer
-* Stores websites, APIs, databases
-* Sends responses
-
-* **Example :**
+Example:
 
 ```
-Browser (Client) → Request → Server
-Browser ← Response ← Server
+Instagram
+Amazon
+Dashboard systems
 ```
 
-### Role of the Browser
+## Internet, DNS, HTTP, HTTPS
 
-A **browser** is a client application that:
+### Internet
 
-* Sends HTTP requests
-* Receives responses
-* Renders web pages
+The **Internet** is a global network connecting computers and servers worldwide.
 
-Browser responsibilities:
+Uses the **TCP/IP protocol** to communicate.
 
-* Parses **HTML**
-* Applies **CSS**
-* Executes **JavaScript**
-* Displays content to the user
+---
 
-### What Happens When You Enter a URL
+### DNS (Domain Name System)
+
+DNS converts a **domain name** into an **IP address**.
 
 Example:
 
 ```
-https://www.example.com
+google.com → 142.250.195.46
 ```
 
-Step-by-step:
+Steps:
 
-1. Browser checks **cache**
-2. Browser asks **DNS server** for IP address
-3. DNS returns server IP
-4. Browser sends **HTTP request** to server
-5. Server processes request
-6. Server sends **HTTP response**
-7. Browser renders the webpage
+1. User enters URL
+2. Browser asks DNS server
+3. DNS returns IP
+4. Browser connects to server
+
 
 ### HTTP (HyperText Transfer Protocol)
 
-HTTP is a **communication protocol** used on the web.
-
-It defines:
-
-* How requests are sent
-* How responses are returned
-
-### HTTP Request
-
-An HTTP request contains:
-
-* **Method** (GET, POST, etc.)
-* **URL**
-* **Headers**
-* **Body** (optional)
+HTTP is a protocol used for **communication between client and server**.
 
 Common methods:
 
-| Method | Use         |
+| Method | Purpose     |
 | ------ | ----------- |
 | GET    | Fetch data  |
 | POST   | Send data   |
 | PUT    | Update data |
 | DELETE | Remove data |
 
-### HTTP Response
 
-An HTTP response contains:
-
-* **Status Code**
-* **Headers**
-* **Body** (HTML / JSON)
-
-Common status codes:
+### HTTP Status Codes
 
 | Code | Meaning      |
 | ---- | ------------ |
@@ -302,258 +260,104 @@ Common status codes:
 | 500  | Server Error |
 | 401  | Unauthorized |
 
+
 ### HTTPS (Secure HTTP)
 
-HTTPS = HTTP + **Encryption (SSL/TLS)**
+HTTPS = **HTTP + encryption (SSL/TLS)**
 
-Provides:
+Benefits:
 
-* Secure data transfer
+* Secure communication
 * Data privacy
-* Protection from hackers
+* Protection from attacks
 
-Used for:
+Default port:
 
-* Login pages
-* Payments
+```
+HTTPS → 443
+HTTP  → 80
+```
+
+## Frontend vs Backend
+
+### Frontend (Client Side)
+
+Frontend is everything **visible to the user**.
+
+Technologies:
+
+```
+HTML → Structure
+CSS → Styling
+JavaScript → Interactivity
+```
+
+Examples:
+
+* Buttons
 * Forms
+* Layout
+* Animations
 
-### Static vs Dynamic Websites
+Runs inside the **browser**.
 
-**Static Website**
 
-* Fixed content
-* Only HTML + CSS
-* Example: Portfolio site
+### Backend (Server Side)
 
-**Dynamic Website**
+Backend handles **logic and data processing**.
 
-* Content changes
-* Uses backend + database
-* Example: Instagram, Amazon
+Responsibilities:
 
-### Backend Role
+* Authentication
+* Database operations
+* Business logic
+* API responses
 
-Backend:
-
-* Handles business logic
-* Connects to database
-* Sends response to client
-
-Example stack:
-
-* Node.js / Python / Java
-* Database: MySQL / MongoDB
-
-### Complete Web Flow (One Line)
+Technologies:
 
 ```
-User → Browser → HTTP Request → Server → Database → HTTP Response → Browser → User
+Node.js
+Python
+Java
+PHP
 ```
 
----
-
-
-### Internet DNS HTTP HTTPS
-
-* **Internet**: Global network
-* **DNS**: Name → IP converter
-* **HTTP**: Data transfer protocol
-* **HTTPS**: Secure HTTP
-
----
-
-## 🌐 Internet
-
-The **Internet** is a global network of interconnected computers and servers.
-
-### Key Points
-
-* Uses **TCP/IP protocol**
-* Connects devices worldwide
-* Enables services like:
-
-  * Websites
-  * Email
-  * Cloud services
-  * Video streaming
-
-### Basic Flow
+Databases:
 
 ```
-Device → ISP → Internet → Server → Response
+MySQL
+MongoDB
+PostgreSQL
 ```
 
----
-
-## 🌍 DNS (Domain Name System)
-
-DNS converts **domain names into IP addresses**.
-
-### Why DNS?
-
-Humans remember:
-
-```
-www.google.com
-```
-
-Computers understand:
-
-```
-142.250.195.46
-```
-
-### DNS Working Steps
-
-1. User enters URL
-2. Browser checks cache
-3. Queries DNS server
-4. DNS returns IP address
-5. Browser connects to server
-
-📌 DNS = Internet’s **phonebook**
-
----
-
-## 📡 HTTP (HyperText Transfer Protocol)
-
-HTTP is a **protocol** for communication between client and server.
-
-### Features
-
-* Stateless
-* Request–response based
-* Fast but **not secure**
-
-### Common HTTP Methods
-
-* GET → Fetch data
-* POST → Send data
-* PUT → Update data
-* DELETE → Remove data
-
-### Common Status Codes
-
-* 200 → OK
-* 404 → Not Found
-* 500 → Server Error
-
----
-
-## 🔐 HTTPS (Secure HTTP)
-
-HTTPS = HTTP + **SSL/TLS encryption**
-
-### Why HTTPS?
-
-* Encrypts data
-* Prevents data theft
-* Ensures data integrity
-
-### Differences: HTTP vs HTTPS
-
-| Feature     | HTTP | HTTPS |
-| ----------- | ---- | ----- |
-| Security    | ❌ No | ✅ Yes |
-| Encryption  | ❌ No | ✅ Yes |
-| Port        | 80   | 443   |
-| Certificate | ❌ No | ✅ SSL |
-
----
+Runs on the **server**.
 
 
-
-### What is frontend vs backend
-
-## 🖥️ Frontend (Client Side)
-
-**Frontend** is everything the **user sees and interacts with** in a website or web app.
-*  **Examples** -> Buttons, Forms, Text, Images, Layout & design
-
-🔹Technologies
-* **HTML** → Structure
-* **CSS** → Styling
-* **JavaScript** → Interactivity
-* Frameworks/Libraries: React, Angular, Vue
-
-🔹 Responsibilities
-* UI/UX design
-* Responsive layouts
-* User interaction handling
-* Sending requests to backend
-
-📌 Runs in the **browser**
-
----
-
-## ⚙️ Backend (Server Side)
-**Backend** is everything that happens **behind the scenes**.
-* Examples -> User authentication, Database operations, Business logic, APIs
-
-🔹**Technologies**
-* Languages : JavaScript (Node.js),  Python, Java, PHP
-* Frameworks : Express, Django, Spring Boot
-* Databases : MySQL, MongoDB, PostgreSQL
-
-🔹**Responsibilities**
-* Process requests
-* Handle logic
-* Store & retrieve data
-* Security & authentication
-
-📌 Runs on the **server**
-
----
-
-## 🔄 Frontend vs Backend (Table)
-
-| Feature         | Frontend         | Backend          |
-| --------------- | ---------------- | ---------------- |
-| Runs on         | Browser          | Server           |
-| User visible    | ✅ Yes            | ❌ No             |
-| Main goal       | UI & interaction | Logic & data     |
-| Languages       | HTML, CSS, JS    | JS, Python, Java |
-| Database access | ❌ No             | ✅ Yes            |
-
----
-
-## 🔁 How They Work Together
+### How They Work Together
 
 ```
 User → Frontend → Backend → Database
-                     ↓
-                 Response
+                    ↓
+                Response
 ```
 
----
+## Browser Rendering (HTML, CSS, JS)
 
-#### Simple Analogy
-🍽️ **Restaurant**
-* Frontend → Menu & waiter
-* Backend → Kitchen
-* Database → Store room
+When a browser loads a webpage, it performs several steps.
 
----
 
-## How browsers render HTML/CSS/JS
+### 1. HTML Parsing
 
-When you enter a website URL, the browser follows **multiple internal steps** to show the page on your screen.
+The browser reads HTML and builds the **DOM (Document Object Model)**.
 
-### HTML Parsing → DOM Creation
-* Browser downloads the **HTML file**
-* Reads HTML **top to bottom**
-* Converts HTML tags into nodes
-* Builds a tree-like structure called **DOM (Document Object Model)**
-
-📌 Example:
+Example:
 
 ```html
 <h1>Hello</h1>
 <p>World</p>
 ```
 
-Becomes:
+DOM structure:
 
 ```
 Document
@@ -561,153 +365,102 @@ Document
  └── p
 ```
 
-➡ DOM represents the **structure of the webpage**
+### 2. CSS Parsing
 
----
+CSS files are parsed to build the **CSSOM (CSS Object Model)**.
 
-### CSS Parsing → CSSOM Creation
+CSSOM contains:
 
-* Browser downloads **CSS files**
-* Parses CSS rules
-* Creates **CSSOM (CSS Object Model)**
+* style rules
+* selectors
+* inheritance
 
-📌 CSSOM contains:
+### 3. Render Tree
 
-* Styles
-* Selectors
-* Inheritance rules
-* Specificity & cascading logic
+The browser combines:
 
-➡ CSSOM represents **how elements should look**
+```
+DOM + CSSOM
+```
 
----
+to create the **Render Tree**.
 
-### Render Tree Construction
+Only **visible elements** are included.
 
-* Browser combines **DOM + CSSOM**
-* Builds the **Render Tree**
+### 4. Layout (Reflow)
 
-⚠️ Important:
+Browser calculates:
 
-* Only **visible elements** are included
-* Elements like `display: none` are excluded
+* element size
+* element position
+* page layout
 
-➡ Render Tree = **What to render + how to render**
+### 5. Painting
 
----
+Browser draws:
 
-### Layout (Reflow)
+* text
+* colors
+* images
+* borders
 
-* Browser calculates:
+on the screen.
 
-  * Width
-  * Height
-  * Position of every element
-* Based on:
+### 6. Compositing
 
-  * Screen size
-  * CSS rules
-  * Parent–child relationships
+The browser combines layers using the **GPU** for better performance.
 
-📌 Called **Reflow**
-📌 Expensive operation (slow if frequent)
+### Complete Rendering Flow
 
----
+```
+HTML → DOM
+CSS → CSSOM
+DOM + CSSOM → Render Tree
+Render Tree → Layout → Paint → Composite
+```
 
-### Painting
+### Performance Tips
 
-* Browser paints pixels:
-
-  * Text
-  * Colors
-  * Images
-  * Borders
-  * Shadows
-
-➡ Each visual layer is drawn on screen
-
----
-
-### Compositing
-
-* Browser splits page into layers
-* GPU combines layers
-* Improves performance (used for animations)
-
----
-
-### JavaScript Execution
-
-* JavaScript runs **after parsing**
-* JS can:
-
-  * Change HTML (DOM)
-  * Change CSS (CSSOM)
-* Causes:
-
-  * Reflow (layout recalculation)
-  * Repaint (redrawing)
-
-📌 JS is **blocking by default**
-
-* `async` → loads independently
-* `defer` → executes after DOM is ready
-
----
-
-### Repaint vs Reflow
-
-| Action              | Reflow | Repaint |
-| ------------------- | ------ | ------- |
-| Change color        | ❌      | ✅       |
-| Change width/height | ✅      | ✅       |
-| Add/remove element  | ✅      | ✅       |
-
----
-
-## Complete Flow (Important for Interviews)
-
-**HTML → DOM**
-**CSS → CSSOM**
-**DOM + CSSOM → Render Tree**
-**Render Tree → Layout → Paint → Composite**
-
----
-
-## Performance Tips
-
-* Avoid frequent DOM changes
-* Use `transform` & `opacity` for animations
-* Load JS using `defer`
-* Minimize reflows
+* Minimize DOM updates
+* Avoid frequent layout changes
+* Use `defer` for JavaScript
+* Optimize CSS and images
 
 ---
 
 
-# HTML 
 
-HTML is the **standard markup language** used to structure web pages. <br>
 
-* HTML = HyperText Markup Language
-* Used to structure web content
-* Not a programming language
-* Uses elements (tags)
-* Web works on **Client–Server model**
-* Browser sends **HTTP request**
-* Server returns **HTML response**
-* HTML → structure
-* CSS → styling
-* JS → behavior
-* Everything runs inside a **browser rendering engine**
 
-## Table of Contents
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# HTML
+
+## Table of Contents 
 * [Web Fundamentals](#web-fundamentals)
 * [HTML Document Structure](#HTML-Document-Structure)
 * [Elements, Tags & Content Model](#Elements-Tags-and-Content-Model)
-    * [Elements](#Elements)
-    * [Tags](#Tags)
-    * [Content Model](#Content-Model)
+* [Elements](#Elements)
+* [Tags](#Tags)
+* [Content Model](#Content-Model)
 * [Text & Typography Elements](#text--typography-elements)
 * [Links & Navigation](#links--navigation)
 * [Images & Multimedia](#images--multimedia)
@@ -728,12 +481,61 @@ HTML is the **standard markup language** used to structure web pages. <br>
 * [HTML Project Building](#html-project-building)
 
 
+HTML is the **standard markup language used to structure web pages**.
+
+* HTML = HyperText Markup Language
+* Defines **structure of web content**
+* Not a programming language
+* Uses **elements (tags)** to describe content
+* Works in a **client–server architecture**
+
+Basic web flow:
+
+1. Browser sends **HTTP request**
+2. Server sends **HTML response**
+3. Browser renders the page
+
+Technology roles:
+
+* **HTML** → Structure
+* **CSS** → Styling
+* **JavaScript** → Behavior
+
+Rendering occurs inside the **browser rendering engine**, which parses HTML into the DOM.
+
+Reference: **MDN Web Docs**
+
+# Web Fundamentals
+
+Core technologies of the web:
+
+**HTML**
+
+* Structures the content of a webpage
+
+**CSS**
+
+* Controls layout, colors, fonts, and design
+
+**JavaScript**
+
+* Adds interactivity and dynamic behavior
+
+Other fundamental concepts:
+
+* URL (Uniform Resource Locator)
+* HTTP / HTTPS protocol
+* Client–Server communication
+* Browser rendering engine
+
 
 # HTML Document Structure
+
 <img width="814" height="696" alt="image" src="https://github.com/user-attachments/assets/7c9a1ea7-32df-47c4-8778-be7523096245" />
 
+Every HTML page follows a basic structure.
 
-#### boiler plate code 
+#### boiler plate code
 ```html
 <!DOCTYPE html>      <--tell browser you are using html 5-->
 <html lang="en">         <--root of an html-->
@@ -745,79 +547,72 @@ HTML is the **standard markup language** used to structure web pages. <br>
 </body>
 </html>
 ```
-* **<html> :** Encloses the entire HTML document, serving as the root element for all HTML content.
-* **<head> :** Contains header information about the webpage, including title, meta tags, and linked stylesheets. It is part of the document's structure but is not displayed on the webpage.
-* **<title> :** Used within the <head> section to define the title of the HTML document. It appears in the browser tab or window and provides a brief description of the webpage's content.
-* **<body> :** Encloses the visible content of the webpage, such as text, images, audio, videos, and links. All elements within this tag are displayed on the actual webpage when viewed in a browser.
+
+**Important elements**
+
+`<!DOCTYPE html>`
+Declares HTML5 document type.
+
+`<html>`
+Root element containing the entire page.
+
+`<head>`
+Contains metadata, links, and document information.
+
+`<title>`
+Displayed in browser tab.
+
+`<body>`
+Contains all visible webpage content.
 
 
-# Elements Tags and Content Model
+# Elements, Tags & Content Model
 
-# Elements
+## Elements
 
-HTML is made of **elements**.
-An element usually consists of:
+HTML documents are built from **elements**.
 
-* Element = opening + content + closing
-* Void elements → no closing (`<img>`, `<br>`)
-* Nested properly (no overlapping)
-* Content categories:
-
-  * Flow content
-  * Phrasing content
-  * Heading content
-  * Interactive content
-  * Embedded content
+Structure:
 
 ```
-<tagname> Content </tagname>
+<tagname>Content</tagname>
 ```
 
-It can include:
+Components:
 
 * Opening tag
 * Content
 * Closing tag
-* Attributes (inside opening tag)
+* Attributes
 
-Example:
+Example
 
 ```html
 <p class="text">Hello</p>
 ```
 
-## Types of Elements
+### Types of Elements
 
-### 1. Container Elements (Normal Elements)
+**Container elements**
 
-* Have **opening and closing tags**
-* Can contain text or other elements
-* Can be nested
+Have opening and closing tags.
 
-Examples:
+Examples
 
-```html
-<p></p>
-<div></div>
-<section></section>
-<article></article>
+```
+<p>
+<div>
+<section>
+<article>
 ```
 
-Structure:
+**Void elements**
 
-```html
-<tag> Content </tag>
+No closing tag.
+
+Examples
+
 ```
-
-### 2. Empty (Void) Elements
-
-* Do **not** have a closing tag
-* Cannot contain content
-* Self-contained
-
-Examples:
-
-```html
 <br>
 <hr>
 <img>
@@ -826,2141 +621,659 @@ Examples:
 <link>
 ```
 
-Structure:
 
-```html
-<tag>
+## Tags
+
+Tags define **meaning and structure**.
+
+### Structural Tags
+
+```
+<html>
+<head>
+<body>
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>
 ```
 
-Note: In HTML5, no `/` is required like `<br />` (though it still works).
+### Text Semantic Tags
 
-# Tags
+```
+<h1>–<h6>
+<p>
+<strong>
+<em>
+<mark>
+<small>
+<cite>
+<time>
+```
 
-Tags can be categorized based on purpose.
+### Formatting Tags
 
-#### Types of Tags
-
-## 1. Semantic Tags (Meaning-Based)
-
-These describe the **meaning** of content, not just appearance.
-
-### Text Semantics
-
-* `<h1>`–`<h6>` → Headings
-* `<p>` → Paragraph
-* `<a>` → Link
-* `<blockquote>` → Quoted content
-* `<cite>` → Citation
-* `<time>` → Date/time value
+```
+<b>
+<i>
+<u>
+<sub>
+<sup>
+<pre>
+<code>
+<kbd>
+```
 
 ### Content Grouping
 
-* `<ul>` / `<ol>` → Lists
-* `<table>` → Tabular data
-* `<form>` → Form container
-
-### Media
-
-* `<img>` → Image
-* `<audio>` → Audio
-* `<video>` → Video
-
-Semantic HTML improves:
-
-* SEO
-* Accessibility
-* Code readability
-
-## 2. Structural Tags (Layout & Page Structure)
-
-Define the structure of the webpage.
-
-* `<html>` → Root
-* `<head>` → Metadata
-* `<body>` → Visible content
-* `<header>` → Top section
-* `<main>` → Main content
-* `<section>` → Thematic grouping
-* `<article>` → Independent content
-* `<aside>` → Sidebar
-* `<footer>` → Bottom section
-* `<nav>` → Navigation
-
-These create a meaningful page layout.
-
-## 3. Formatting Tags (Presentation-Level)
-
-Change visual style or emphasize text.
-
-### Non-semantic formatting
-
-* `<b>` → Bold (visual only)
-* `<i>` → Italic (visual only)
-* `<u>` → Underline
-
-### Semantic formatting
-
-* `<strong>` → Important text
-* `<em>` → Emphasized text
-
-### Technical formatting
-
-* `<sup>` → Superscript
-* `<sub>` → Subscript
-* `<pre>` → Preserves spacing
-* `<code>` → Inline code
-* `<mark>` → Highlighted text
-* `<small>` → Smaller text
-
-Important distinction:
-
-* `<b>` is visual.
-* `<strong>` adds meaning.
-
-# Content Model
-
-HTML elements follow rules about what they can contain.
-
-### Main Content Categories
-
-1. Flow Content
-   Most elements allowed inside `<body>`.
-
-2. Phrasing Content
-   Inline elements like `<span>`, `<a>`, `<strong>`.
-
-3. Sectioning Content
-   `<section>`, `<article>`, `<nav>`, `<aside>`.
-
-4. Heading Content
-   `<h1>`–`<h6>`.
-
-5. Embedded Content
-   `<img>`, `<video>`, `<iframe>`.
-
-6. Interactive Content
-   `<button>`, `<input>`, `<a>`.
-
-Understanding content model prevents invalid nesting.
-
-Example of invalid structure:
-
-```html
-<p>
-  <div></div>   <!-- Not allowed -->
-</p>
 ```
-
-
-
----
-
-## 4️⃣ Text & Typography Elements
-
-* Headings: `<h1>`–`<h6>`
-* Paragraph: `<p>`
-* Inline semantics:
-
-  * `<strong>` importance
-  * `<em>` emphasis
-  * `<mark>` highlight
-  * `<small>` side comments
-  * `<code>` code
-  * `<pre>` preformatted
-  * `<blockquote>` long quotes
-  * `<q>` short quotes
-* Avoid using `<b>` and `<i>` for meaning.
-
----
-
-## 5️⃣ Links & Navigation
-
-```html
-<a href="url">Text</a>
-```
-
-* `href` → destination
-* `target="_blank"`
-* Relative vs Absolute URLs
-* Fragment links (`#id`)
-* Navigation often built with `<nav>`
-
----
-
-## 6️⃣ Images & Multimedia
-
-```html
-<img src="img.jpg" alt="desc">
-```
-
-Important:
-
-* `alt` required for accessibility
-* `<figure>` + `<figcaption>`
-* `<audio>` and `<video>`
-* `<source>` for multiple formats
-* Use correct file formats (web-optimized)
-
----
-
-## 7️⃣ Lists
-
-* `<ul>` unordered
-* `<ol>` ordered
-* `<dl>` description list
-* `<li>` list item
-
-Lists are structural — not just visual.
-
----
-
-## 8️⃣ Tables
-
-Structure:
-
-* `<table>`
-* `<tr>` row
-* `<th>` header
-* `<td>` cell
-* `<thead>`, `<tbody>`, `<tfoot>`
-* `colspan`, `rowspan`
-
-Use tables for **data only**, not layout.
-
----
-
-## 9️⃣ Forms & Input Controls
-
-```html
-<form action="" method="POST">
-```
-
-Core:
-
-* `<input>` types (text, email, password, radio, checkbox, file, date, number)
-* `<label>` improves accessibility
-* `<textarea>`
-* `<select>` + `<option>`
-* `required`, `pattern`, `placeholder`
-* GET vs POST
-
-Form validation can be native (HTML5).
-
----
-
-## 🔟 Semantic HTML & Page Layout
-
-HTML5 layout elements:
-
-* `<header>`
-* `<nav>`
-* `<main>`
-* `<section>`
-* `<article>`
-* `<aside>`
-* `<footer>`
-
-Purpose:
-
-* Meaningful structure
-* Better SEO
-* Better accessibility
-
----
-
-## 1️⃣1️⃣ Global Attributes
-
-Common global attributes:
-
-* `id`
-* `class`
-* `style`
-* `title`
-* `hidden`
-* `data-*`
-* `tabindex`
-* `contenteditable`
-* `lang`
-
-Apply to most elements.
-
----
-
-## 1️⃣2️⃣ Metadata & SEO
-
-Inside `<head>`:
-
-* `<meta charset>`
-* `<meta name="description">`
-* `<meta name="viewport">`
-* `<title>`
-* Open Graph tags (for social sharing)
-* Favicon `<link>`
-
-Helps search engines understand content.
-
----
-
-## 1️⃣3️⃣ Accessibility (A11Y)
-
-* Always use `alt` in images
-* Use `<label>` for inputs
-* Proper heading hierarchy
-* Use semantic elements
-* ARIA roles only when needed
-* Keyboard navigation support
-
-Accessibility = usability.
-
----
-
-## 1️⃣4️⃣ HTML Entities & Symbols
-
-Used for reserved characters:
-
-* `&lt;`
-* `&gt;`
-* `&amp;`
-* `&copy;`
-* `&nbsp;`
-
-Prevents parsing errors.
-
----
-
-## 1️⃣5️⃣ Embedding External Content
-
-* `<iframe>`
-* `<embed>`
-* `<object>`
-* `<script>`
-* `<link>`
-
-Be careful with:
-
-* Security
-* Performance
-* Sandbox attributes
-
----
-
-## 1️⃣6️⃣ HTML5 APIs (Canvas, SVG, Media)
-
-Canvas:
-
-```html
-<canvas></canvas>
-```
-
-Used with JavaScript for drawing.
-
-SVG:
-
-```html
-<svg></svg>
-```
-
-Vector graphics (scalable).
-
-Media:
-
-* `<audio>`
-* `<video>`
-
-APIs extend HTML beyond static content.
-
----
-
-## 1️⃣7️⃣ Best Practices & Validation
-
-* Use semantic elements
-* Close tags properly
-* Avoid inline styles
-* Keep structure clean
-* Validate using W3C validator
-* Separate HTML, CSS, JS
-
----
-
-## 1️⃣8️⃣ Performance Basics
-
-* Optimize images
-* Minimize DOM depth
-* Avoid unnecessary elements
-* Use lazy loading (`loading="lazy"`)
-* Defer scripts
-
-HTML structure affects performance.
-
----
-
-## 1️⃣9️⃣ Browser Rendering & DOM Basics
-
-* Browser parses HTML → builds **DOM tree**
-* CSSOM built separately
-* Combined → Render Tree
-* Reflow & Repaint affect performance
-
-DOM = in-memory representation of HTML.
-
----
-
-## 2️⃣0️⃣ Real-World Page Structure Patterns
-
-Typical structure:
-
-```html
-<header>
-<nav></nav>
-</header>
-<main>
-  <section>
-  <article>
-</main>
-<footer>
-```
-
-Patterns:
-
-* Hero section
-* Card layouts
-* Sidebar layout
-* Grid structure
-
----
-
-## 2️⃣1️⃣ HTML Project Building
-
-When building projects:
-
-1. Plan structure first
-2. Use semantic layout
-3. Add accessibility
-4. Validate
-5. Optimize
-6. Then style with CSS
-
-Think:
-Structure → Meaning → Accessibility → Performance
-
----
-
-
-### heading tag 
-
-# 1. Text Styles
-
-* `color`
-* `font-family`
-* `font-size`
-* `font-weight`
-* `font-style`
-* `letter-spacing`
-* `word-spacing`
-* `text-transform` (uppercase, lowercase, capitalize)
-* `text-decoration` (underline, overline, line-through)
-* `text-shadow`
-
-Example:
-
-```css
-h1 {
-  color: blue;
-  font-size: 40px;
-  text-transform: uppercase;
-}
-```
-
-# 2. Alignment & Spacing
-
-* `text-align` (left, center, right)
-* `margin`
-* `padding`
-* `line-height`
-
-Example:
-
-```css
-h2 {
-  text-align: center;
-  margin-top: 20px;
-}
-```
-
-# 3. Background Styles
-
-* `background-color`
-* `background-image`
-* `background-gradient`
-* `background-clip`
-
-Example:
-
-```css
-h3 {
-  background-color: lightgray;
-}
-```
-
-# 4. Border & Box Styling
-
-* `border`
-* `border-radius`
-* `box-shadow`
-* `outline`
-
-Example:
-
-```css
-h4 {
-  border-bottom: 3px solid black;
-}
-```
-
-# 5. Advanced Visual Effects
-
-* `transform` (scale, rotate)
-* `transition`
-* `animation`
-* `gradient text`
-* `hover effects`
-
-Example:
-
-```css
-h1:hover {
-  color: red;
-  transform: scale(1.1);
-}
-```
-
-# 6. Responsive Styling
-
-* Media queries
-* Relative units (em, rem, %)
-* Clamp function
-
-Example:
-
-```css
-h1 {
-  font-size: clamp(24px, 5vw, 48px);
-}
-```
-
----
-
-### paragraph tag 
-# Paragraph Tag (`<p>`) – Complete Notes
-
-## 1. Definition
-
-The `<p>` tag defines a **paragraph of text** in HTML.
-
-It is a **block-level element**, meaning:
-
-* It starts on a new line
-* Takes full available width
-* Adds space before and after automatically
-
-## 2. Basic Syntax
-
-```html
-<p>This is a paragraph.</p>
-```
-
-## 3. Key Characteristics
-
-* Automatically adds margin (top and bottom)
-* Cannot contain block-level elements like `<div>`, `<section>`
-* Can contain inline elements like:
-
-  * `<strong>`
-  * `<em>`
-  * `<a>`
-  * `<span>`
-  * `<code>`
-
-Valid example:
-
-```html
-<p>This is <strong>important</strong> text.</p>
-```
-
-Invalid example:
-
-```html
-<p>
-  <div>Wrong usage</div>
-</p>
-```
-
-## 4. Lorem Ipsum (Dummy Text)
-
-Used for placeholder content during design.
-
-### Basic Lorem
-
-```html
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-```
-
-### Longer Lorem Example
-
-```html
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-</p>
-```
-
-
-## 5. Styling Paragraphs with CSS
-
-Common styles:
-
-* `color`
-* `font-size`
-* `line-height`
-* `text-align`
-* `margin`
-* `padding`
-* `text-indent`
-
-Example:
-
-```css
-p {
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: justify;
-}
-```
-
-
-## 6. Important Notes
-
-* Browsers ignore extra spaces and line breaks inside `<p>`
-* Use `<br>` for manual line break inside paragraph
-* Do not use `<p>` just for spacing
-* Use semantic structure properly
-
-## 7. Best Practice
-
-Use paragraphs for:
-
-* Articles
-* Blog content
-* Descriptions
-* Any readable text block
-
-Do not use `<p>` for layout purposes.
-
----
-
-## special tag 
-
-## 1. `<sub>` – Subscript
-
-Displays text slightly below normal line level.
-
-Used for:
-
-* Chemical formulas
-* Mathematical expressions
-
-Example:
-
-```html
-H<sub>2</sub>O
-```
-
-Output: H₂O
-
-## 2. `<sup>` – Superscript
-
-Displays text slightly above normal line level.
-
-Used for:
-
-* Powers
-* Footnotes
-* Mathematical expressions
-
-Example:
-
-```html
-x<sup>2</sup>
-```
-
-Output: x²
-
-## 3. `<strong>` – Important Text
-
-Indicates strong importance (semantic meaning).
-
-Example:
-
-```html
-<strong>Warning!</strong>
-```
-
-Default: Bold
-Adds meaning for SEO and screen readers.
-
-## 4. `<em>` – Emphasized Text
-
-Indicates stress emphasis (semantic meaning).
-
-Example:
-
-```html
-<em>Very important</em>
-```
-
-Default: Italic
-Adds meaning, not just style.
-
-## 5. `<b>` – Bold (Visual Only)
-
-Makes text bold without semantic importance.
-
-Example:
-
-```html
-<b>Bold text</b>
-```
-
-Use `<strong>` instead when importance matters.
-
-## 6. `<i>` – Italic (Visual Only)
-
-Makes text italic without semantic meaning.
-
-Example:
-
-```html
-<i>Italic text</i>
-```
-
-## 7. `<u>` – Underline
-
-Underlines text.
-
-Example:
-
-```html
-<u>Underlined text</u>
-```
-
-Use carefully — can look like a link.
-
-## 8. `<mark>` – Highlighted Text
-
-Highlights text.
-
-Example:
-
-```html
-<mark>Important</mark>
-```
-
-Default: Yellow background
-
-## 9. `<small>` – Smaller Text
-
-Represents fine print or side comments.
-
-Example:
-
-```html
-<small>Terms and conditions apply.</small>
-```
-
-## 10. `<del>` – Deleted Text
-
-Shows removed content.
-
-Example:
-
-```html
-<del>Old price</del>
-```
-
-Default: Strikethrough
-
-## 11. `<ins>` – Inserted Text
-
-Shows added content.
-
-Example:
-
-```html
-<ins>New price</ins>
-```
-
-Default: Underlined
-
-## 12. `<code>` – Inline Code
-
-Represents programming code.
-
-Example:
-
-```html
-Use <code>printf()</code> function.
-```
-
-Monospace font by default.
-
-## 13. `<pre>` – Preformatted Text
-
-Preserves:
-
-* Spaces
-* Line breaks
-* Formatting
-
-Example:
-
-```html
-<pre>
-Line 1
-    Line 2
-</pre>
-```
-
-
-## 14. `<kbd>` – Keyboard Input
-
-Represents keyboard keys.
-
-Example:
-
-```html
-Press <kbd>Ctrl</kbd> + <kbd>C</kbd>
-```
-
-
-## 15. `<abbr>` – Abbreviation
-
-Defines abbreviation with full form.
-
-Example:
-
-```html
-<abbr title="HyperText Markup Language">HTML</abbr>
-```
-
-## 16. `<cite>` – Citation
-
-Used for titles of books, movies, research, etc.
-
-Example:
-
-```html
-<cite>Harry Potter</cite>
-```
-
-## 17. `<q>` – Short Quotation
-
-Inline quotation.
-
-Example:
-
-```html
-<q>Stay focused</q>
-```
-
-## 18. `<blockquote>` – Block Quotation
-
-Used for long quoted content.
-
-Example:
-
-```html
-<blockquote>
-This is a long quoted text.
-</blockquote>
-```
-
-
-# Important Distinction
-
-Semantic tags (add meaning):
-
-* `<strong>`
-* `<em>`
-* `<mark>`
-* `<abbr>`
-* `<cite>`
-* `<del>`
-* `<ins>`
-
-Visual-only tags:
-
-* `<b>`
-* `<i>`
-* `<u>`
-
----
-
-
-# Emmet Abbreviations in HTML – Complete Notes
-
-## 1. What is Emmet?
-
-Emmet is a toolkit built into modern code editors (like VS Code) that allows you to write **short abbreviations** and expand them into full HTML structure instantly.
-
-It increases speed and productivity in web development.
-
----
-
-# Basic Emmet Syntax
-
-## 1. Child Operator `>`
-
-Creates nested elements.
-
-Abbreviation:
-
-```text
-ul>li
-```
-
-Expands to:
-
-```html
-<ul>
-  <li></li>
-</ul>
-```
-
----
-
-## 2. Sibling Operator `+`
-
-Creates elements at the same level.
-
-Abbreviation:
-
-```text
-h1+p
-```
-
-Expands to:
-
-```html
-<h1></h1>
-<p></p>
-```
-
----
-
-## 3. Multiplication `*`
-
-Creates multiple elements.
-
-Abbreviation:
-
-```text
-li*3
-```
-
-Expands to:
-
-```html
-<li></li>
-<li></li>
-<li></li>
-```
-
----
-
-## 4. Climb-up Operator `^`
-
-Moves one level up in structure.
-
-Abbreviation:
-
-```text
-div>ul>li^p
-```
-
-Expands to:
-
-```html
 <div>
-  <ul>
-    <li></li>
-  </ul>
-  <p></p>
-</div>
-```
-
----
-
-## 5. Grouping `()`
-
-Groups elements together.
-
-Abbreviation:
-
-```text
-div>(header>h1)+footer
-```
-
-Expands to:
-
-```html
-<div>
-  <header>
-    <h1></h1>
-  </header>
-  <footer></footer>
-</div>
-```
-
----
-
-# Attributes in Emmet
-
-## 6. ID `#`
-
-Adds id attribute.
-
-Abbreviation:
-
-```text
-div#main
-```
-
-Expands to:
-
-```html
-<div id="main"></div>
-```
-
----
-
-## 7. Class `.`
-
-Adds class attribute.
-
-Abbreviation:
-
-```text
-div.container
-```
-
-Expands to:
-
-```html
-<div class="container"></div>
-```
-
-Multiple classes:
-
-```text
-div.box.red.large
-```
-
----
-
-## 8. Custom Attributes `[]`
-
-Abbreviation:
-
-```text
-input[type=text]
-```
-
-Expands to:
-
-```html
-<input type="text">
-```
-
----
-
-# Text Content in Emmet
-
-## 9. Curly Braces `{}`
-
-Adds text inside element.
-
-Abbreviation:
-
-```text
-p{Hello World}
-```
-
-Expands to:
-
-```html
-<p>Hello World</p>
-```
-
----
-
-# Numbering in Emmet
-
-## 10. Dollar `$`
-
-Auto-numbering.
-
-Abbreviation:
-
-```text
-li.item$*3
-```
-
-Expands to:
-
-```html
-<li class="item1"></li>
-<li class="item2"></li>
-<li class="item3"></li>
-```
-
-Reverse numbering:
-
-```text
-li.item$@-*3
-```
-
----
-
-# Common Useful Emmet Shortcuts
-
-## 11. HTML Boilerplate
-
-Type:
-
-```text
-!
-```
-
-Expands to full HTML5 template.
-
----
-
-## 12. Table Generator
-
-```text
-table>tr*3>td*4
-```
-
----
-
-## 13. Form Generator
-
-```text
-form>input[type=text]+input[type=password]+button
-```
-
----
-
-## 14. Navigation Structure
-
-```text
-nav>ul>li*5>a
-```
-
----
-
-# Advanced Pattern Example
-
-Abbreviation:
-
-```text
-div.container>header>h1{Title}+nav>ul>li*3>a{Link $}^^main>section*2>h2{Section $}+p{Lorem ipsum}
-```
-
-Generates a structured layout automatically.
-
----
-
-# Why Emmet is Important
-
-* Saves time
-* Reduces typing
-* Cleaner workflow
-* Essential for frontend developers
-
----
-
-# Block vs Inline Elements in HTML
-
-Understanding this is very important for layout and structure.
-
----
-
-# 1. Block Elements
-
-## Definition
-
-Block elements:
-
-* Start on a new line
-* Take full available width
-* Can contain other block and inline elements (with some rules)
-
-## Characteristics
-
-* Width: 100% by default
-* Respect `width`, `height`, `margin`, `padding`
-* Create vertical structure
-
-## Common Block Elements
-
-```html
-<div>
-<p>
-<h1> to <h6>
-<section>
-<article>
-<header>
-<footer>
-<nav>
-<main>
+<span>
 <ul>
 <ol>
 <li>
-<table>
+<dl>
+<dt>
+<dd>
+```
+
+### Media Tags
+
+```
+<img>
+<audio>
+<video>
+<source>
+<track>
+<figure>
+<figcaption>
+```
+
+### Form Tags
+
+```
 <form>
+<input>
+<label>
+<textarea>
+<select>
+<option>
+<button>
+fieldset>
+legend>
 ```
 
-## Example
 
-```html
-<div>
-  <p>This is a paragraph.</p>
-</div>
+## Content Model
+
+HTML elements follow **content categories**.
+
+Main categories:
+
+**Flow content**
+Most elements allowed inside `<body>`.
+
+**Phrasing content**
+Inline elements used inside text.
+
+Examples:
+
 ```
-
-Each element appears on a new line.
-
----
-
-# 2. Inline Elements
-
-## Definition
-
-Inline elements:
-
-* Do not start on a new line
-* Only take as much width as needed
-* Usually used inside block elements
-
-## Characteristics
-
-* Cannot contain block elements
-* Width and height generally do not apply
-* Used for styling or small content pieces
-
-## Common Inline Elements
-
-```html
 <span>
 <a>
 <strong>
 <em>
-<b>
-<i>
-<sub>
-<sup>
-<code>
-<mark>
+```
+
+**Heading content**
+
+```
+<h1>
+<h2>
+<h3>
+<h4>
+<h5>
+<h6>
+```
+
+**Sectioning content**
+
+```
+<section>
+<article>
+<nav>
+<aside>
+```
+
+**Embedded content**
+
+```
 <img>
-<label>
+<video>
+<audio>
+<iframe>
 ```
 
-## Example
+**Interactive content**
+
+```
+<a>
+<button>
+<input>
+<select>
+```
+
+Invalid nesting example:
 
 ```html
-<p>This is <strong>important</strong> text.</p>
+<p>
+  <div></div>
+</p>
 ```
-
-The `<strong>` stays in the same line.
-
----
-
-# 3. Key Differences
-
-| Feature                    | Block              | Inline       |
-| -------------------------- | ------------------ | ------------ |
-| New line                   | Yes                | No           |
-| Full width                 | Yes                | No           |
-| Can set width/height       | Yes                | Limited      |
-| Can contain block elements | Yes (mostly)       | No           |
-| Used for                   | Layout & structure | Text styling |
-
----
-
-# 4. Important Note
-
-Some elements are **inline by default but can be changed** using CSS:
-
-```css
-display: block;
-display: inline;
-display: inline-block;
-```
-
-Example:
-
-```css
-span {
-  display: block;
-}
-```
-
----
-
-# 5. Inline-Block (Important Concept)
-
-`inline-block`:
-
-* Stays inline
-* But allows width & height
-
-Example:
-
-```css
-a {
-  display: inline-block;
-  width: 100px;
-}
-```
-
-
-
-
-
-# table
-
-# 1. What is a Table?
-
-An HTML table is used to display **tabular data** (data arranged in rows and columns).
-
-Tables should be used for:
-
-* Data representation
-* Reports
-* Timetables
-* Comparison charts
-
-Do NOT use tables for layout design.
-
----
-
-# 2. Basic Table Structure
-
-## Core Elements
-
-* `<table>` → Table container
-* `<tr>` → Table row
-* `<th>` → Table header cell
-* `<td>` → Table data cell
-
-## Basic Example
-
-```html
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Saujanya</td>
-    <td>20</td>
-  </tr>
-</table>
-```
-
----
-
-# 3. Table Sections (Semantic Structure)
-
-Used for better organization.
-
-* `<caption>` → Table title
-* `<thead>` → Header section
-* `<tbody>` → Body section
-* `<tfoot>` → Footer section
-
-## Example
-
-```html
-<table>
-  <caption>Student Marks</caption>
-
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Marks</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>Rahul</td>
-      <td>90</td>
-    </tr>
-  </tbody>
-
-  <tfoot>
-    <tr>
-      <td>Total</td>
-      <td>90</td>
-    </tr>
-  </tfoot>
-</table>
-```
-
----
-
-# 4. Column Grouping
-
-## `<colgroup>` and `<col>`
-
-Used to apply styles to entire columns.
-
-```html
-<table>
-  <colgroup>
-    <col style="background-color: lightgray;">
-    <col>
-  </colgroup>
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-  </tr>
-</table>
-```
-
----
-
-# 5. Merging Cells
-
-## 1. `colspan`
-
-Merges columns.
-
-```html
-<td colspan="2">Merged Cell</td>
-```
-
-## 2. `rowspan`
-
-Merges rows.
-
-```html
-<td rowspan="2">Merged Cell</td>
-```
-
----
-
-# 6. Advanced Example (Colspan + Rowspan)
-
-```html
-<table border="1">
-  <tr>
-    <th>Name</th>
-    <th colspan="2">Marks</th>
-  </tr>
-  <tr>
-    <td rowspan="2">Sita</td>
-    <td>Math</td>
-    <td>90</td>
-  </tr>
-  <tr>
-    <td>Science</td>
-    <td>85</td>
-  </tr>
-</table>
-```
-
----
-
-# 7. Table Attributes (Old vs Modern)
-
-Old HTML attributes (avoid in modern practice):
-
-* `border`
-* `cellpadding`
-* `cellspacing`
-* `align`
-* `width`
-
-Modern practice: Use CSS instead.
-
----
-
-# 8. Styling Tables with CSS
-
-## Basic Styling
-
-```css
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-```
-
----
-
-# 9. Important CSS Properties
-
-* `border-collapse`
-* `border-spacing`
-* `table-layout`
-* `vertical-align`
-* `padding`
-* `text-align`
-* `background-color`
-
-## Fixed Layout
-
-```css
-table {
-  table-layout: fixed;
-}
-```
-
----
-
-# 10. Accessibility (Very Important)
-
-## 1. Use `<th>` for headers
-
-## 2. Use `scope`
-
-```html
-<th scope="col">Name</th>
-<th scope="row">Total</th>
-```
-
-## 3. Use `<caption>` for description
-
-Improves screen reader support.
-
----
-
-# 11. Responsive Tables
-
-Problem: Table overflows on small screens.
-
-Solution:
-
-```css
-.table-container {
-  overflow-x: auto;
-}
-```
-
-```html
-<div class="table-container">
-  <table>
-    ...
-  </table>
-</div>
-```
-
----
-
-# 12. Sticky Header (Modern UI)
-
-```css
-thead {
-  position: sticky;
-  top: 0;
-  background-color: white;
-}
-```
-
----
-
-# 13. Content Model Rules
-
-* `<table>` can contain:
-
-  * `<caption>`
-  * `<colgroup>`
-  * `<thead>`
-  * `<tbody>`
-  * `<tfoot>`
-  * `<tr>`
-
-* `<tr>` can contain:
-
-  * `<th>`
-  * `<td>`
-
-* `<td>` and `<th>` can contain:
-
-  * Flow content (text, images, lists, etc.)
-
----
-
-# 14. Nested Tables
-
-Tables can be placed inside `<td>`, but avoid unless necessary.
-
----
-
-# 15. Best Practices
-
-* Use tables only for tabular data
-* Always use semantic sections
-* Avoid inline styling
-* Use CSS for design
-* Maintain clean structure
-* Add accessibility attributes
-
----
-
-# 16. Real-World Use Cases
-
-* Dashboard data
-* Marksheets
-* Reports
-* Financial statements
-* Comparison pricing tables
-
----
-
-# Final Level Check
-
-If you understand:
-
-* Structure
-* Sections
-* Merging
-* Styling
-* Accessibility
-* Responsiveness
-
-Then your table knowledge is complete for frontend development.
-
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Text & Typography Elements
 
+Headings
+
+```
+<h1> <h2> <h3> <h4> <h5> <h6>
+```
+
+Text structure
+
+```
+<p>
+<br>
+<hr>
+```
+
+Text emphasis
+
+```
+<strong>
+<em>
+<b>
+<i>
+<u>
+```
+
+Special text
+
+```
+<mark>
+<small>
+<sub>
+<sup>
+<del>
+<ins>
+```
+
+Code and formatting
+
+```
+<code>
+<pre>
+<kbd>
+<samp>
+```
+
+Quotations
+
+```
+<q>
+<blockquote>
+<cite>
+```
+
+
 # Links & Navigation
 
-# Images & Multimedia
+Main tag:
 
-# Lists
-
-# Tables
-
-# Forms & Input Controls
-
-# Semantic HTML & Page Layout
-
-# Global Attributes
-
-# Metadata & SEO
-
-# Accessibility (A11Y)
-
-# HTML Entities & Symbols
-
-# Embedding External Content
-
-# HTML5 APIs (Canvas, SVG, Media)
-
-# Best Practices & Validation
-
-# Performance Basics
-
-# Browser Rendering & DOM Basics
-
-# Real-World Page Structure Patterns
-
-# HTML Project Building
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Text and Content Tags
-
-### Headings
-
-The HTML heading tags are used to create headings for the content of a webpage. <br>
-* paired tag
-* h1 = most important
-* Used for SEO structure
-
-```html
-<h1></h1>
-<h2></h2>
-<h3></h3>
-<h4></h4>
-<h5></h5>
-<h6></h6>
+```
+<a>
 ```
 
-### Paragraph
-
-HTML <p> tags are used to write paragraph statements on a webpage. They start with the <p> tag and end with </p>.
-* paired tag
-```html
-<p> Content... </p>
-```
-
-
-### Line Break & Horizontal Rule
+Example
 
 ```html
-<br>
-<hr>
+<a href="https://example.com">Visit</a>
 ```
 
-### Text Formatting Tags
-
-| Tag            | Meaning                   |
-| -------------- | ------------------------- |
-| `<b>`          | Bold (visual only)        |
-| `<strong>`     | Important text (semantic) |
-| `<i>`          | Italic                    |
-| `<em>`         | Emphasized                |
-| `<u>`          | Underline                 |
-| `<mark>`       | Highlight                 |
-| `<small>`      | Smaller text              |
-| `<del>`        | Deleted                   |
-| `<ins>`        | Inserted                  |
-| `<sub>`        | Subscript                 |
-| `<sup>`        | Superscript               |
-| `<code>`       | Inline code               |
-| `<pre>`        | Preserves formatting      |
-| `<blockquote>` | Block quote               |
-| `<q>`          | Inline quote              |
-
----
-
-
-
-
-
-### Break 
-The HTML <br> tag is used to insert a single line break and does not require a closing tag. In HTML, the break tag is written as <br>.
-* single tag
-```html
-<br>
-```
-
-### Horizontal Line
-The HTML <hr> tag is used to divide a page into sections by creating a horizontal line that spans from the left to the right side of the page. This is an empty tag and does not require a closing tag or any additional attributes.
-```html
-<hr>
-```
-
-### Comments
-HTML comments are annotations in your code that are not displayed in the browser. They are enclosed within <!-- and --> tags and are primarily used for documentation, explanation, or temporarily disabling code during debugging.
-
-Single-line comment:
-```html
-<!-- This is a single-line comment -->
-```
-Multi-line comment:
-```html
-<!--
-This is a multi-line comment
-spanning multiple lines
--->
-```
-### Images
-The <img> tag is used to insert an image into a webpage. The source of the image is specified within the src attribute, like this: <img src="source_of_image">.
-```html
-<img src="geeks.png">
-```
-
-### Source Code
-1. **View HTML Source Code of Entire Page**
-* **ctrl + u** on the page, **or right-click**on the page and select the **"view page source"** option.
-* This will open a new tab that shows the HTML source code for that entire page.
-2. **Inspect an HTML Element on a Page**
-* **right-click** on the page and select the **"Inspect"** option.
-* This lets you see the HTML and CSS behind that element.
-
-* by going on on a website device icon <img width="39" height="32" alt="image" src="https://github.com/user-attachments/assets/c932b376-68ea-4ea1-a830-6bec5f611867" /> you can view how website looks on other device.
-
-* **name = "viewport"** for responsive of site on other device.
-
-#### important points
-
-* on vs code we can select a tag and get it know with mdn
-* **index.html** -> homepage (ny default) if not you will have to specify the homepage
-* **!** -> emit boiler plate code
-
-**Must know**
-
-* Semantic tags
-* Forms & inputs
-* Accessibility basics
-
-📌 Build:
-
-* Resume page
-* Blog layout
-
-
-
-
-
-
-
-
-
-
-
-# 4️⃣ Semantic HTML (Very Important 🔥)
-
-Used for meaningful structure (SEO + accessibility)
-
-| Tag            | Use                 |
-| -------------- | ------------------- |
-| `<header>`     | Top section         |
-| `<nav>`        | Navigation          |
-| `<main>`       | Main content        |
-| `<section>`    | Section             |
-| `<article>`    | Independent content |
-| `<aside>`      | Sidebar             |
-| `<footer>`     | Bottom section      |
-| `<figure>`     | Image container     |
-| `<figcaption>` | Image caption       |
-
----
-
-# 5️⃣ Links & Navigation
-
-### Anchor Tag
-
-```html
-<a href="https://google.com" target="_blank">Visit</a>
-```
-
-Attributes:
+Important attributes:
 
 * `href`
 * `target`
 * `download`
-* `rel="noopener"`
+* `rel`
 
----
+Navigation structures often use:
 
-# 6️⃣ Images & Media
+```
+<nav>
+<ul>
+<li>
+```
 
-### Image
+Link types:
+
+* Absolute URL
+* Relative URL
+* Fragment link (`#id`)
+
+# Images & Multimedia
+
+Image element
+
+```
+<img>
+```
+
+Example
 
 ```html
 <img src="image.jpg" alt="description">
+```
+
+Related elements
+
+```
+<figure>
+<figcaption>
+```
+
+Audio
+
+```
+<audio>
+<source>
+<track>
+```
+
+Video
+
+```
+<video>
+<source>
+<track>
 ```
 
 Important attributes:
 
 * `src`
 * `alt`
-* `width`
-* `height`
-* `loading="lazy"`
+* `controls`
+* `autoplay`
+* `loop`
 
----
+# Lists
 
-### Audio
+Unordered list
 
-```html
-<audio controls>
-    <source src="song.mp3" type="audio/mpeg">
-</audio>
 ```
-
----
-
-### Video
-
-```html
-<video controls width="400">
-    <source src="video.mp4" type="video/mp4">
-</video>
-```
-
----
-
-# 7️⃣ Lists
-
-### Ordered List
-
-```html
-<ol>
-  <li>Item</li>
-</ol>
-```
-
-### Unordered List
-
-```html
 <ul>
-  <li>Item</li>
-</ul>
+<li>
 ```
 
-### Description List
+Ordered list
 
-```html
+```
+<ol>
+<li>
+```
+
+Description list
+
+```
 <dl>
-  <dt>Term</dt>
-  <dd>Description</dd>
-</dl>
+<dt>
+<dd>
 ```
 
----
+Lists organize structured data.
 
-# 8️⃣ Tables (Advanced Structure)
 
-```html
+# Tables
+
+Table elements
+
+```
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>John</td>
-    </tr>
-  </tbody>
-</table>
+<tr>
+<th>
+<td>
+<thead>
+<tbody>
+<tfoot>
+<caption>
+<colgroup>
+<col>
 ```
 
-Important Tags:
+Attributes
 
-| Tag       | Meaning         |
-| --------- | --------------- |
-| `<table>` | Table container |
-| `<tr>`    | Table row       |
-| `<th>`    | Header cell     |
-| `<td>`    | Data cell       |
-| `<thead>` | Header group    |
-| `<tbody>` | Body            |
-| `<tfoot>` | Footer          |
-| `colspan` | Merge columns   |
-| `rowspan` | Merge rows      |
+* `rowspan`
+* `colspan`
 
----
+Tables should be used for **data representation**, not layout.
 
-# 9️⃣ Forms (Very Important 🔥🔥🔥)
 
-```html
-<form action="/submit" method="POST">
-  <input type="text">
-</form>
+# Forms & Input Controls
+
+Form container
+
+```
+<form>
 ```
 
-### Input Types
+Input controls
 
-| Type     | Use                |
-| -------- | ------------------ |
-| text     | Text input         |
-| password | Password           |
-| email    | Email validation   |
-| number   | Numbers            |
-| tel      | Phone              |
-| url      | URL                |
-| date     | Date picker        |
-| file     | Upload             |
-| checkbox | Multiple selection |
-| radio    | Single selection   |
-| range    | Slider             |
-| color    | Color picker       |
-| submit   | Submit             |
-| reset    | Reset              |
+```
+<input>
+<textarea>
+<select>
+<option>
+<button>
+```
 
----
+Supporting elements
 
-### Other Form Tags
+```
+<label>
+<fieldset>
+<legend>
+<datalist>
+<output>
+```
 
-| Tag          | Use             |
-| ------------ | --------------- |
-| `<label>`    | Input label     |
-| `<textarea>` | Multi-line      |
-| `<select>`   | Dropdown        |
-| `<option>`   | Dropdown item   |
-| `<fieldset>` | Group inputs    |
-| `<legend>`   | Field title     |
-| `<datalist>` | Suggestion list |
-| `<button>`   | Button          |
+Common input types
 
----
+```
+text
+email
+password
+number
+date
+checkbox
+radio
+file
+submit
+```
 
-# 🔟 HTML Global Attributes
+Form attributes
 
-Available on all elements:
+* `action`
+* `method`
+* `required`
+* `placeholder`
+* `pattern`
 
-* `id`
-* `class`
-* `style`
-* `title`
-* `hidden`
-* `tabindex`
-* `contenteditable`
-* `draggable`
-* `data-*`
 
----
+# Semantic HTML & Page Layout
 
-# 1️⃣1️⃣ Meta Tags (SEO + Responsive)
+Semantic elements describe page structure.
 
-```html
+Main layout tags
+
+```
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>
+```
+
+Benefits:
+
+* Better accessibility
+* Better SEO
+* Clearer code structure
+
+
+
+# Global Attributes
+
+Attributes usable on most elements.
+
+Common global attributes:
+
+```
+id
+class
+style
+title
+hidden
+lang
+tabindex
+contenteditable
+data-*
+dir
+```
+
+Used for styling, scripting, and accessibility.
+
+
+# Metadata & SEO
+
+Metadata is placed inside `<head>`.
+
+Important elements
+
+```
+<meta>
+<title>
+<link>
+<base>
+```
+
+Common metadata examples
+
+```
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="...">
-<meta name="keywords" content="...">
-<meta name="author" content="...">
+<meta name="viewport">
+<meta name="description">
+<meta name="author">
 ```
 
----
+Also used for:
 
-# 1️⃣2️⃣ Embedding External Content
+* search engine optimization
+* social media previews
 
-### Iframe
+
+
+# Accessibility (A11Y)
+
+Accessibility ensures websites are usable by everyone.
+
+Key practices:
+
+* Use semantic elements
+* Add `alt` text to images
+* Associate labels with inputs
+* Maintain heading hierarchy
+* Ensure keyboard navigation
+* Use ARIA attributes when necessary
+
+Example
+
+```html
+<label for="email">Email</label>
+<input id="email" type="email">
+```
+
+
+
+# HTML Entities & Symbols
+
+Entities represent reserved characters.
+
+Examples
+
+```
+&lt;   <
+&gt;   >
+&amp;  &
+&nbsp; non-breaking space
+&copy; copyright
+&reg; registered
+```
+
+Used to prevent parsing conflicts.
+
+
+
+# Embedding External Content
+
+Elements used to embed external resources.
+
+```
+<iframe>
+<embed>
+<object>
+<script>
+<link>
+```
+
+Example
 
 ```html
 <iframe src="https://example.com"></iframe>
 ```
 
+Security features:
+
+* sandbox attribute
+* content security policies
+
+
+
+# HTML5 APIs (Canvas, SVG, Media)
+
+Canvas
+
+```
+<canvas>
+```
+
+Used with JavaScript for drawing graphics.
+
+SVG
+
+```
+<svg>
+```
+
+Defines scalable vector graphics.
+
+Media APIs
+
+```
+<audio>
+<video>
+<track>
+```
+
+Used for multimedia playback.
+
+
+
+# Best Practices & Validation
+
+Recommended practices:
+
+* Use semantic HTML
+* Maintain proper indentation
+* Close elements correctly
+* Avoid unnecessary nesting
+* Separate HTML, CSS, and JavaScript
+* Validate using W3C validator
+
+
+
+# Performance Basics
+
+HTML structure affects page performance.
+
+Key considerations:
+
+* Optimize images
+* Reduce DOM depth
+* Avoid excessive elements
+* Use lazy loading
+
+Example
+
+```html
+<img src="image.jpg" loading="lazy">
+```
+
+
+
+# Browser Rendering & DOM Basics
+
+Rendering process:
+
+1. Browser parses HTML
+2. Builds **DOM (Document Object Model)**
+3. Parses CSS to create CSSOM
+4. Combines them to build Render Tree
+5. Paints pixels on screen
+
+DOM represents the page structure in memory and allows JavaScript interaction.
+
+
+
+# Real-World Page Structure Patterns
+
+Typical page layout
+
+```html
+<header>
+<nav></nav>
+</header>
+
+<main>
+  <section>
+  <article>
+</main>
+
+<footer>
+</footer>
+```
+
+Common patterns:
+
+* Hero section
+* Card layouts
+* Sidebar layouts
+* Grid-based layouts
+
+
+
+# HTML Project Building
+
+Suggested workflow:
+
+1. Plan page structure
+2. Use semantic layout
+3. Add content
+4. Ensure accessibility
+5. Validate HTML
+6. Add CSS styling
+7. Add JavaScript functionality
+
+Development mindset:
+
+Structure → Semantics → Accessibility → Performance.
+
 ---
-
-# 1️⃣3️⃣ HTML Entities
-
-| Symbol | Entity   |
-| ------ | -------- |
-| <      | `&lt;`   |
-| >      | `&gt;`   |
-| &      | `&amp;`  |
-| "      | `&quot;` |
-| ©      | `&copy;` |
-
----
-
-# 1️⃣4️⃣ Advanced & Modern Tags
-
-| Tag          | Use              |
-| ------------ | ---------------- |
-| `<canvas>`   | Graphics         |
-| `<svg>`      | Vector graphics  |
-| `<progress>` | Progress bar     |
-| `<meter>`    | Measurement      |
-| `<details>`  | Toggle           |
-| `<summary>`  | Title of details |
-| `<template>` | Hidden template  |
-| `<noscript>` | If JS disabled   |
-
----
-
-# 1️⃣5️⃣ HTML Best Practices (Advanced)
-
-✅ Use semantic tags
-✅ Always use `alt` in images
-✅ Use proper heading hierarchy
-✅ Use labels for forms
-✅ Avoid inline styles
-✅ Use accessibility attributes (`aria-*`)
-
----
-
-# 💡 HTML vs CSS vs JS
-
-| Technology | Role      |
-| ---------- | --------- |
-| HTML       | Structure |
-| CSS        | Styling   |
-| JavaScript | Behavior  |
-
----
-
-If you want, next we can:
-
-1. 🔥 Make HTML Interview Notes
-2. 🔥 Make Advanced Form Validation Notes
-3. 🔥 Start CSS Notes
-4. 🔥 Build a Complete HTML Project Step-by-Step
-
-You are building strong foundation now. Good start 💪
 
 
 
@@ -3000,221 +1313,130 @@ You are building strong foundation now. Good start 💪
 
 # CSS 
 
-- [css roadmap.sh](https://roadmap.sh/css)
+## Table of Contents
 
+* [CSS Introduction](#css-introduction)
+* [CSS Syntax Basics](#css-syntax-basics)
+* [Applying CSS to HTML](#applying-css-to-html)
+* [CSS Rules, Properties & Values](#css-rules-properties--values)
+* [CSS Comments](#css-comments)
 
-**Must know**
+* [Selectors](#selectors)
+* [Combinator Selectors](#combinator-selectors)
+* [Attribute Selectors](#attribute-selectors)
+* [Pseudo-classes & Pseudo-elements](#pseudo-classes--pseudo-elements)
 
-* Box model
-* Flexbox
-* Grid
-* Responsive design
-* Media queries
+* [CSS Units & Measurements](#css-units--measurements)
+* [Absolute vs Relative Units](#absolute-vs-relative-units)
+* [CSS Functions](#css-functions)
 
-📌 Build:
+* [Typography & Fonts](#typography--fonts)
+* [Text Styling](#text-styling)
 
-* Responsive landing page
-* Portfolio layout
+* [Colors](#colors)
+* [Backgrounds](#backgrounds)
 
+* [Box Model](#box-model)
+* [Borders & Outline](#borders--outline)
+* [Box Shadow](#box-shadow)
+
+* [Display & Visibility](#display--visibility)
+* [Positioning](#positioning)
+* [Z-Index & Stacking Context](#z-index--stacking-context)
+
+* [Lists & Tables Styling](#lists--tables-styling)
+* [Images & Filters](#images--filters)
+
+* [Layouting Techniques](#layouting-techniques)
+* [Flow Layout](#flow-layout)
+* [Floating Elements](#floating-elements)
+* [Multicolumn Layout](#multicolumn-layout)
+* [Flexbox](#flexbox)
+* [CSS Grid](#css-grid)
+
+* [Transforms](#transforms)
+* [Transitions](#transitions)
+* [Animations](#animations)
+* [Keyframe Animations](#keyframe-animations)
+
+* [CSS Variables](#css-variables)
+
+* [Responsive Design](#responsive-design)
+* [Media Queries](#media-queries)
+* [Container Queries](#container-queries)
+* [Responsive Typography](#responsive-typography)
+
+* [Accessibility](#accessibility)
+* [Performance](#performance)
+* [CSS Best Practices](#css-best-practices)
+
+* [CSS Architecture & Methodologies](#css-architecture--methodologies)
+* [BEM](#bem)
+* [CSS Modules](#css-modules)
+* [CSS-in-JS](#css-in-js)
+
+* [CSS Preprocessors & Tools](#css-preprocessors--tools)
+* [Sass](#sass)
+* [PostCSS](#postcss)
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## JavaScript
 
-- [javascript roadmap.sh](https://roadmap.sh/javascript)
+## Table of Contents
 
-
-**Core**
-
-* Variables, functions, loops
-* Arrays & objects
-* DOM manipulation
-* Events
-* ES6 (let, const, arrow, map/filter)
-
-**Advanced**
-
-* Closures
-* Promises
-* async/await
-* Fetch API
-
-📌 Build:
-
-* To-do app
-* Weather app (API)
-* Form validation
-
-🎯 Interview focus:
-
-* `map vs forEach`
-* `var vs let vs const`
-* Event bubbling
-* Async JS
-
+* [Introduction to JavaScript](#introduction-to-javascript)
+* [JavaScript Environment & Execution](#javascript-environment--execution)
+* [Variables & Declarations](#variables--declarations)
+* [Data Types](#data-types)
+* [Type Conversion & Type Casting](#type-conversion--type-casting)
+* [Operators & Expressions](#operators--expressions)
+* [Control Flow](#control-flow)
+* [Loops & Iterations](#loops--iterations)
+* [Functions](#functions)
+* [Scope & Closures](#scope--closures)
+* [Objects & Prototypes](#objects--prototypes)
+* [Data Structures](#data-structures)
+* [Equality Comparisons](#equality-comparisons)
+* [Strict Mode](#strict-mode)
+* [`this` Keyword](#this-keyword)
+* [Error Handling](#error-handling)
+* [Asynchronous JavaScript](#asynchronous-javascript)
+* [Working with APIs](#working-with-apis)
+* [Modules in JavaScript](#modules-in-javascript)
+* [DOM & Browser APIs](#dom--browser-apis)
+* [Memory Management](#memory-management)
+* [Debugging & DevTools](#debugging--devtools)
+* [Advanced JavaScript Concepts](#advanced-javascript-concepts)
+* [JavaScript Ecosystem](#javascript-ecosystem)
 
 ---
-
-## React.js 
-
-**Core**
-
-* Components
-* Props & state
-* Hooks (`useState`, `useEffect`)
-* Conditional rendering
-
-**Advanced**
-
-* Context API
-* Custom hooks
-* React Router
-
-📌 Build:
-
-* Notes app
-* E-commerce frontend
-* Portfolio (React)
-
-🎯 Interview focus:
-
-* State vs props
-* Virtual DOM
-* useEffect lifecycle
-
----
-
-# Backend 
-
-## 6️⃣ Backend Basics
-
-Choose **Node.js + Express** (industry-friendly)
-
-**Learn**
-
-* REST APIs
-* HTTP methods
-* Middleware
-* MVC pattern
-
-📌 Build:
-
-* CRUD API
-* Auth system (login/signup)
-
----
-
-## 7️⃣ Database (Week 2–3)
-
-Choose **MongoDB**
-
-* Collections & documents
-* CRUD operations
-* Indexes
-
-📌 Build:
-
-* User DB
-* Blog backend
-
-🎯 Interview focus:
-
-* SQL vs NoSQL
-* Indexing
-* Data modeling
-
----
-
-
-## Full Stack Projects
-
-#### beautician booking real life use project 
-* git hub repo : https://github.com/Saujanya-rajvanshi/beautician-frontend-clean
-* deployed project : https://beautician-frontend-clean.vercel.app/
-
-
-
-
-
-
-
-
-
-
-
-
-## System and Web Concepts
-
-* Authentication (JWT)
-* Cookies vs localStorage
-* CORS
-* Security basics
-
----
-
-# Interviews Internships 
-
-## 🔎 Interview Preparation
-
-### Web Dev Questions
-
-* How browser works
-* REST vs GraphQL
-* HTTP status codes
-* React performance
-
-### DSA (Parallel)
-
-* Arrays, strings
-* Stack, queue
-* Recursion
-* Time complexity
-
-(You’re already doing DSA → continue 🔥)
-
----
-
-## 📂 Portfolio & Resume
-
-### Portfolio
-
-* About
-* Skills
-* Projects
-* GitHub
-* Contact
-
-### Resume
-
-* 1 page
-* Skills → Projects → Education
-
----
-
-## 🧲 Getting Internships & Jobs
-
-### Apply On
-
-* Internshala
-* LinkedIn
-* Wellfound (AngelList)
-* Company career pages
-
-### Strategy
-
-* 5–10 applications/day
-* Cold email startups
-* Share projects on LinkedIn
-
----
-
-# 🏁 FINAL CHECKLIST (If YES → You’re Ready)
-
-✔ 5+ projects
-✔ React + Backend
-✔ GitHub active
-✔ Can explain projects clearly
-✔ Basic DSA
-
----
-
-
