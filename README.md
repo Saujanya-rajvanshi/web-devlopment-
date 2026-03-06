@@ -1309,8 +1309,6 @@ Structure → Semantics → Accessibility → Performance.
 
 
 
----
-
 # CSS 
 
 ## Table of Contents
@@ -1364,7 +1362,7 @@ Structure → Semantics → Accessibility → Performance.
 * [CSS Preprocessors & Tools](#css-preprocessors--tools)
 * [Sass](#sass)
 * [PostCSS](#postcss)
---
+
 
 ## CSS Fundamentals
 
