@@ -43,51 +43,20 @@
 
 A **computer** is an electronic machine that:
 
-* Takes **input**
-* **Processes** data
-* Produces **output**
-* **Stores** information
-
-### Basic Flow
-
 ```
 Input → Processing → Output → Storage
 ```
 
-Example in web development:
-
-```
-User Input (Form) → JavaScript/Backend → Webpage Output
-```
-
 ### Hardware Components
 
-**CPU (Processor)**
-
-* Executes instructions and program code
-* Handles calculations and logic
-
-**RAM (Memory)**
-
-* Temporary memory for running programs
-* Stores browser tabs, editor, and server processes
-
-**Storage (HDD / SSD)**
-
-* Permanent storage for OS, files, and projects
-* SSD is faster than HDD
+* CPU (Processor)
+* RAM (Memory)
+* Storage (HDD / SSD)
 
 ### Software Types
 
-**System Software**
-
-* Operating systems (Windows, Linux, macOS)
-* Manages hardware and system resources
-
-**Application Software**
-
-* Programs used by users
-* Examples: Browser, VS Code, Git
+* System Software
+* Application Software
 
 ### File System Basics
 
@@ -112,46 +81,158 @@ Common web file extensions:
 
 A **process** is a running program.
 
-Examples:
-
-* Browser tabs
-* Node.js server
-* Code editor
-
 ---
 
 ## How the Web Works
 
-The web follows a **client–server architecture**.
+<img width="807" height="501" alt="image" src="https://github.com/user-attachments/assets/fa36be72-a7f0-49f9-a94e-0a45c058cde6" />
 
-### Client
+## 1. User
 
-The **client** is the user’s device.
+A **user** opens a browser and types a website URL.
 
-Examples:
-
-* Browser
-* Mobile app
-
-Responsibilities:
-
-* Sends requests
-* Displays responses
-
-### Server
-
-A **server** is a computer that:
-
-* Stores websites and applications
-* Processes requests
-* Sends responses
-
-### Basic Web Flow
+Example:
 
 ```
-Browser → Request → Server
-Browser ← Response ← Server
+https://www.academind.com
 ```
+
+The user expects the website to appear on the screen.
+
+---
+
+## 2. Browser
+
+The **browser** receives the URL and starts the process.
+
+Examples of browsers:
+
+* Google Chrome
+* Mozilla Firefox
+* Microsoft Edge
+
+The browser sends a **request** to find the website.
+
+---
+
+# 3. Request Sent
+
+The browser sends a **request through the internet** asking:
+
+> "Where is this website located?"
+
+But computers do not understand domain names like
+`academind.com`.
+
+They understand **IP addresses**.
+
+Example:
+
+```
+142.250.182.14
+```
+
+---
+
+# 4. DNS Server
+
+The request goes to a **DNS server**.
+
+DNS = **Domain Name System**
+
+Its job is to **translate domain names into IP addresses**.
+
+Example:
+
+```
+academind.com → 192.168.1.1
+```
+
+So the DNS server tells the browser:
+
+> "This website is located at this IP address."
+
+---
+
+# 5. Server
+
+Now the browser sends the request to the **web server** using the IP address.
+
+A **server** is a powerful computer that stores websites.
+
+Example servers:
+
+* Apache HTTP Server
+* Nginx
+
+The server processes the request and finds the website files.
+
+These files usually include:
+
+```
+HTML
+CSS
+JavaScript
+Images
+```
+
+---
+
+# 6. Response
+
+The server sends a **response back to the browser**.
+
+This response contains the website files.
+
+Example:
+
+```
+index.html
+style.css
+script.js
+images
+```
+
+---
+
+# 7. Browser Renders the Website
+
+The browser receives the files and **builds the webpage**.
+
+Process:
+
+1. HTML → Structure
+2. CSS → Styling
+3. JavaScript → Interactivity
+
+Finally, the **website appears on the screen**.
+
+---
+
+# Simple Flow (Easy to Remember)
+
+```
+User
+ ↓
+Browser
+ ↓
+DNS Server (Domain → IP)
+ ↓
+Server
+ ↓
+Response
+ ↓
+Browser Displays Website
+```
+
+---
+
+# One-Line Summary
+
+**User enters URL → Browser sends request → DNS finds IP → Server processes request → Server sends response → Browser shows website.**
+
+---
+
 
 
 ## Static vs Dynamic Web Pages
