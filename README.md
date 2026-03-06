@@ -1320,61 +1320,47 @@ Structure → Semantics → Accessibility → Performance.
 * [Applying CSS to HTML](#applying-css-to-html)
 * [CSS Rules, Properties & Values](#css-rules-properties--values)
 * [CSS Comments](#css-comments)
-
 * [Selectors](#selectors)
 * [Combinator Selectors](#combinator-selectors)
 * [Attribute Selectors](#attribute-selectors)
 * [Pseudo-classes & Pseudo-elements](#pseudo-classes--pseudo-elements)
-
 * [CSS Units & Measurements](#css-units--measurements)
 * [Absolute vs Relative Units](#absolute-vs-relative-units)
 * [CSS Functions](#css-functions)
-
 * [Typography & Fonts](#typography--fonts)
 * [Text Styling](#text-styling)
-
 * [Colors](#colors)
 * [Backgrounds](#backgrounds)
-
 * [Box Model](#box-model)
 * [Borders & Outline](#borders--outline)
 * [Box Shadow](#box-shadow)
-
 * [Display & Visibility](#display--visibility)
 * [Positioning](#positioning)
 * [Z-Index & Stacking Context](#z-index--stacking-context)
-
 * [Lists & Tables Styling](#lists--tables-styling)
 * [Images & Filters](#images--filters)
-
 * [Layouting Techniques](#layouting-techniques)
 * [Flow Layout](#flow-layout)
 * [Floating Elements](#floating-elements)
 * [Multicolumn Layout](#multicolumn-layout)
 * [Flexbox](#flexbox)
 * [CSS Grid](#css-grid)
-
 * [Transforms](#transforms)
 * [Transitions](#transitions)
 * [Animations](#animations)
 * [Keyframe Animations](#keyframe-animations)
-
 * [CSS Variables](#css-variables)
-
 * [Responsive Design](#responsive-design)
 * [Media Queries](#media-queries)
 * [Container Queries](#container-queries)
 * [Responsive Typography](#responsive-typography)
-
 * [Accessibility](#accessibility)
 * [Performance](#performance)
 * [CSS Best Practices](#css-best-practices)
-
 * [CSS Architecture & Methodologies](#css-architecture--methodologies)
 * [BEM](#bem)
 * [CSS Modules](#css-modules)
 * [CSS-in-JS](#css-in-js)
-
 * [CSS Preprocessors & Tools](#css-preprocessors--tools)
 * [Sass](#sass)
 * [PostCSS](#postcss)
