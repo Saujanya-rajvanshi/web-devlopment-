@@ -1378,7 +1378,466 @@ Structure → Semantics → Accessibility → Performance.
 * [CSS Preprocessors & Tools](#css-preprocessors--tools)
 * [Sass](#sass)
 * [PostCSS](#postcss)
+--
+
+## CSS Fundamentals
+
+Introduction to CSS and how it is used to style web pages.
+
+* CSS Introduction
+
+  * What is CSS
+  * Why CSS is used
+  * CSS vs HTML responsibilities
+  * Advantages of CSS
+
+* CSS Syntax Basics
+
+  * CSS rule structure
+  * Selectors, properties, and values
+  * Declaration blocks
+
+* Applying CSS to HTML
+
+  * Inline CSS
+  * Internal CSS
+  * External CSS
+  * Linking stylesheets
+
+* CSS Rules, Properties & Values
+
+  * How CSS rules are interpreted by browsers
+  * Property-value pairs
+  * Shorthand properties
+
+* CSS Comments
+
+  * Syntax of comments
+  * Purpose of comments in CSS
+
+# CSS Selectors
+
+Selectors determine **which HTML elements CSS will style**.
+
+* Basic Selectors
+
+  * Element selector
+  * Class selector
+  * ID selector
+  * Universal selector
+
+* Combinator Selectors
+
+  * Descendant selector
+  * Child selector
+  * Adjacent sibling selector
+  * General sibling selector
+
+* Attribute Selectors
+
+  * Selecting elements based on attributes
+  * Exact value match
+  * Partial attribute matches
+
+* Pseudo-classes & Pseudo-elements
+
+  * Pseudo-classes (states of elements)
+
+  * `:hover`
+
+  * `:focus`
+
+  * `:nth-child()`
+
+  * Pseudo-elements
+
+  * `::before`
+
+  * `::after`
+
+  * `::first-letter`
+
+# 3. CSS Units & Measurements
+
+Defines **how sizes and spacing are measured** in CSS.
+
+* CSS Units & Measurements
+
+  * Length units
+  * Percentage units
+
+* Absolute Units
+
+  * `px`
+  * `cm`
+  * `mm`
+  * `in`
+
+* Relative Units
+
+  * `em`
+  * `rem`
+  * `%`
+  * `vw`
+  * `vh`
+
+* CSS Functions
+
+  * `calc()`
+  * `min()`
+  * `max()`
+  * `clamp()`
+
 ---
+
+# 4. Typography & Text Styling
+
+Controls **how text appears on a webpage**.
+
+* Typography & Fonts
+
+  * Font families
+  * Web safe fonts
+  * Google fonts usage
+
+* Text Styling
+
+  * `text-align`
+  * `text-decoration`
+  * `text-transform`
+  * `letter-spacing`
+  * `line-height`
+
+---
+
+# 5. Colors & Backgrounds
+
+Controls **visual appearance and color design**.
+
+* Colors
+
+  * Named colors
+  * HEX colors
+  * RGB colors
+  * HSL colors
+  * Opacity
+
+* Backgrounds
+
+  * `background-color`
+  * `background-image`
+  * `background-size`
+  * `background-repeat`
+  * `background-position`
+
+---
+
+# 6. Box Model
+
+Every HTML element is treated as a **rectangular box**.
+
+* Box Model Structure
+
+  * Content
+  * Padding
+  * Border
+  * Margin
+
+* Box Model Behavior
+
+  * `box-sizing`
+  * `border-box` vs `content-box`
+
+---
+
+# 7. Borders, Outline & Shadows
+
+Visual styling for element boundaries.
+
+* Borders
+
+  * Border width
+  * Border style
+  * Border color
+  * Border radius
+
+* Outline
+
+  * Difference between border and outline
+
+* Box Shadow
+
+  * Creating depth effects
+  * Shadow properties
+
+---
+
+# 8. Display & Visibility
+
+Controls **how elements appear and occupy space**.
+
+* Display Property
+
+  * `block`
+  * `inline`
+  * `inline-block`
+  * `none`
+
+* Visibility
+
+  * `visible`
+  * `hidden`
+
+---
+
+# 9. Positioning
+
+Controls **where elements appear on the page**.
+
+* Static positioning
+* Relative positioning
+* Absolute positioning
+* Fixed positioning
+* Sticky positioning
+
+---
+
+# 10. Z-Index & Stacking Context
+
+Determines **which element appears above another**.
+
+* Layer ordering
+* Stacking contexts
+* z-index behavior
+
+---
+
+# 11. Styling Lists & Tables
+
+Customizing default HTML list and table appearance.
+
+* Lists styling
+
+  * list-style-type
+  * list-style-position
+
+* Tables styling
+
+  * borders
+  * spacing
+  * alignment
+
+---
+
+# 12. Images & Filters
+
+Styling images and applying visual effects.
+
+* Image sizing
+* Object-fit
+* Filters
+
+  * blur
+  * brightness
+  * contrast
+  * grayscale
+
+---
+
+# 13. Layout Techniques
+
+Methods for arranging elements on a page.
+
+* Flow Layout
+  Default browser layout behavior.
+
+* Floating Elements
+
+  * `float`
+  * `clear`
+
+* Multicolumn Layout
+
+  * Creating newspaper-like layouts
+
+---
+
+# 14. Modern Layout Systems
+
+### Flexbox
+
+Used for **one-dimensional layouts**.
+
+Concepts:
+
+* Main axis
+* Cross axis
+* Flex container
+* Flex items
+
+Properties:
+
+* justify-content
+* align-items
+* flex-direction
+* flex-wrap
+
+---
+
+### CSS Grid
+
+Used for **two-dimensional layouts**.
+
+Concepts:
+
+* Grid container
+* Grid tracks
+* Grid areas
+
+Properties:
+
+* grid-template-columns
+* grid-template-rows
+* grid-gap
+
+---
+
+# 15. CSS Effects
+
+Adds motion and visual interaction.
+
+### Transforms
+
+* rotate
+* scale
+* translate
+* skew
+
+---
+
+### Transitions
+
+Smooth change between CSS values.
+
+---
+
+### Animations
+
+Create complex animations using CSS.
+
+---
+
+### Keyframe Animations
+
+Define animation steps using `@keyframes`.
+
+---
+
+# 16. CSS Variables
+
+Reusable values stored as **custom properties**.
+
+Benefits:
+
+* Maintainable code
+* Dynamic theming
+
+---
+
+# 17. Responsive Design
+
+Making websites work across **different devices**.
+
+* Responsive layouts
+* Fluid grids
+
+---
+
+### Media Queries
+
+Apply styles based on screen size.
+
+---
+
+### Container Queries
+
+Apply styles based on **container size instead of screen**.
+
+---
+
+### Responsive Typography
+
+Scaling fonts for different screen sizes.
+
+---
+
+# 18. Accessibility (A11Y)
+
+Ensuring websites are usable for **all users**.
+
+Examples:
+
+* Good color contrast
+* Readable font sizes
+* Focus states
+
+---
+
+# 19. CSS Performance
+
+Optimizing CSS for faster websites.
+
+* Reduce unused CSS
+* Avoid deep selectors
+* Minification
+
+---
+
+# 20. CSS Best Practices
+
+Guidelines for writing maintainable CSS.
+
+* Consistent naming
+* Modular styles
+* Avoid inline CSS
+
+---
+
+# 21. CSS Architecture & Methodologies
+
+Techniques for organizing large CSS projects.
+
+### BEM
+
+Block Element Modifier naming methodology.
+
+---
+
+### CSS Modules
+
+Scoped CSS for components.
+
+---
+
+### CSS-in-JS
+
+Styling directly inside JavaScript frameworks.
+
+---
+
+# 22. CSS Preprocessors & Tools
+
+Tools that extend CSS capabilities.
+
+### Sass
+
+Adds variables, nesting, and functions.
+
+---
+
+### PostCSS
+
+Transforms CSS with plugins.
 
 
 
