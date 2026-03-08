@@ -213,8 +213,6 @@ Response
 Browser Displays Website
 ```
 
-**User enters URL → Browser sends request → DNS finds IP → Server processes request → Server sends response → Browser shows website.**
-
 ---
 
 
