@@ -1380,10 +1380,10 @@ Structure → Semantics → Accessibility → Performance.
 * [CSS Fundamentals](#css-Fundamentals)
 * [Selectors](#selectors)
 * [CSS Units & Measurements](#css-units--measurements)
-* [Typography & Fonts](#typography--Text-Styling)
+* [Typography & Text Styling](#typography--Text-Styling)
 * [Colors & Backgrounds](#colors--Backgrounds)
 * [Box Model](#box-model)
-* [Borders & Outline](#borders--outline)
+* [Borders, Outline & Shadows](#Borders-Outline--Shadows)
 * [Box Shadow](#box-shadow)
 * [Display & Visibility](#display--visibility)
 * [Positioning](#positioning)
@@ -1415,6 +1415,13 @@ Structure → Semantics → Accessibility → Performance.
 * [CSS Preprocessors & Tools](#css-preprocessors--tools)
 * [Sass](#sass)
 * [PostCSS](#postcss)
+
+
+
+
+
+
+
 
 
 # CSS Fundamentals
@@ -1513,7 +1520,7 @@ contact.html
 style.css
 ```
 
-# CSS Syntax Basics
+## CSS Syntax Basics
 
 CSS follows a simple rule-based syntax.
 
@@ -1836,7 +1843,7 @@ header {
 
 
 
-## CSS Selectors
+# CSS Selectors
 
 Selectors determine **which HTML elements CSS will style**.
 They allow you to target specific elements in the HTML document.
@@ -1851,11 +1858,12 @@ p {
 
 Here `p` is the **selector**, and it targets all `<p>` elements.
 
-* [Combinator Selectors](#combinator-selectors)
+* [Basic Selectors](#Basic-selectors)
+* [Combinator Selectors](#Combinator-Selectors)
 * [Attribute Selectors](#attribute-selectors)
 * [Pseudo-classes & Pseudo-elements](#pseudo-classes--pseudo-elements)
 
-### Basic Selectors
+## Basic Selectors
 
 Basic selectors are the **most commonly used selectors** in CSS.
 
@@ -2313,11 +2321,12 @@ Commonly used in **article styling**.
 
 
 
-## CSS Units & Measurements
+# CSS Units & Measurements
 
 CSS units define **how sizes, spacing, and dimensions are measured** in web layouts.
 
-* [Absolute vs Relative Units](#absolute-vs-relative-units)
+* [Absolute Units](#Absolute-Units)
+* [Relative Units](#relative-units)
 * [CSS Functions](#css-functions)
 
 They are used in properties like:
@@ -2344,8 +2353,6 @@ In this example:
 
 * `16px` → font size unit
 * `10px` → spacing unit
-
-## CSS Units & Measurements
 
 CSS measurements mainly fall into two categories:
 
@@ -2473,7 +2480,7 @@ Relative units scale **based on another value** like font size, viewport, or par
 
 These are **essential for responsive design**.
 
-## `em`
+### `em`
 
 Relative to the **font size of the parent element**.
 
@@ -2509,7 +2516,7 @@ Result:
 1.5 × 20px = 30px
 ```
 
-## `rem`
+### `rem`
 
 Relative to the **root element (`html`) font size**.
 
@@ -2547,7 +2554,7 @@ Result:
 
 `rem` is preferred because it is **more predictable than em**.
 
-### `%` (Percentage)
+#### `%` (Percentage)
 
 Relative to the **parent element size**.
 
@@ -2570,7 +2577,7 @@ Common uses:
 * responsive containers
 * flexible images
 
-### `vw` (Viewport Width)
+#### `vw` (Viewport Width)
 
 Represents **percentage of the browser width**.
 
@@ -2594,7 +2601,7 @@ If screen width = `1200px`
 
 Used for **responsive layouts**.
 
-### `vh` (Viewport Height)
+#### `vh` (Viewport Height)
 
 Represents **percentage of the browser height**.
 
@@ -2620,7 +2627,7 @@ Common use:
 
 CSS functions perform **dynamic calculations and responsive sizing**.
 
-## `calc()`
+### `calc()`
 
 Performs mathematical calculations in CSS.
 
@@ -2732,10 +2739,13 @@ clamp() for responsive typography
 
 
 
-# 4. Typography & Text Styling
+# Typography & Text Styling
 
 Typography controls **how text appears and is presented on a webpage**.
 It affects readability, accessibility, and overall design.
+
+- [Typography & Fonts](#Typography--Fonts)
+- [Text Styling](#Text-Styling)
 
 CSS typography properties allow developers to control:
 
@@ -2755,9 +2765,7 @@ p {
 }
 ```
 
----
-
-# Typography & Fonts
+## Typography & Fonts
 
 Typography in CSS mainly deals with **fonts and how they are displayed**.
 
@@ -2771,9 +2779,7 @@ line-height
 letter-spacing
 ```
 
----
-
-## Font Families
+### Font Families
 
 The `font-family` property defines **which font will be used for text**.
 
@@ -2813,9 +2819,7 @@ h1 {
 }
 ```
 
----
-
-## Web Safe Fonts
+### Web Safe Fonts
 
 Web safe fonts are **fonts supported by almost all browsers and operating systems**.
 
@@ -2844,22 +2848,20 @@ Advantages:
 * No external loading required
 * Faster performance
 
----
-
-## Google Fonts Usage
+### Google Fonts Usage
 
 Developers often use custom fonts from
 Google Fonts.
 
 Steps to use Google Fonts:
 
-### 1. Import font in HTML
+#### 1. Import font in HTML
 
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 ```
 
-### 2. Apply in CSS
+#### 2. Apply in CSS
 
 ```css
 body {
@@ -2873,9 +2875,7 @@ Benefits:
 * Easy integration
 * Free to use
 
----
-
-# Text Styling
+## Text Styling
 
 Text styling controls **how text is aligned, decorated, and spaced**.
 
@@ -2889,9 +2889,7 @@ letter-spacing
 line-height
 ```
 
----
-
-## `text-align`
+### `text-align`
 
 Controls **horizontal alignment of text** inside an element.
 
@@ -2912,9 +2910,7 @@ p {
 }
 ```
 
----
-
-## `text-decoration`
+### `text-decoration`
 
 Adds **decorative lines to text**.
 
@@ -2945,9 +2941,7 @@ h2 {
 }
 ```
 
----
-
-## `text-transform`
+### `text-transform`
 
 Controls **capitalization of text**.
 
@@ -2967,9 +2961,7 @@ h1 {
 }
 ```
 
----
-
-## `letter-spacing`
+### `letter-spacing`
 
 Controls **space between characters**.
 
@@ -2994,9 +2986,7 @@ p {
 }
 ```
 
----
-
-## `line-height`
+### `line-height`
 
 Controls **vertical spacing between lines of text**.
 
@@ -3028,7 +3018,7 @@ Benefits:
 * Improves readability
 * Better paragraph spacing
 
-### Example Typography Styling
+#### Example Typography Styling
 
 Example CSS combining multiple typography properties:
 
@@ -3068,122 +3058,2078 @@ p {
 
 
 
-# 5. Colors & Backgrounds
 
-Controls **visual appearance and color design**.
+
+
+# Colors & Backgrounds
+
+Colors and backgrounds control the **visual appearance of elements on a webpage**.
+They help create **design, readability, and user experience**.
+
+CSS allows developers to apply colors to:
+
+* Text
+* Backgrounds
+* Borders
+* Shadows
+
+Example:
+
+```css
+p {
+  color: blue;
+  background-color: lightgray;
+}
+```
+
+- [Colors](#Colors)
+- [Backgrounds](#Backgrounds)
+
+
+## Colors
+
+CSS supports several ways to define colors.
+
+### Named Colors
+
+CSS provides **predefined color names**.
+
+Example:
+
+```css
+h1 {
+  color: red;
+}
+```
+
+Some common named colors:
+
+| Color | Example         |
+| ----- | --------------- |
+| red   | `color: red;`   |
+| blue  | `color: blue;`  |
+| green | `color: green;` |
+| black | `color: black;` |
+| white | `color: white;` |
+
+Example:
+
+```css
+body {
+  background-color: lightblue;
+}
+```
+
+Named colors are **easy to use but limited**.
+
+### HEX Colors
+
+HEX (Hexadecimal) colors are the **most commonly used color format in CSS**.
+
+Format:
+
+```text
+#RRGGBB
+```
+
+Example:
+
+```css
+p {
+  color: #ff0000;
+}
+```
+
+Explanation:
+
+| Part | Meaning     |
+| ---- | ----------- |
+| FF   | Red value   |
+| 00   | Green value |
+| 00   | Blue value  |
+
+Examples:
+
+```css
+color: #000000; /* black */
+color: #ffffff; /* white */
+color: #3498db; /* blue */
+```
+
+Short HEX format:
+
+```css
+color: #fff;
+```
+
+Equivalent to:
+
+```text
+#ffffff
+```
+
+### RGB Colors
+
+RGB stands for **Red, Green, Blue**.
+
+Format:
+
+```text
+rgb(red, green, blue)
+```
+
+Each value ranges from:
+
+```text
+0 → 255
+```
+
+Example:
+
+```css
+p {
+  color: rgb(255, 0, 0);
+}
+```
+
+Examples:
+
+```css
+color: rgb(0, 0, 0);      /* black */
+color: rgb(255, 255, 255);/* white */
+color: rgb(0, 128, 0);    /* green */
+```
+
+### HSL Colors
+
+HSL stands for:
+
+```text
+Hue
+Saturation
+Lightness
+```
+
+Format:
+
+```text
+hsl(hue, saturation, lightness)
+```
+
+Example:
+
+```css
+p {
+  color: hsl(0, 100%, 50%);
+}
+```
+
+Explanation:
+
+| Component  | Meaning            |
+| ---------- | ------------------ |
+| Hue        | Color type (0–360) |
+| Saturation | Color intensity    |
+| Lightness  | Brightness         |
+
+Example colors:
+
+```css
+color: hsl(120, 100%, 50%); /* green */
+color: hsl(240, 100%, 50%); /* blue */
+```
+
+Advantages:
+
+* Easier to adjust brightness
+* Better for design systems
+
+### Opacity
+
+Opacity controls **transparency of an element**.
+
+Value range:
+
+```text
+0 → fully transparent
+1 → fully visible
+```
+
+Example:
+
+```css
+div {
+  opacity: 0.5;
+}
+```
+
+This makes the element **50% transparent**.
+
+## Backgrounds
+
+Background properties control the **background appearance of elements**.
+
+They can include:
 
 * Colors
+* Images
+* Gradients
+* Positioning
 
-  * Named colors
-  * HEX colors
-  * RGB colors
-  * HSL colors
-  * Opacity
+### `background-color`
 
-* Backgrounds
+Sets the **background color of an element**.
 
-  * `background-color`
-  * `background-image`
-  * `background-size`
-  * `background-repeat`
-  * `background-position`
+Example:
+
+```css
+div {
+  background-color: lightgray;
+}
+```
+
+Using HEX:
+
+```css
+div {
+  background-color: #f4f4f4;
+}
+```
+
+### `background-image`
+
+Adds an image as the background.
+
+Example:
+
+```css
+body {
+  background-image: url("background.jpg");
+}
+```
+
+The image is **repeated by default**.
+
+Example:
+
+```css
+div {
+  background-image: url("pattern.png");
+}
+```
+
+### `background-size`
+
+Controls the **size of the background image**.
+
+Common values:
+
+| Value   | Meaning                  |
+| ------- | ------------------------ |
+| cover   | Fill entire element      |
+| contain | Fit image inside element |
+| auto    | Default size             |
+
+Example:
+
+```css
+div {
+  background-size: cover;
+}
+```
+
+This makes the image **cover the entire container**.
+
+### `background-repeat`
+
+Controls **whether the background image repeats**.
+
+Values:
+
+| Value     | Meaning             |
+| --------- | ------------------- |
+| repeat    | Repeat image        |
+| no-repeat | Show image once     |
+| repeat-x  | Repeat horizontally |
+| repeat-y  | Repeat vertically   |
+
+Example:
+
+```css
+body {
+  background-repeat: no-repeat;
+}
+```
+
+### `background-position`
+
+Controls **where the background image appears**.
+
+Example values:
+
+```text
+left
+right
+center
+top
+bottom
+```
+
+Example:
+
+```css
+div {
+  background-position: center;
+}
+```
+
+Example with coordinates:
+
+```css
+div {
+  background-position: top right;
+}
+```
+
+## Example Background Styling
+
+Example combining multiple background properties:
+
+```css
+body {
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+```
+
+## Background Shorthand
+
+CSS also provides a **shorthand property** for backgrounds.
+
+Example:
+
+```css
+body {
+  background: url("bg.jpg") no-repeat center/cover;
+}
+```
+
+Equivalent to:
+
+```css
+background-image
+background-repeat
+background-position
+background-size
+```
+
+#### Best Practices
+
+* Use **HEX or HSL for consistent design**
+* Avoid extremely bright colors for text
+* Ensure **good color contrast for accessibility**
+* Optimize background images for performance
+* Use `background-size: cover` for hero sections
 
 ---
 
-# 6. Box Model
 
-Every HTML element is treated as a **rectangular box**.
 
-* Box Model Structure
 
-  * Content
-  * Padding
-  * Border
-  * Margin
 
-* Box Model Behavior
 
-  * `box-sizing`
-  * `border-box` vs `content-box`
+
+
+
+
+# Box Model
+
+* [Box Model Structure](#Box-Model-Structure)
+* [Box Model Behavior](#Box-Model-Behavior)
+
+In CSS, every HTML element is treated as a **rectangular box**.
+The **Box Model** defines how the **size and spacing of elements** are calculated.
+
+Each element consists of four layers:
+
+```
+Margin
+Border
+Padding
+Content
+```
+
+Example:
+
+```css
+div {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;
+}
+```
+
+## Box Model Structure
+
+The CSS Box Model contains **four main parts**.
+
+```
++----------------------+
+|        Margin        |
+|  +----------------+  |
+|  |     Border     |  |
+|  | +------------+ |  |
+|  | |  Padding   | |  |
+|  | | +--------+ | |  |
+|  | | |Content | | |  |
+|  | | +--------+ | |  |
+|  | +------------+ |  |
+|  +----------------+  |
++----------------------+
+```
+
+### Content
+
+The **content area** is the main area where text, images, or other elements appear.
+
+Example:
+
+```css
+div {
+  width: 300px;
+  height: 150px;
+}
+```
+
+The `width` and `height` properties define the **content size by default**.
+
+Example HTML:
+
+```html
+<div>Hello World</div>
+```
+
+### Padding
+
+Padding is the **space between the content and the border**.
+
+It creates **internal spacing inside the element**.
+
+Example:
+
+```css
+div {
+  padding: 20px;
+}
+```
+
+This adds **20px space inside the element**.
+
+Individual padding sides:
+
+```css
+padding-top
+padding-right
+padding-bottom
+padding-left
+```
+
+Example:
+
+```css
+div {
+  padding: 10px 20px;
+}
+```
+
+Meaning:
+
+```
+Top/Bottom → 10px
+Left/Right → 20px
+```
+
+## Border
+
+The border surrounds the padding and content.
+
+Example:
+
+```css
+div {
+  border: 2px solid black;
+}
+```
+
+Border properties:
+
+| Property     | Description           |
+| ------------ | --------------------- |
+| border-width | Thickness of border   |
+| border-style | solid, dashed, dotted |
+| border-color | Color of border       |
+
+Example:
+
+```css
+div {
+  border-width: 3px;
+  border-style: solid;
+  border-color: blue;
+}
+```
+
+Shorthand:
+
+```css
+div {
+  border: 3px solid blue;
+}
+```
+
+### Margin
+
+Margin is the **space outside the border**.
+
+It creates **distance between elements**.
+
+Example:
+
+```css
+div {
+  margin: 20px;
+}
+```
+
+Individual margin sides:
+
+```css
+margin-top
+margin-right
+margin-bottom
+margin-left
+```
+
+Example:
+
+```css
+div {
+  margin: 10px 15px;
+}
+```
+
+Meaning:
+
+```
+Top/Bottom → 10px
+Left/Right → 15px
+```
+
+Special feature:
+
+```css
+margin: auto;
+```
+
+Used for **centering elements horizontally**.
+
+Example:
+
+```css
+div {
+  width: 500px;
+  margin: auto;
+}
+```
+
+## Box Model Behavior
+
+The Box Model behavior determines **how width and height are calculated**. <br>
+This is controlled using the **`box-sizing` property**.
+
+## `box-sizing`
+
+The `box-sizing` property controls **how total element size is calculated**. <br>
+<br>
+Example: <br>
+
+```css
+div {
+  box-sizing: border-box;
+}
+```
+
+Two main values:
+
+```
+content-box
+border-box
+```
+
+### `content-box` (Default)
+
+This is the **default CSS behavior**.
+
+Here, the `width` and `height` apply **only to the content area**.
+
+Example:
+
+```css
+div {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+}
+```
+
+Total width calculation:
+
+```
+200px (content)
++ 40px (padding)
++ 10px (border)
+= 250px total width
+```
+
+### `border-box`
+
+With `border-box`, the **width includes padding and border**.
+
+Example:
+
+```css
+div {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+```
+
+Now the **total width remains 200px**.
+
+The browser automatically adjusts the content size.
+
+### Best Practice
+
+Most modern projects use:
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+Benefits:
+
+* Easier layout calculations
+* Predictable element sizes
+* Prevents layout issues
+
+Example:
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
+This is often used as a **CSS reset**.
+
+### Example Box Model Calculation
+
+Example CSS:
+
+```css
+div {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;
+}
+```
+
+Total width with `content-box`:
+
+```
+Content → 300px
+Padding → 40px
+Border → 10px
+
+Total element width = 350px
+```
+
+Margin adds extra spacing **outside the element**.
+
+#### Quick Summary
+
+| Box Layer | Description              |
+| --------- | ------------------------ |
+| Content   | Main element content     |
+| Padding   | Space inside element     |
+| Border    | Edge surrounding padding |
+| Margin    | Space outside element    |
+
+**Important Concept :** <br>
+The **CSS Box Model** is one of the most important concepts in frontend development because **every layout is built using it**.
 
 ---
 
-# 7. Borders, Outline & Shadows
 
-Visual styling for element boundaries.
 
-* Borders
 
-  * Border width
-  * Border style
-  * Border color
-  * Border radius
 
-* Outline
 
-  * Difference between border and outline
 
-* Box Shadow
 
-  * Creating depth effects
-  * Shadow properties
+
+
+
+
+# Borders Outline & Shadows
+
+* [Borders](#Borders)
+* [Outline](#Outline)
+* [Box Shadow](#Box-Shadow)
+
+Borders, outlines, and shadows are used to **visually define element boundaries** and improve UI design.
+They help highlight elements, create separation, and add depth to layouts.
+
+Example:
+
+```css
+div {
+  border: 2px solid black;
+}
+```
+
+## Borders
+
+The `border` property defines the **line surrounding an element’s padding and content**.
+
+A border has three main components:
+
+```text
+border-width
+border-style
+border-color
+```
+
+Example:
+
+```css
+div {
+  border: 2px solid black;
+}
+```
+
+### Border Width
+
+Defines the **thickness of the border**.
+
+Example:
+
+```css
+div {
+  border-width: 3px;
+}
+```
+
+You can set different widths for each side:
+
+```css
+div {
+  border-top-width: 4px;
+  border-right-width: 2px;
+  border-bottom-width: 4px;
+  border-left-width: 2px;
+}
+```
+
+Common values:
+
+```
+thin
+medium
+thick
+px values
+```
+
+Example:
+
+```css
+div {
+  border-width: thin;
+}
+```
+
+### Border Style
+
+Defines **how the border appears**.
+
+Example:
+
+```css
+div {
+  border-style: solid;
+}
+```
+
+Common border styles:
+
+| Style  | Description       |
+| ------ | ----------------- |
+| solid  | Solid line        |
+| dashed | Dashed line       |
+| dotted | Dotted line       |
+| double | Double border     |
+| groove | 3D grooved border |
+| ridge  | 3D ridge border   |
+| inset  | Embedded look     |
+| outset | Raised look       |
+| none   | No border         |
+
+Example:
+
+```css
+div {
+  border-style: dashed;
+}
+```
+
+### Border Color
+
+Defines the **color of the border**.
+
+Example:
+
+```css
+div {
+  border-color: red;
+}
+```
+
+Using HEX color:
+
+```css
+div {
+  border-color: #3498db;
+}
+```
+
+Example with shorthand:
+
+```css
+div {
+  border: 2px solid blue;
+}
+```
+
+### Border Radius
+
+The `border-radius` property creates **rounded corners**.
+
+Example:
+
+```css
+div {
+  border-radius: 10px;
+}
+```
+
+Circle example:
+
+```css
+img {
+  border-radius: 50%;
+}
+```
+
+Individual corner control:
+
+```css
+div {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+```
+
+Common use:
+
+* buttons
+* profile images
+* cards
+
+## Outline
+
+The `outline` property draws a **line around the element outside the border**.
+
+Example:
+
+```css
+button {
+  outline: 2px solid blue;
+}
+```
+
+Outline properties:
+
+```
+outline-width
+outline-style
+outline-color
+```
+
+Example:
+
+```css
+input {
+  outline: 2px dashed red;
+}
+```
+
+### Difference Between Border and Outline
+
+| Feature  | Border                 | Outline                       |
+| -------- | ---------------------- | ----------------------------- |
+| Position | Inside box model       | Outside border                |
+| Space    | Takes space            | Does not affect layout        |
+| Radius   | Supports border-radius | Does not follow border-radius |
+| Use case | Element styling        | Focus indicators              |
+
+Example:
+
+```css
+button:focus {
+  outline: 3px solid blue;
+}
+```
+
+Outlines are commonly used for **accessibility focus indicators**.
+
+## Box Shadow
+
+The `box-shadow` property adds **shadow effects around elements**.
+
+This creates **depth and visual hierarchy** in UI design.
+
+Example:
+
+```css
+div {
+  box-shadow: 2px 2px 5px gray;
+}
+```
+
+### Creating Depth Effects
+
+Shadows help simulate **elevation and layering**.
+
+Common UI elements using shadows:
+
+* cards
+* modals
+* buttons
+* navigation bars
+
+Example:
+
+```css
+.card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+```
+
+### Shadow Properties
+
+The `box-shadow` syntax:
+
+```
+box-shadow: horizontal vertical blur spread color;
+```
+
+Example:
+
+```css
+div {
+  box-shadow: 5px 5px 10px black;
+}
+```
+
+Explanation:
+
+| Value      | Meaning                    |
+| ---------- | -------------------------- |
+| horizontal | Shadow position left/right |
+| vertical   | Shadow position up/down    |
+| blur       | Blur intensity             |
+| spread     | Shadow size                |
+| color      | Shadow color               |
+
+Example with blur:
+
+```css
+div {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+```
+
+### Multiple Shadows
+
+CSS allows **multiple shadows**.
+
+Example:
+
+```css
+div {
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.2),
+    0 6px 20px rgba(0,0,0,0.1);
+}
+```
+
+Used for **advanced UI effects**.
+
+### Example: Border, Outline & Shadow
+
+Example CSS:
+
+```css
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+```
+
+This creates a **modern card-style UI component**.
+
+#### Best Practices
+
+* Use **subtle shadows** for better design
+* Avoid heavy borders in modern UI
+* Use `border-radius` for smooth corners
+* Keep outlines for **accessibility focus states**
+
+Example focus styling:
+
+```css
+button:focus {
+  outline: 2px solid blue;
+}
+```
 
 ---
 
-# 8. Display & Visibility
 
-Controls **how elements appear and occupy space**.
 
-* Display Property
 
-  * `block`
-  * `inline`
-  * `inline-block`
-  * `none`
 
-* Visibility
 
-  * `visible`
-  * `hidden`
+
+
+
+# Display & Visibility
+
+* [Display Property](#Display-Property)
+* [Visibility](#Visibility)
+
+Controls **how elements appear and how they occupy space in a webpage layout**.
+
+## Display Property
+
+The `display` property determines **how an element is rendered in the layout flow**.
+
+It controls whether an element behaves like a block, inline, or other layout type.
+
+### 1. `block`
+
+Block elements:
+
+* Start on a **new line**
+* Take **full width** of their parent container
+* Allow **width and height** to be set
+
+Common block elements:
+
+* `div`
+* `p`
+* `h1–h6`
+* `section`
+* `article`
+
+Example:
+
+```css
+div {
+  display: block;
+}
+```
+
+Behavior:
+
+```
+[Block Element]
+[Block Element]
+[Block Element]
+```
+
+Each block appears **on its own line**.
+
+### 2. `inline`
+
+Inline elements:
+
+* Do **not start on a new line**
+* Only take **width of their content**
+* **Width and height cannot be applied properly**
+
+Common inline elements:
+
+* `span`
+* `a`
+* `strong`
+* `em`
+
+Example:
+
+```css
+span {
+  display: inline;
+}
+```
+
+Behavior:
+
+```
+Text Text Text Text
+```
+
+Inline elements **flow within text**.
+
+### 3. `inline-block`
+
+Inline-block elements:
+
+* Stay **inline with other elements**
+* But allow **width and height**
+
+This combines **inline behavior + block styling ability**.
+
+Example:
+
+```css
+button {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+}
+```
+
+Behavior:
+
+```
+[Box] [Box] [Box]
+```
+
+All elements stay in the **same line but have box dimensions**.
+
+### 4. `none`
+
+`display: none` **completely removes the element from the layout**.
+
+The element:
+
+* is **not visible**
+* **does not occupy space**
+
+Example:
+
+```css
+.menu {
+  display: none;
+}
+```
+
+Result:
+
+The element behaves as if **it does not exist in the document**.
+
+## Visibility Property
+
+The `visibility` property controls **whether an element is visible or hidden without removing its space**.
+
+### 1. `visible`
+
+Default value.
+
+The element is **fully visible**.
+
+Example:
+
+```css
+div {
+  visibility: visible;
+}
+```
+
+### 2. `hidden`
+
+The element becomes **invisible but still occupies space in layout**.
+
+Example:
+
+```css
+div {
+  visibility: hidden;
+}
+```
+
+Result:
+
+```
+[Box] [empty space] [Box]
+```
+
+The space remains **reserved**.
+
+### Difference: `display: none` vs `visibility: hidden`
+
+| Feature         | display: none | visibility: hidden |
+| --------------- | ------------- | ------------------ |
+| Element visible | ❌ No          | ❌ No               |
+| Space occupied  | ❌ No          | ✔ Yes              |
+| Layout affected | ✔ Yes         | ❌ No               |
+
+Example:
+
+```css
+.box1 {
+  display: none;
+}
+
+.box2 {
+  visibility: hidden;
+}
+```
+
+### Quick Summary
+
+**display**
+
+| Value        | Behavior               |
+| ------------ | ---------------------- |
+| block        | Starts new line        |
+| inline       | Flows in text          |
+| inline-block | Inline but allows size |
+| none         | Removed from layout    |
+
+**visibility**
+
+| Value   | Behavior              |
+| ------- | --------------------- |
+| visible | Element visible       |
+| hidden  | Hidden but space kept |
+
 
 ---
+
+
+
+
+
+
+
+
+
+
 
 # 9. Positioning
 
-Controls **where elements appear on the page**.
+* [Static positioning](#Static-positioning)
+* [Relative positioning](#Relative-positioning)
+* [Absolute positioning](#Absolute-positioning)
+* [Fixed positioning](#Fixed-positioning)
+* [Sticky positioning](#Sticky-positioning)
 
-* Static positioning
-* Relative positioning
-* Absolute positioning
-* Fixed positioning
-* Sticky positioning
+The **`position` property** controls **how an element is placed on a webpage and how it behaves in the layout flow**.
+
+It works together with **offset properties**:
+
+* `top`
+* `right`
+* `bottom`
+* `left`
+
+These properties move positioned elements relative to their reference point.
+
+## Static Positioning
+
+`static` is the **default positioning for all HTML elements**.
+
+Characteristics:
+
+* Elements follow the **normal document flow**
+* `top`, `left`, `right`, `bottom` **do not work**
+* Elements appear **one after another according to HTML structure**
+
+Example:
+
+```css
+div {
+  position: static;
+}
+```
+
+Example HTML layout:
+
+```
+[Header]
+[Paragraph]
+[Image]
+```
+
+All elements appear **naturally in order**.
+
+Use case:
+Most elements **do not need special positioning**, so they remain static.
+
+## Relative Positioning
+
+`relative` moves an element **relative to its original position**.
+
+Characteristics:
+
+* Element **still occupies its original space**
+* Can be moved using `top`, `left`, `right`, `bottom`
+
+Example:
+
+```css
+.box {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+```
+
+Result:
+
+* Element moves **20px down**
+* Element moves **30px right**
+* But the **original space remains reserved**
+
+Example layout:
+
+```
+Original space reserved
+        [Moved Box]
+```
+
+Use case:
+
+* Creating **reference points for absolute elements**
+* Small layout adjustments
+
+## Absolute Positioning
+
+`absolute` positions an element **relative to the nearest positioned ancestor**.
+
+If no positioned ancestor exists, it positions relative to the **document body**.
+
+Characteristics:
+
+* Element **removed from normal layout flow**
+* Does **not occupy space**
+* Can be placed **anywhere using top/left/right/bottom**
+
+Example:
+
+```css
+.box {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+```
+
+Example with parent container:
+
+```css
+.container {
+  position: relative;
+}
+
+.box {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+```
+
+Result:
+
+The `.box` appears **inside the container at top-right corner**.
+
+Use case:
+
+* Tooltips
+* Dropdown menus
+* Badges
+* Overlay elements
+
+## Fixed Positioning
+
+`fixed` positions an element **relative to the browser viewport**.
+
+Characteristics:
+
+* Element **stays fixed while scrolling**
+* Removed from normal layout flow
+* Always visible in the same place
+
+Example:
+
+```css
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+```
+
+Result:
+
+The navigation bar **sticks to the top of the screen** even when scrolling.
+
+Common uses:
+
+* Navigation bars
+* Chat buttons
+* Floating action buttons
+* Back-to-top buttons
+
+Example layout:
+
+```
+[Fixed Navbar]
+-----------------
+Scrolling Content
+Scrolling Content
+Scrolling Content
+```
+
+## Sticky Positioning
+
+`sticky` behaves like **relative until a scroll threshold is reached**, then becomes **fixed**.
+
+Characteristics:
+
+* Element scrolls normally at first
+* When reaching a specified position, it **sticks**
+
+Example:
+
+```css
+.header {
+  position: sticky;
+  top: 0;
+}
+```
+
+Result:
+
+* Header scrolls normally
+* When it reaches the top, it **sticks there**
+
+Example layout:
+
+```
+Scroll ↓
+
+[Header] → sticks to top
+Content
+Content
+```
+
+Common uses:
+
+* Sticky navigation bars
+* Section headers
+* Sidebar navigation
+
+### Position Properties (Offsets)
+
+These properties work with **relative, absolute, fixed, and sticky**.
+
+| Property | Function             |
+| -------- | -------------------- |
+| `top`    | Distance from top    |
+| `right`  | Distance from right  |
+| `bottom` | Distance from bottom |
+| `left`   | Distance from left   |
+
+Example:
+
+```css
+.box {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+```
 
 ---
 
-# 10. Z-Index & Stacking Context
 
-Determines **which element appears above another**.
 
-* Layer ordering
-* Stacking contexts
-* z-index behavior
+
+
+
+
+
+
+# Z Index & Stacking Context
+
+* [Layer ordering](#Layer-ordering)
+* [Stacking contexts](#Stacking-contexts)
+* [z-index behavior](#z-index-behavior)
+
+The **`z-index` property** controls **the vertical stacking order of elements** when they overlap.
+
+It determines **which element appears on top and which appears behind**.
+
+This property works only with **positioned elements**.
+
+(Position values like `relative`, `absolute`, `fixed`, or `sticky`.)
+
+## Layer Ordering
+
+Web pages are rendered in **layers along the Z-axis**.
+
+Think of it as **stacking sheets of paper**.
+
+```
+Top Layer (highest z-index)
+---------------------------
+Element C
+---------------------------
+Element B
+---------------------------
+Element A
+---------------------------
+Bottom Layer (lowest z-index)
+```
+
+Elements with **higher `z-index` values appear on top**.
+
+### Example
+
+```css
+.box1 {
+  position: absolute;
+  z-index: 1;
+}
+
+.box2 {
+  position: absolute;
+  z-index: 2;
+}
+```
+
+Result:
+
+```
+box2 (z-index:2)
+----------------
+box1 (z-index:1)
+```
+
+`box2` appears **above** `box1`.
+
+## 2. z-index Behavior
+
+The `z-index` property defines **the stack level of an element**.
+
+### Syntax
+
+```css
+z-index: value;
+```
+
+Example:
+
+```css
+.modal {
+  position: fixed;
+  z-index: 1000;
+}
+```
+
+Higher numbers appear **closer to the user (on top)**.
 
 ---
 
-# 11. Styling Lists & Tables
+### Example with overlapping elements
 
-Customizing default HTML list and table appearance.
+```css
+.box1 {
+  position: absolute;
+  background: red;
+  z-index: 1;
+}
 
-* Lists styling
+.box2 {
+  position: absolute;
+  background: blue;
+  z-index: 5;
+}
+```
 
-  * list-style-type
-  * list-style-position
+Result:
 
-* Tables styling
+```
+Blue Box (z-index:5)
+Red Box (z-index:1)
+```
 
-  * borders
-  * spacing
-  * alignment
+The **blue box covers the red box**.
+
+## 3. Important Rule: Position Required
+
+`z-index` **does not work on static elements**.
+
+Example (won't work):
+
+```css
+.box {
+  z-index: 10;
+}
+```
+
+Correct usage:
+
+```css
+.box {
+  position: relative;
+  z-index: 10;
+}
+```
+
+## Stacking Context
+
+A **stacking context** is a group of elements that stack **independently from other groups**.
+
+Each stacking context manages its **own z-index layers**.
+
+Example:
+
+```
+Parent Container (Stacking Context)
+
+   Child A (z-index: 1)
+   Child B (z-index: 2)
+```
+
+Even if another element outside has a **higher z-index**, it may still appear below depending on stacking context rules.
+
+### Example
+
+```css
+.parent {
+  position: relative;
+  z-index: 1;
+}
+
+.child {
+  position: absolute;
+  z-index: 10;
+}
+```
+
+The `.child` is **only compared inside `.parent`**, not globally.
+
+### 5. How Stacking Contexts Are Created
+
+A stacking context is created when an element has:
+
+* `position` with `z-index`
+* `opacity` less than `1`
+* `transform`
+* `filter`
+* `position: fixed`
+* `position: sticky`
+
+Example:
+
+```css
+.card {
+  transform: scale(1);
+}
+```
+
+This creates a **new stacking context**.
+
+### 6. Real-World Use Cases
+
+#### Modals
+
+```css
+.modal {
+  position: fixed;
+  z-index: 1000;
+}
+```
+
+Ensures modal appears **above the page content**.
+
+#### Navigation Bars
+
+```css
+.navbar {
+  position: fixed;
+  z-index: 999;
+}
+```
+
+Keeps navbar **above scrolling content**.
+
+#### Dropdown Menus
+
+```css
+.dropdown {
+  position: absolute;
+  z-index: 100;
+}
+```
+
+Allows dropdown to appear **above other elements**.
+
+### Quick Summary
+
+| Concept          | Explanation                      |
+| ---------------- | -------------------------------- |
+| `z-index`        | Controls vertical stacking order |
+| Higher value     | Appears on top                   |
+| Lower value      | Appears behind                   |
+| Works with       | Positioned elements              |
+| Stacking context | Independent stacking environment |
+
+---
+
+
+
+
+
+
+
+
+
+
+
+# Styling Lists & Tables
+
+* [Lists styling](#Lists-styling)
+* [Tables styling](#Tables-styling)
+
+CSS allows developers to **customize the appearance of HTML lists and tables** instead of using the browser’s default styles.
+
+This helps improve **readability, layout, and visual design**.
+
+# 1. Styling Lists
+
+Lists are created using:
+
+* `ul` → Unordered list
+* `ol` → Ordered list
+* `li` → List item
+
+By default, browsers show **bullets or numbers**, but CSS can modify them.
+
+---
+
+## list-style-type
+
+The `list-style-type` property defines **the type of marker used for list items**.
+
+### Common values
+
+| Value         | Description        |
+| ------------- | ------------------ |
+| `disc`        | Default bullet (●) |
+| `circle`      | Hollow circle (○)  |
+| `square`      | Square bullet      |
+| `decimal`     | Numbers (1,2,3)    |
+| `lower-alpha` | a, b, c            |
+| `upper-alpha` | A, B, C            |
+| `none`        | Removes bullets    |
+
+### Example
+
+```css
+ul {
+  list-style-type: square;
+}
+```
+
+Result:
+
+```
+■ Item 1
+■ Item 2
+■ Item 3
+```
+
+---
+
+### Removing list bullets
+
+Often used in **navigation menus**.
+
+```css
+ul {
+  list-style-type: none;
+}
+```
+
+Result:
+
+```
+Item 1
+Item 2
+Item 3
+```
+
+---
+
+## list-style-position
+
+This property controls **where the bullet or number appears** relative to the list text.
+
+### Values
+
+| Value     | Description                                     |
+| --------- | ----------------------------------------------- |
+| `outside` | Marker appears outside the text block (default) |
+| `inside`  | Marker appears inside the text block            |
+
+### Example
+
+```css
+ul {
+  list-style-position: inside;
+}
+```
+
+Result:
+
+```
+• Item text aligned with bullet
+```
+
+---
+
+# 2. Styling Tables
+
+Tables are created using:
+
+* `table`
+* `tr` → table row
+* `th` → table header
+* `td` → table cell
+
+CSS allows control over **borders, spacing, and alignment**.
+
+---
+
+# Table Borders
+
+Borders define the **outline of table cells and the table itself**.
+
+Example:
+
+```css
+table, th, td {
+  border: 1px solid black;
+}
+```
+
+Result:
+
+```
+| Name | Age |
+|-----|-----|
+| John | 22 |
+| Sara | 24 |
+```
+
+---
+
+## border-collapse
+
+Controls whether borders are **separate or merged**.
+
+### Values
+
+| Value      | Description                    |
+| ---------- | ------------------------------ |
+| `separate` | Default, borders stay separate |
+| `collapse` | Borders merge into one         |
+
+Example:
+
+```css
+table {
+  border-collapse: collapse;
+}
+```
+
+Result:
+
+Cleaner **single border layout**.
+
+---
+
+# Table Spacing
+
+Spacing between cells can be controlled using:
+
+### border-spacing
+
+Defines **space between table cells**.
+
+Example:
+
+```css
+table {
+  border-spacing: 10px;
+}
+```
+
+---
+
+### padding inside cells
+
+Adds **space inside cells**.
+
+Example:
+
+```css
+td, th {
+  padding: 10px;
+}
+```
+
+Result:
+
+Cells look **more readable and spaced**.
+
+---
+
+# Table Alignment
+
+Alignment controls **how text appears inside table cells**.
+
+---
+
+## Horizontal alignment
+
+Using `text-align`.
+
+Values:
+
+* `left`
+* `center`
+* `right`
+
+Example:
+
+```css
+th {
+  text-align: center;
+}
+```
+
+---
+
+## Vertical alignment
+
+Using `vertical-align`.
+
+Values:
+
+* `top`
+* `middle`
+* `bottom`
+
+Example:
+
+```css
+td {
+  vertical-align: middle;
+}
+```
+
+---
+
+# Example Complete Table Styling
+
+```css
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid gray;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: lightgray;
+}
+```
+
+This creates a **clean, readable table layout**.
+
+---
+
+# Quick Summary
+
+| Feature               | Purpose                           |
+| --------------------- | --------------------------------- |
+| `list-style-type`     | Defines bullet or numbering style |
+| `list-style-position` | Controls bullet placement         |
+| `border`              | Adds borders to tables            |
+| `border-collapse`     | Merges table borders              |
+| `border-spacing`      | Controls spacing between cells    |
+| `text-align`          | Horizontal alignment              |
+| `vertical-align`      | Vertical alignment                |
+
+---
+
+If you want, I can also continue with **next section notes**:
+
+**12. Images & Filters**
+
+Includes:
+
+* `object-fit`
+* `filter`
+* `blur()`
+* `grayscale()`
+* `brightness()`
+
+These are **very useful for modern UI design.**
+
 
 ---
 
