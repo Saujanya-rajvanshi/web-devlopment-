@@ -76,18 +76,20 @@ Common web file extensions:
 .js   → JavaScript logic
 ```
 
-
 ### Processes
 
 A **process** is a running program.
 
 ---
 
+
+
+
 ## How the Web Works
 
 <img width="807" height="501" alt="image" src="https://github.com/user-attachments/assets/fa36be72-a7f0-49f9-a94e-0a45c058cde6" />
 
-## 1. User
+### 1. User
 
 A **user** opens a browser and types a website URL.
 
@@ -99,9 +101,7 @@ https://www.academind.com
 
 The user expects the website to appear on the screen.
 
----
-
-## 2. Browser
+### 2. Browser
 
 The **browser** receives the URL and starts the process.
 
@@ -113,9 +113,7 @@ Examples of browsers:
 
 The browser sends a **request** to find the website.
 
----
-
-# 3. Request Sent
+### 3. Request Sent
 
 The browser sends a **request through the internet** asking:
 
@@ -132,9 +130,7 @@ Example:
 142.250.182.14
 ```
 
----
-
-# 4. DNS Server
+### 4. DNS Server
 
 The request goes to a **DNS server**.
 
@@ -152,9 +148,7 @@ So the DNS server tells the browser:
 
 > "This website is located at this IP address."
 
----
-
-# 5. Server
+### 5. Server
 
 Now the browser sends the request to the **web server** using the IP address.
 
@@ -176,9 +170,7 @@ JavaScript
 Images
 ```
 
----
-
-# 6. Response
+### 6. Response
 
 The server sends a **response back to the browser**.
 
@@ -193,9 +185,7 @@ script.js
 images
 ```
 
----
-
-# 7. Browser Renders the Website
+### 7. Browser Renders the Website
 
 The browser receives the files and **builds the webpage**.
 
@@ -207,9 +197,7 @@ Process:
 
 Finally, the **website appears on the screen**.
 
----
-
-# Simple Flow (Easy to Remember)
+### Simple Flow (Easy to Remember)
 
 ```
 User
@@ -224,10 +212,6 @@ Response
  ↓
 Browser Displays Website
 ```
-
----
-
-# One-Line Summary
 
 **User enters URL → Browser sends request → DNS finds IP → Server processes request → Server sends response → Browser shows website.**
 
