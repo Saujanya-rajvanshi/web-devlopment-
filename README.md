@@ -34,9 +34,10 @@
 # Foundations 
 - [Computer basics](#Computer-basics)
 - [How the web works](#How-the-web-works)
+- [Static vs Dynamic Web Pages](#Static-vs-Dynamic-Web-Pages)
 - [Internet DNS HTTP HTTPS](#Internet-DNS-HTTP-HTTPS)
 - [What is frontend vs backend](#What-is-frontend-vs-backend)
-- [How browsers render HTML/CSS/JS](#How-browsers-render-HTMLCSSJS)
+- [How browsers render HTML/CSS/JS](#How-browsers-render-HTMLCSS-JS)
 
 
 ## Computer Basics
@@ -272,7 +273,7 @@ Amazon
 Dashboard systems
 ```
 
-## Internet, DNS, HTTP, HTTPS
+## Internet DNS HTTP HTTPS 
 
 ### Internet
 
@@ -404,7 +405,7 @@ User → Frontend → Backend → Database
                 Response
 ```
 
-## Browser Rendering (HTML, CSS, JS)
+## Browser Rendering HTML CSS JS
 
 When a browser loads a webpage, it performs several steps.
 
