@@ -1377,22 +1377,11 @@ Structure → Semantics → Accessibility → Performance.
 
 ## Table of Contents
 
-* [CSS Introduction](#css-introduction)
-* [CSS Syntax Basics](#css-syntax-basics)
-* [Applying CSS to HTML](#applying-css-to-html)
-* [CSS Rules, Properties & Values](#css-rules-properties--values)
-* [CSS Comments](#css-comments)
+* [CSS Fundamentals](#css-Fundamentals)
 * [Selectors](#selectors)
-* [Combinator Selectors](#combinator-selectors)
-* [Attribute Selectors](#attribute-selectors)
-* [Pseudo-classes & Pseudo-elements](#pseudo-classes--pseudo-elements)
 * [CSS Units & Measurements](#css-units--measurements)
-* [Absolute vs Relative Units](#absolute-vs-relative-units)
-* [CSS Functions](#css-functions)
-* [Typography & Fonts](#typography--fonts)
-* [Text Styling](#text-styling)
-* [Colors](#colors)
-* [Backgrounds](#backgrounds)
+* [Typography & Fonts](#typography--Text-Styling)
+* [Colors & Backgrounds](#colors--Backgrounds)
 * [Box Model](#box-model)
 * [Borders & Outline](#borders--outline)
 * [Box Shadow](#box-shadow)
@@ -1428,135 +1417,1656 @@ Structure → Semantics → Accessibility → Performance.
 * [PostCSS](#postcss)
 
 
-## CSS Fundamentals
+# CSS Fundamentals
 
-Introduction to CSS and how it is used to style web pages.
+CSS controls the **visual presentation of HTML elements**, including layout, colors, fonts, spacing, and responsiveness.
 
-* CSS Introduction
+- [CSS Introduction](#CSS-Introduction)
+- [CSS Syntax Basics](#CSS-Syntax-Basics)
+- [Applying CSS to HTML](Applying-CSS-to-HTML)
+- [CSS Rules, Properties & Values](#CSS-Rules--Properties--Values)
+- [CSS Comments](#CSS-Comments)
 
-  * What is CSS
-  * Why CSS is used
-  * CSS vs HTML responsibilities
-  * Advantages of CSS
+## CSS Introduction
 
-* CSS Syntax Basics
+### What is CSS
 
-  * CSS rule structure
-  * Selectors, properties, and values
-  * Declaration blocks
+CSS stands for **Cascading Style Sheets**.
+It is a stylesheet language used to describe **how HTML elements should be displayed** on a webpage.
 
-* Applying CSS to HTML
+CSS separates **content from design**.
 
-  * Inline CSS
-  * Internal CSS
-  * External CSS
-  * Linking stylesheets
+Example:
 
-* CSS Rules, Properties & Values
+```css
+p {
+  color: blue;
+  font-size: 18px;
+}
+```
 
-  * How CSS rules are interpreted by browsers
-  * Property-value pairs
-  * Shorthand properties
+This styles all `<p>` elements with blue text and a font size of 18px.
 
-* CSS Comments
+### Why CSS is Used
 
-  * Syntax of comments
-  * Purpose of comments in CSS
+CSS is used to:
 
-# CSS Selectors
+* Style HTML elements
+* Control page layout
+* Improve visual appearance
+* Make websites responsive
+* Maintain consistent design across pages
 
-Selectors determine **which HTML elements CSS will style**.
+Example uses:
 
-* Basic Selectors
+* Changing text color
+* Adding spacing between elements
+* Creating responsive layouts
+* Adding animations
 
-  * Element selector
-  * Class selector
-  * ID selector
-  * Universal selector
+### CSS vs HTML Responsibilities
 
-* Combinator Selectors
+| HTML              | CSS                 |
+| ----------------- | ------------------- |
+| Defines structure | Defines style       |
+| Creates elements  | Controls appearance |
+| Adds content      | Controls layout     |
+| Semantic meaning  | Visual presentation |
 
-  * Descendant selector
-  * Child selector
-  * Adjacent sibling selector
-  * General sibling selector
+Example:
 
-* Attribute Selectors
+HTML structure:
 
-  * Selecting elements based on attributes
-  * Exact value match
-  * Partial attribute matches
+```html
+<h1>Welcome</h1>
+<p>This is a paragraph</p>
+```
 
-* Pseudo-classes & Pseudo-elements
+CSS styling:
 
-  * Pseudo-classes (states of elements)
+```css
+h1 {
+  color: green;
+}
 
-  * `:hover`
+p {
+  font-size: 16px;
+}
+```
 
-  * `:focus`
+### Advantages of CSS
 
-  * `:nth-child()`
+1. **Separation of content and design**
+2. **Reusable styles across multiple pages**
+3. **Better maintainability**
+4. **Faster website performance**
+5. **Responsive design support**
 
-  * Pseudo-elements
+Example:
 
-  * `::before`
+One CSS file can style **multiple pages**.
 
-  * `::after`
+```
+index.html
+about.html
+contact.html
+style.css
+```
 
-  * `::first-letter`
+# CSS Syntax Basics
 
-# 3. CSS Units & Measurements
+CSS follows a simple rule-based syntax.
 
-Defines **how sizes and spacing are measured** in CSS.
+Example:
 
-* CSS Units & Measurements
+```css
+h1 {
+  color: red;
+  font-size: 32px;
+}
+```
 
-  * Length units
-  * Percentage units
+Structure:
 
-* Absolute Units
+```
+selector {
+  property: value;
+}
+```
 
-  * `px`
-  * `cm`
-  * `mm`
-  * `in`
+### CSS Rule Structure
 
-* Relative Units
+A CSS rule consists of two main parts:
 
-  * `em`
-  * `rem`
-  * `%`
-  * `vw`
-  * `vh`
+1. **Selector**
+2. **Declaration block**
 
-* CSS Functions
+Example:
 
-  * `calc()`
-  * `min()`
-  * `max()`
-  * `clamp()`
+```css
+p {
+  color: blue;
+}
+```
+
+Breakdown:
+
+```
+p → selector
+color → property
+blue → value
+```
+
+### Selectors, Properties, and Values
+
+#### Selector
+
+Specifies **which HTML element to style**.
+
+Example:
+
+```css
+p
+h1
+div
+```
+
+#### Property
+
+The **style attribute** you want to change.
+
+Examples:
+
+```
+color
+font-size
+margin
+background
+```
+
+#### Value
+
+Defines the **setting of the property**.
+
+Example:
+
+```css
+color: red;
+font-size: 20px;
+margin: 10px;
+```
+
+### Declaration Blocks
+
+A **declaration block** contains one or more CSS declarations.
+
+Example:
+
+```css
+p {
+  color: red;
+  font-size: 16px;
+  line-height: 1.5;
+}
+```
+
+Structure:
+
+```
+selector {
+  declaration;
+  declaration;
+}
+```
+
+Each declaration ends with a **semicolon**.
+
+## Applying CSS to HTML
+
+CSS can be applied to HTML in **three ways**.
+
+### Inline CSS
+
+CSS is written **directly inside an HTML element** using the `style` attribute.
+
+Example:
+
+```html
+<p style="color: red;">Hello World</p>
+```
+
+Characteristics:
+
+* Applies only to that element
+* Hard to maintain
+* Not recommended for large projects
+
+### Internal CSS
+
+CSS is written inside a `<style>` tag within the `<head>` section.
+
+Example:
+
+```html
+<head>
+<style>
+p {
+  color: blue;
+}
+</style>
+</head>
+```
+
+Characteristics:
+
+* Applies to one HTML page
+* Useful for small projects
+
+### External CSS
+
+CSS is written in a **separate file**.
+
+Example:
+
+```
+style.css
+```
+
+HTML link:
+
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+Advantages:
+
+* Reusable across pages
+* Easier maintenance
+* Better performance
+
+This is the **recommended approach**.
+
+### Linking Stylesheets
+
+External CSS files are connected using the `<link>` tag.
+
+Example:
+
+```html
+<head>
+<link rel="stylesheet" href="styles.css">
+</head>
+```
+
+Attributes:
+
+| Attribute | Description                       |
+| --------- | --------------------------------- |
+| rel       | Relationship between HTML and CSS |
+| href      | Path to CSS file                  |
+
+
+## CSS Rules, Properties & Values
+
+CSS works by applying **rules to HTML elements**.
+
+Rule example:
+
+```css
+h1 {
+  color: blue;
+}
+```
+
+Meaning:
+
+* `h1` → selector
+* `color` → property
+* `blue` → value
+
+### How CSS Rules Are Interpreted by Browsers
+
+The browser processes CSS in this order:
+
+1. Parse HTML
+2. Parse CSS
+3. Match selectors to elements
+4. Apply styles
+5. Render the page
+
+This process is handled by browser engines like:
+
+* Blink
+* Gecko
+* WebKit
+
+### Property–Value Pairs
+
+Each CSS declaration consists of a **property and value pair**.
+
+Example:
+
+```css
+color: red;
+margin: 20px;
+font-size: 18px;
+```
+
+Format:
+
+```
+property : value ;
+```
+
+### Shorthand Properties
+
+Some CSS properties combine **multiple properties into one**.
+
+Example:
+
+Instead of:
+
+```css
+margin-top: 10px;
+margin-right: 20px;
+margin-bottom: 10px;
+margin-left: 20px;
+```
+
+You can write:
+
+```css
+margin: 10px 20px;
+```
+
+Example shorthand properties:
+
+```
+margin
+padding
+border
+background
+font
+```
+
+## CSS Comments
+
+Comments are used to **explain code and improve readability**. 
+
+They are ignored by the browser.
+
+### Syntax of Comments
+
+CSS comments start with `/*` and end with `*/`.
+
+Example:
+
+```css
+/* This is a CSS comment */
+
+p {
+  color: red;
+}
+```
+
+### Purpose of Comments in CSS
+
+Comments help developers:
+
+* Explain code
+* Organize sections
+* Disable styles temporarily
+* Improve collaboration
+
+Example:
+
+```css
+/* Header styles */
+header {
+  background: black;
+  color: white;
+}
+```
 
 ---
+
+
+
+
+
+
+
+## CSS Selectors
+
+Selectors determine **which HTML elements CSS will style**.
+They allow you to target specific elements in the HTML document.
+
+Example:
+
+```css
+p {
+  color: blue;
+}
+```
+
+Here `p` is the **selector**, and it targets all `<p>` elements.
+
+* [Combinator Selectors](#combinator-selectors)
+* [Attribute Selectors](#attribute-selectors)
+* [Pseudo-classes & Pseudo-elements](#pseudo-classes--pseudo-elements)
+
+### Basic Selectors
+
+Basic selectors are the **most commonly used selectors** in CSS.
+
+### Element Selector
+
+Targets **all elements of a specific HTML tag**.
+
+Example:
+
+```css
+p {
+  color: red;
+}
+```
+
+This applies the style to **all `<p>` elements**.
+
+Example HTML:
+
+```html
+<p>Hello</p>
+<p>World</p>
+```
+
+Both paragraphs will be red.
+
+### Class Selector
+
+Targets elements using the **class attribute**.
+
+Syntax:
+
+```css
+.classname {
+  property: value;
+}
+```
+
+Example:
+
+```css
+.box {
+  background: yellow;
+}
+```
+
+HTML:
+
+```html
+<div class="box">Content</div>
+```
+
+Characteristics:
+
+* Reusable
+* Multiple elements can share the same class
+
+Example:
+
+```html
+<p class="box">Text</p>
+<div class="box">Box</div>
+```
+
+### ID Selector
+
+Targets a **specific element with a unique ID**.
+
+Syntax:
+
+```css
+#idname {
+  property: value;
+}
+```
+
+Example:
+
+```css
+#header {
+  background: black;
+  color: white;
+}
+```
+
+HTML:
+
+```html
+<div id="header">Header</div>
+```
+
+Characteristics:
+
+* Must be **unique in the page**
+* Higher specificity than class selectors
+
+## Universal Selector
+
+Targets **all elements on the page**.
+
+Syntax:
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+}
+```
+
+Commonly used for **CSS reset**.
+
+Example effect:
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+## Combinator Selectors
+
+Combinator selectors select elements **based on relationships between elements**.
+
+### Descendant Selector
+
+Targets elements **inside another element (at any depth)**.
+
+Syntax:
+
+```css
+parent child
+```
+
+Example:
+
+```css
+div p {
+  color: blue;
+}
+```
+
+HTML:
+
+```html
+<div>
+  <p>Selected</p>
+</div>
+```
+
+All `<p>` inside `<div>` will be styled.
+
+### Child Selector
+
+Targets **direct children only**.
+
+Syntax:
+
+```css
+parent > child
+```
+
+Example:
+
+```css
+div > p {
+  color: green;
+}
+```
+
+HTML:
+
+```html
+<div>
+  <p>Selected</p>
+  <section>
+    <p>Not selected</p>
+  </section>
+</div>
+```
+
+Only the **direct child `<p>`** is selected.
+
+### Adjacent Sibling Selector
+
+Targets the **immediate sibling element**.
+
+Syntax:
+
+```css
+element + element
+```
+
+Example:
+
+```css
+h1 + p {
+  color: red;
+}
+```
+
+HTML:
+
+```html
+<h1>Title</h1>
+<p>Styled paragraph</p>
+```
+
+Only the **first `<p>` after `<h1>`** is selected.
+
+### General Sibling Selector
+
+Targets **all sibling elements after a specific element**.
+
+Syntax:
+
+```css
+element ~ element
+```
+
+Example:
+
+```css
+h1 ~ p {
+  color: purple;
+}
+```
+
+HTML:
+
+```html
+<h1>Title</h1>
+<p>Styled</p>
+<p>Styled</p>
+```
+
+All `<p>` after `<h1>` are styled.
+
+## Attribute Selectors
+
+Attribute selectors target elements **based on HTML attributes**.
+
+Example attribute:
+
+```html
+<input type="text">
+```
+
+### Selecting Elements Based on Attributes
+
+Syntax:
+
+```css
+element[attribute]
+```
+
+Example:
+
+```css
+input[type] {
+  border: 1px solid black;
+}
+```
+
+This targets **all inputs that have a `type` attribute**.
+
+### Exact Value Match
+
+Select elements where the attribute **exactly matches a value**.
+
+Syntax:
+
+```css
+element[attribute="value"]
+```
+
+Example:
+
+```css
+input[type="text"] {
+  background: lightyellow;
+}
+```
+
+This selects only **text inputs**.
+
+### Partial Attribute Matches
+
+Used when **only part of the attribute value matches**.
+
+Common operators:
+
+| Operator | Meaning     |
+| -------- | ----------- |
+| `^=`     | Starts with |
+| `$=`     | Ends with   |
+| `*=`     | Contains    |
+
+Example:
+
+```css
+a[href^="https"] {
+  color: green;
+}
+```
+
+This selects links that **start with https**.
+
+## Pseudo-classes & Pseudo-elements
+
+These selectors target **special states or parts of elements**.
+
+## Pseudo-classes
+
+Pseudo-classes select elements **based on their state**.
+
+Syntax:
+
+```css
+selector:pseudo-class
+```
+
+Example:
+
+```css
+button:hover {
+  background: blue;
+}
+```
+
+### :hover
+
+Targets elements when the **mouse pointer is over them**.
+
+Example:
+
+```css
+a:hover {
+  color: red;
+}
+```
+
+Used for:
+
+* buttons
+* links
+* menus
+
+### :focus
+
+Targets elements when they **receive focus** (like input fields).
+
+Example:
+
+```css
+input:focus {
+  border: 2px solid blue;
+}
+```
+
+Used for **form accessibility and UX**.
+
+### :nth-child()
+
+Targets elements based on their **position in a parent**.
+
+Example:
+
+```css
+li:nth-child(2) {
+  color: red;
+}
+```
+
+This selects the **second list item**.
+
+Example patterns:
+
+```css
+li:nth-child(odd)
+li:nth-child(even)
+li:nth-child(3n)
+```
+
+## Pseudo-elements
+
+Pseudo-elements style **specific parts of elements**.
+
+Syntax:
+
+```css
+selector::pseudo-element
+```
+
+### ::before
+
+Inserts **content before an element**.
+
+Example:
+
+```css
+p::before {
+  content: "Note: ";
+}
+```
+
+### ::after
+
+Inserts **content after an element**.
+
+Example:
+
+```css
+p::after {
+  content: " ✔";
+}
+```
+
+### ::first-letter
+
+Styles the **first letter of a text element**.
+
+Example:
+
+```css
+p::first-letter {
+  font-size: 30px;
+  color: red;
+}
+```
+
+Commonly used in **article styling**.
+
+#### Quick Selector Summary
+
+| Selector   | Example   | Purpose                |
+| ---------- | --------- | ---------------------- |
+| Element    | `p`       | Select tag             |
+| Class      | `.box`    | Select class           |
+| ID         | `#header` | Select unique element  |
+| Universal  | `*`       | Select all             |
+| Descendant | `div p`   | Nested elements        |
+| Child      | `div > p` | Direct children        |
+| Adjacent   | `h1 + p`  | Immediate sibling      |
+| General    | `h1 ~ p`  | All following siblings |
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## CSS Units & Measurements
+
+CSS units define **how sizes, spacing, and dimensions are measured** in web layouts.
+
+* [Absolute vs Relative Units](#absolute-vs-relative-units)
+* [CSS Functions](#css-functions)
+
+They are used in properties like:
+
+```css
+width
+height
+margin
+padding
+font-size
+border-width
+```
+
+Example:
+
+```css
+p {
+  font-size: 16px;
+  margin: 10px;
+}
+```
+
+In this example:
+
+* `16px` → font size unit
+* `10px` → spacing unit
+
+## CSS Units & Measurements
+
+CSS measurements mainly fall into two categories:
+
+1. **Length Units**
+2. **Percentage Units**
+
+### Length Units
+
+Length units define **fixed or relative sizes** for elements.
+
+Example:
+
+```css
+div {
+  width: 300px;
+}
+```
+
+Here the element width is **300 pixels**.
+
+### Percentage Units
+
+Percentage (`%`) values are **relative to the parent element**.
+
+Example:
+
+```css
+div {
+  width: 50%;
+}
+```
+
+If the parent element is **800px wide**, the child becomes:
+
+```
+400px
+```
+
+Common uses:
+
+* responsive layouts
+* flexible containers
+
+## Absolute Units
+
+Absolute units represent **fixed measurements** that do not depend on other elements.
+
+They are **not responsive**.
+
+### `px` (Pixels)
+
+The most commonly used CSS unit.
+
+Example:
+
+```css
+h1 {
+  font-size: 24px;
+}
+```
+
+Characteristics:
+
+* Fixed size
+* Precise control
+* Widely supported
+
+Example layout:
+
+```css
+.container {
+  width: 1200px;
+}
+```
+
+### `cm` (Centimeters)
+
+Represents **centimeters** in physical measurement.
+
+Example:
+
+```css
+div {
+  width: 5cm;
+}
+```
+
+Rarely used in web design.
+
+Mostly used for:
+
+* printing layouts
+
+### `mm` (Millimeters)
+
+Represents **millimeters**.
+
+Example:
+
+```css
+div {
+  height: 10mm;
+}
+```
+
+Also rarely used on websites.
+
+### `in` (Inches)
+
+Represents **inches**.
+
+Example:
+
+```css
+div {
+  width: 2in;
+}
+```
+
+Used mainly in **print styling**.
+
+## Relative Units
+
+Relative units scale **based on another value** like font size, viewport, or parent element.
+
+These are **essential for responsive design**.
+
+## `em`
+
+Relative to the **font size of the parent element**.
+
+Example:
+
+```css
+p {
+  font-size: 2em;
+}
+```
+
+If parent font size = `16px`
+
+```
+2em = 32px
+```
+
+Example:
+
+```css
+.container {
+  font-size: 20px;
+}
+
+p {
+  font-size: 1.5em;
+}
+```
+
+Result:
+
+```
+1.5 × 20px = 30px
+```
+
+## `rem`
+
+Relative to the **root element (`html`) font size**.
+
+Example:
+
+```css
+p {
+  font-size: 2rem;
+}
+```
+
+If root font size = `16px`
+
+```
+2rem = 32px
+```
+
+Example:
+
+```css
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+```
+
+Result:
+
+```
+3 × 16px = 48px
+```
+
+`rem` is preferred because it is **more predictable than em**.
+
+### `%` (Percentage)
+
+Relative to the **parent element size**.
+
+Example:
+
+```css
+div {
+  width: 50%;
+}
+```
+
+If parent width = `1000px`
+
+```
+child width = 500px
+```
+
+Common uses:
+
+* responsive containers
+* flexible images
+
+### `vw` (Viewport Width)
+
+Represents **percentage of the browser width**.
+
+```
+1vw = 1% of viewport width
+```
+
+Example:
+
+```css
+div {
+  width: 50vw;
+}
+```
+
+If screen width = `1200px`
+
+```
+50vw = 600px
+```
+
+Used for **responsive layouts**.
+
+### `vh` (Viewport Height)
+
+Represents **percentage of the browser height**.
+
+```
+1vh = 1% of viewport height
+```
+
+Example:
+
+```css
+section {
+  height: 100vh;
+}
+```
+
+This makes the section **fill the entire screen height**.
+
+Common use:
+
+* full-screen hero sections
+
+## CSS Functions
+
+CSS functions perform **dynamic calculations and responsive sizing**.
+
+## `calc()`
+
+Performs mathematical calculations in CSS.
+
+Example:
+
+```css
+div {
+  width: calc(100% - 200px);
+}
+```
+
+Meaning:
+
+```
+Container width minus 200px
+```
+
+Useful for:
+
+* flexible layouts
+* dynamic spacing
+
+### `min()`
+
+Chooses the **smallest value**.
+
+Example:
+
+```css
+width: min(500px, 90%);
+```
+
+Meaning:
+
+The width will be **whichever value is smaller**.
+
+### `max()`
+
+Chooses the **largest value**.
+
+Example:
+
+```css
+width: max(300px, 50%);
+```
+
+Meaning:
+
+The width will be **whichever value is larger**.
+
+### `clamp()`
+
+Sets **minimum, preferred, and maximum values**.
+
+Syntax:
+
+```
+clamp(min, preferred, max)
+```
+
+Example:
+
+```css
+font-size: clamp(16px, 4vw, 32px);
+```
+
+Meaning:
+
+* Minimum → `16px`
+* Preferred → `4vw`
+* Maximum → `32px`
+
+This is very useful for **responsive typography**.
+
+### Quick Unit Comparison
+
+| Unit | Type     | Relative To      |
+| ---- | -------- | ---------------- |
+| px   | Absolute | Fixed pixels     |
+| em   | Relative | Parent font size |
+| rem  | Relative | Root font size   |
+| %    | Relative | Parent element   |
+| vw   | Relative | Viewport width   |
+| vh   | Relative | Viewport height  |
+
+**Best Practice**
+
+Modern CSS typically uses:
+
+```
+rem for fonts
+% for layouts
+vw/vh for full-screen sections
+clamp() for responsive typography
+```
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 4. Typography & Text Styling
 
-Controls **how text appears on a webpage**.
+Typography controls **how text appears and is presented on a webpage**.
+It affects readability, accessibility, and overall design.
 
-* Typography & Fonts
+CSS typography properties allow developers to control:
 
-  * Font families
-  * Web safe fonts
-  * Google fonts usage
+* Font type
+* Font size
+* Text alignment
+* Spacing between letters and lines
+* Text transformation
 
-* Text Styling
+Example:
 
-  * `text-align`
-  * `text-decoration`
-  * `text-transform`
-  * `letter-spacing`
-  * `line-height`
+```css
+p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+```
 
 ---
+
+# Typography & Fonts
+
+Typography in CSS mainly deals with **fonts and how they are displayed**.
+
+Important typography properties include:
+
+```css
+font-family
+font-size
+font-weight
+line-height
+letter-spacing
+```
+
+---
+
+## Font Families
+
+The `font-family` property defines **which font will be used for text**.
+
+Example:
+
+```css
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+```
+
+Multiple fonts are listed as **fallbacks**.
+
+Explanation:
+
+```text
+Arial → first choice
+Helvetica → used if Arial not available
+sans-serif → default fallback
+```
+
+Types of font families:
+
+| Type       | Example         |
+| ---------- | --------------- |
+| Serif      | Times New Roman |
+| Sans-serif | Arial           |
+| Monospace  | Courier New     |
+| Cursive    | Comic Sans      |
+| Fantasy    | Impact          |
+
+Example:
+
+```css
+h1 {
+  font-family: "Times New Roman", serif;
+}
+```
+
+---
+
+## Web Safe Fonts
+
+Web safe fonts are **fonts supported by almost all browsers and operating systems**.
+
+Common web safe fonts:
+
+| Font            | Type       |
+| --------------- | ---------- |
+| Arial           | Sans-serif |
+| Helvetica       | Sans-serif |
+| Times New Roman | Serif      |
+| Georgia         | Serif      |
+| Verdana         | Sans-serif |
+| Courier New     | Monospace  |
+
+Example:
+
+```css
+p {
+  font-family: Verdana, Geneva, sans-serif;
+}
+```
+
+Advantages:
+
+* Compatible across browsers
+* No external loading required
+* Faster performance
+
+---
+
+## Google Fonts Usage
+
+Developers often use custom fonts from
+Google Fonts.
+
+Steps to use Google Fonts:
+
+### 1. Import font in HTML
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+```
+
+### 2. Apply in CSS
+
+```css
+body {
+  font-family: 'Roboto', sans-serif;
+}
+```
+
+Benefits:
+
+* Large font library
+* Easy integration
+* Free to use
+
+---
+
+# Text Styling
+
+Text styling controls **how text is aligned, decorated, and spaced**.
+
+Common properties include:
+
+```css
+text-align
+text-decoration
+text-transform
+letter-spacing
+line-height
+```
+
+---
+
+## `text-align`
+
+Controls **horizontal alignment of text** inside an element.
+
+Values:
+
+| Value   | Description         |
+| ------- | ------------------- |
+| left    | Align text to left  |
+| right   | Align text to right |
+| center  | Center text         |
+| justify | Spread text evenly  |
+
+Example:
+
+```css
+p {
+  text-align: center;
+}
+```
+
+---
+
+## `text-decoration`
+
+Adds **decorative lines to text**.
+
+Common values:
+
+| Value        | Effect              |
+| ------------ | ------------------- |
+| none         | Removes decoration  |
+| underline    | Underline text      |
+| overline     | Line above text     |
+| line-through | Strike-through text |
+
+Example:
+
+```css
+a {
+  text-decoration: none;
+}
+```
+
+Often used to remove default link underline.
+
+Example:
+
+```css
+h2 {
+  text-decoration: underline;
+}
+```
+
+---
+
+## `text-transform`
+
+Controls **capitalization of text**.
+
+Values:
+
+| Value      | Result               |
+| ---------- | -------------------- |
+| uppercase  | ALL LETTERS CAPITAL  |
+| lowercase  | all letters small    |
+| capitalize | First letter capital |
+
+Example:
+
+```css
+h1 {
+  text-transform: uppercase;
+}
+```
+
+---
+
+## `letter-spacing`
+
+Controls **space between characters**.
+
+Example:
+
+```css
+h1 {
+  letter-spacing: 2px;
+}
+```
+
+Uses:
+
+* Improve readability
+* Create stylistic text
+
+Example:
+
+```css
+p {
+  letter-spacing: 1px;
+}
+```
+
+---
+
+## `line-height`
+
+Controls **vertical spacing between lines of text**.
+
+Example:
+
+```css
+p {
+  line-height: 1.5;
+}
+```
+
+This means:
+
+```text
+Line height = 1.5 × font size
+```
+
+Example:
+
+```css
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+```
+
+Benefits:
+
+* Improves readability
+* Better paragraph spacing
+
+### Example Typography Styling
+
+Example CSS combining multiple typography properties:
+
+```css
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+```
+
+#### Best Practices for Typography
+
+* Use **readable fonts**
+* Maintain **consistent font sizes**
+* Use **sufficient line height**
+* Avoid too many font families
+* Ensure **good color contrast for accessibility**
+
+---
+
+
+
+
+
+
+
+
 
 # 5. Colors & Backgrounds
 
