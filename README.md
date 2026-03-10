@@ -4836,16 +4836,15 @@ Allows dropdown to appear **above other elements**.
 
 # Styling Lists & Tables
 
-* [Lists styling](#Lists-styling)
-* [Tables styling](#Tables-styling)
+* [styling Lists](#styling-Lists)
+* [styling Tables](#styling=Tables)
 
-CSS allows developers to **customize the appearance of HTML lists and tables** instead of using the browser’s default styles.
-
+CSS allows developers to **customize the appearance of HTML lists and tables** instead of using the browser’s default styles. <br>
 This helps improve **readability, layout, and visual design**.
 
-# 1. Styling Lists
+## Styling Lists
 
-Lists are created using:
+Lists are created using :
 
 * `ul` → Unordered list
 * `ol` → Ordered list
@@ -4853,13 +4852,11 @@ Lists are created using:
 
 By default, browsers show **bullets or numbers**, but CSS can modify them.
 
----
-
-## list-style-type
+### list-style-type
 
 The `list-style-type` property defines **the type of marker used for list items**.
 
-### Common values
+#### Common values
 
 | Value         | Description        |
 | ------------- | ------------------ |
@@ -4871,7 +4868,7 @@ The `list-style-type` property defines **the type of marker used for list items*
 | `upper-alpha` | A, B, C            |
 | `none`        | Removes bullets    |
 
-### Example
+#### Example
 
 ```css
 ul {
@@ -4887,9 +4884,7 @@ Result:
 ■ Item 3
 ```
 
----
-
-### Removing list bullets
+#### Removing list bullets
 
 Often used in **navigation menus**.
 
@@ -4907,20 +4902,18 @@ Item 2
 Item 3
 ```
 
----
-
-## list-style-position
+### list-style-position
 
 This property controls **where the bullet or number appears** relative to the list text.
 
-### Values
+#### Values
 
 | Value     | Description                                     |
 | --------- | ----------------------------------------------- |
 | `outside` | Marker appears outside the text block (default) |
 | `inside`  | Marker appears inside the text block            |
 
-### Example
+#### Example
 
 ```css
 ul {
@@ -4934,9 +4927,7 @@ Result:
 • Item text aligned with bullet
 ```
 
----
-
-# 2. Styling Tables
+## Styling Tables
 
 Tables are created using:
 
@@ -4947,9 +4938,7 @@ Tables are created using:
 
 CSS allows control over **borders, spacing, and alignment**.
 
----
-
-# Table Borders
+### Table Borders
 
 Borders define the **outline of table cells and the table itself**.
 
@@ -4970,13 +4959,11 @@ Result:
 | Sara | 24 |
 ```
 
----
-
-## border-collapse
+#### border-collapse
 
 Controls whether borders are **separate or merged**.
 
-### Values
+#### Values
 
 | Value      | Description                    |
 | ---------- | ------------------------------ |
@@ -4995,13 +4982,11 @@ Result:
 
 Cleaner **single border layout**.
 
----
-
-# Table Spacing
+### Table Spacing
 
 Spacing between cells can be controlled using:
 
-### border-spacing
+#### border-spacing
 
 Defines **space between table cells**.
 
@@ -5013,9 +4998,7 @@ table {
 }
 ```
 
----
-
-### padding inside cells
+#### padding inside cells
 
 Adds **space inside cells**.
 
@@ -5031,15 +5014,11 @@ Result:
 
 Cells look **more readable and spaced**.
 
----
-
-# Table Alignment
+### Table Alignment
 
 Alignment controls **how text appears inside table cells**.
 
----
-
-## Horizontal alignment
+### Horizontal alignment
 
 Using `text-align`.
 
@@ -5057,9 +5036,7 @@ th {
 }
 ```
 
----
-
-## Vertical alignment
+### Vertical alignment
 
 Using `vertical-align`.
 
@@ -5077,9 +5054,7 @@ td {
 }
 ```
 
----
-
-# Example Complete Table Styling
+## Example Complete Table Styling
 
 ```css
 table {
@@ -5100,9 +5075,7 @@ th {
 
 This creates a **clean, readable table layout**.
 
----
-
-# Quick Summary
+##### Quick Summary
 
 | Feature               | Purpose                           |
 | --------------------- | --------------------------------- |
@@ -5116,22 +5089,24 @@ This creates a **clean, readable table layout**.
 
 ---
 
-If you want, I can also continue with **next section notes**:
-
-**12. Images & Filters**
-
-Includes:
-
-* `object-fit`
-* `filter`
-* `blur()`
-* `grayscale()`
-* `brightness()`
-
-These are **very useful for modern UI design.**
 
 
----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 12. Images & Filters
 
