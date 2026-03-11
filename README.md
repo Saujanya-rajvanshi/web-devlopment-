@@ -5108,20 +5108,276 @@ This creates a **clean, readable table layout**.
 
 
 
-# 12. Images & Filters
+# Images & Filters
 
-Styling images and applying visual effects.
+* [Image sizing](#Image-sizing)
+* [Object fit](#Object-fit)
+* [Filters](#Filters)
 
-* Image sizing
-* Object-fit
-* Filters
+CSS allows developers to **control the size, layout, and visual effects of images**.
+Images can be resized, fitted inside containers, and enhanced using **CSS filters**.
 
-  * blur
-  * brightness
-  * contrast
-  * grayscale
+## Image Sizing
+
+Images can be resized using the **`width` and `height` properties**.
+
+This helps maintain **layout consistency and responsiveness**.
+
+#### Example
+
+```css
+img {
+  width: 300px;
+  height: 200px;
+}
+```
+
+The image will display **300px wide and 200px tall**.
+
+### Responsive Image
+
+To make images **responsive**, developers often use:
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+Explanation:
+
+* `max-width: 100%` → Image never exceeds its container width
+* `height: auto` → Maintains the **aspect ratio**
+
+This is commonly used in **responsive web design**.
+
+## Object fit
+
+The **`object-fit` property** controls **how an image fits inside its container**.
+
+It is mainly used when the image size **does not match the container size**.
+
+### Syntax
+
+```css
+object-fit: value;
+```
+
+### Common Values
+
+#### `fill`
+
+Default behavior.
+
+The image **stretches to fill the container**, which may distort the image.
+
+```css
+img {
+  object-fit: fill;
+}
+```
+
+#### `contain`
+
+The entire image fits inside the container **without cropping**.
+
+* Maintains aspect ratio
+* May leave empty space
+
+```css
+img {
+  object-fit: contain;
+}
+```
+
+#### `cover`
+
+The image **fills the container completely**.
+
+* Maintains aspect ratio
+* Parts of the image may be **cropped**
+
+```css
+img {
+  object-fit: cover;
+}
+```
+
+Used commonly for:
+
+* Profile images
+* Background image sections
+* Cards
+
+#### `none`
+
+The image keeps its **original size**.
+
+```css
+img {
+  object-fit: none;
+}
+```
+
+#### `scale-down`
+
+The image behaves like the **smaller of `none` or `contain`**.
+
+## Filters
+
+The **`filter` property** applies **visual effects** to images similar to photo editing tools.
+
+#### Syntax
+
+```css
+filter: effect(value);
+```
+
+Multiple filters can also be applied together.
+
+Example:
+
+```css
+img {
+  filter: grayscale(50%) brightness(120%);
+}
+```
+
+## Common Filter Effects
+
+### blur()
+
+Creates a **blur effect** on an image.
+
+#### Example
+
+```css
+img {
+  filter: blur(5px);
+}
+```
+
+Effect:
+
+Image becomes **soft and blurry**.
+
+Used in:
+
+* Background blur
+* Loading screens
+* Focus effects
+
+### brightness()
+
+Controls **image brightness**.
+
+Values:
+
+* `100%` → normal brightness
+* greater than `100%` → brighter
+* less than `100%` → darker
+
+Example:
+
+```css
+img {
+  filter: brightness(150%);
+}
+```
+
+The image becomes **brighter**.
+
+### contrast()
+
+Adjusts the **difference between light and dark areas**.
+
+Example:
+
+```css
+img {
+  filter: contrast(200%);
+}
+```
+
+Higher contrast makes colors **more intense**.
+
+### grayscale()
+
+Converts the image **to black and white**.
+
+Values:
+
+* `0%` → original color
+* `100%` → full grayscale
+
+Example:
+
+```css
+img {
+  filter: grayscale(100%);
+}
+```
+
+Used in:
+
+* hover effects
+* design aesthetics
+
+Example hover effect:
+
+```css
+img:hover {
+  filter: grayscale(0%);
+}
+```
+
+## Example Combining Filters
+
+```css
+img {
+  filter: brightness(110%) contrast(120%) grayscale(30%);
+}
+```
+
+This creates a **stylized image effect**.
+
+#### Quick Summary
+
+| Feature            | Purpose                                 |
+| ------------------ | --------------------------------------- |
+| `width` / `height` | Controls image size                     |
+| `max-width`        | Makes images responsive                 |
+| `object-fit`       | Controls image fitting inside container |
+| `filter`           | Applies visual effects                  |
+
+#### Common filters:
+
+| Filter         | Effect                            |
+| -------------- | --------------------------------- |
+| `blur()`       | Blurs the image                   |
+| `brightness()` | Adjusts brightness                |
+| `contrast()`   | Adjusts color intensity           |
+| `grayscale()`  | Converts image to black and white |
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 13. Layout Techniques
 
