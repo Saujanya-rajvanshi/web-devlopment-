@@ -5375,27 +5375,210 @@ This creates a **stylized image effect**.
 
 
 
+# Layout Techniques
 
+- [Flow Layout](#Flow-Layout)
+- [Floating Elements](#Floating-Elements)
+- [Multicolumn Layout](#Multicolumn-Layout)
 
+Layout techniques define **how elements are arranged and organized on a webpage**.
+Before modern layouts like **Flexbox and Grid**, developers mainly used **normal flow, floats, and multicolumn layouts**.
 
+## Flow Layout
 
-# 13. Layout Techniques
+Flow layout is the **default layout behavior of browsers**.
 
-Methods for arranging elements on a page.
+In this layout, elements appear **in the order they are written in HTML**.
 
-* Flow Layout
-  Default browser layout behavior.
+#### Behavior
 
-* Floating Elements
+* **Block elements** start on a **new line**
+* **Inline elements** stay on the **same line**
+* Elements appear **top to bottom**
 
-  * `float`
-  * `clear`
+#### Example HTML
 
-* Multicolumn Layout
+```html
+<h1>Title</h1>
+<p>Paragraph text</p>
+<img src="image.jpg">
+```
 
-  * Creating newspaper-like layouts
+Result layout:
+
+```
+Title
+Paragraph text
+Image
+```
+
+The browser automatically places elements **in vertical order**.
+
+### Key Characteristics
+
+* Default browser behavior
+* No special CSS required
+* Elements follow **document flow**
+
+## Floating Elements
+
+The **`float` property** allows elements to move **to the left or right side of their container**, allowing other content to wrap around them.
+
+Originally used for **wrapping text around images**.
+
+### float Property
+
+#### Values
+
+| Value   | Description                 |
+| ------- | --------------------------- |
+| `left`  | Element floats to the left  |
+| `right` | Element floats to the right |
+| `none`  | Default, no floating        |
+
+#### Example
+
+```css
+img {
+  float: left;
+  margin-right: 10px;
+}
+```
+
+Result:
+
+```
+[Image] Text text text text text
+        Text continues here
+```
+
+The text **wraps around the image**.
 
 ---
+
+## clear Property
+
+The `clear` property controls **how elements behave around floated elements**.
+
+It prevents elements from wrapping around floats.
+
+### Values
+
+| Value   | Description         |
+| ------- | ------------------- |
+| `left`  | Clears left floats  |
+| `right` | Clears right floats |
+| `both`  | Clears both sides   |
+
+### Example
+
+```css
+.footer {
+  clear: both;
+}
+```
+
+Result:
+
+The footer appears **below all floated elements**.
+
+Example layout:
+
+```
+[Float Left]  [Float Right]
+
+Footer (cleared below)
+```
+
+## Multicolumn Layout
+
+CSS allows content to be displayed in **multiple vertical columns**, similar to a **newspaper or magazine layout**.
+
+This is useful for **long text content**.
+
+### column-count
+
+Defines **number of columns**.
+
+Example:
+
+```css
+.container {
+  column-count: 3;
+}
+```
+
+Result:
+
+```
+Column 1   Column 2   Column 3
+Text...    Text...    Text...
+```
+
+### column-gap
+
+Controls **space between columns**.
+
+Example:
+
+```css
+.container {
+  column-count: 3;
+  column-gap: 20px;
+}
+```
+
+### column-rule
+
+Adds a **line between columns**.
+
+Example:
+
+```css
+.container {
+  column-count: 3;
+  column-rule: 1px solid gray;
+}
+```
+
+Result:
+
+```
+Column | Column | Column
+```
+
+### Example Multicolumn Layout
+
+```css
+.article {
+  column-count: 2;
+  column-gap: 30px;
+}
+```
+
+This creates a **two-column text layout** like a magazine article.
+
+#### Quick Summary
+
+| Technique          | Purpose                         |
+| ------------------ | ------------------------------- |
+| Flow Layout        | Default browser layout          |
+| `float`            | Moves elements left or right    |
+| `clear`            | Controls behavior around floats |
+| Multicolumn Layout | Splits content into columns     |
+
+---
+
+
+
+
+
+
+
+
+
+
+
 
 # 14. Modern Layout Systems
 
