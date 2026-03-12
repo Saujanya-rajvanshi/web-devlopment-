@@ -5580,45 +5580,376 @@ This creates a **two-column text layout** like a magazine article.
 
 
 
-# 14. Modern Layout Systems
+# Modern Layout Systems
 
-### Flexbox
+- [Flexbox](#Flexbox)
+- [CSS Grid](#CSS-Grid)
 
-Used for **one-dimensional layouts**.
+Modern CSS provides **powerful layout systems** to build responsive and flexible designs.
+The two main systems are **Flexbox** and **CSS Grid**.
 
-Concepts:
+* **Flexbox** → One-dimensional layouts (row OR column)
+* **Grid** → Two-dimensional layouts (rows AND columns)
 
-* Main axis
-* Cross axis
-* Flex container
-* Flex items
+## Flexbox
 
-Properties:
+Flexbox (Flexible Box Layout) is used to **align and distribute space between elements inside a container**.
 
-* justify-content
-* align-items
-* flex-direction
-* flex-wrap
+It is ideal for **navigation bars, cards, menus, and responsive layouts**.
+
+To enable Flexbox, the parent element must be set as a **flex container**.
+
+```css
+.container {
+  display: flex;
+}
+```
+
+#### Key Flexbox Concepts
+
+### Flex Container
+
+The **parent element** that holds flex items.
+
+Example:
+
+```css
+.container {
+  display: flex;
+}
+```
+
+All direct children automatically become **flex items**.
+
+### Flex Items
+
+The **child elements inside a flex container**.
+
+Example:
+
+```html
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+```
+
+Here:
+
+* `.container` → flex container
+* `.item` → flex items
+
+
+### Main Axis
+
+The **primary direction in which flex items are arranged**.
+
+Default direction is **horizontal (left → right)**.
+
+Example layout:
+
+```
+Item1  Item2  Item3
+```
+
+### Cross Axis
+
+The **perpendicular axis to the main axis**.
+
+If the main axis is **horizontal**, the cross axis becomes **vertical**.
+
+```
+Main Axis → (Row)
+Cross Axis ↓ (Column)
+```
+
+#### Important Flexbox Properties
+
+### flex-direction
+
+Defines the **direction of the main axis**.
+
+Values:
+
+| Value            | Description                         |
+| ---------------- | ----------------------------------- |
+| `row`            | Items placed horizontally (default) |
+| `column`         | Items placed vertically             |
+| `row-reverse`    | Reverse horizontal order            |
+| `column-reverse` | Reverse vertical order              |
+
+Example:
+
+```css
+.container {
+  display: flex;
+  flex-direction: column;
+}
+```
+
+Result:
+
+```
+Item1
+Item2
+Item3
+```
+
+### justify-content
+
+Controls **alignment of items along the main axis**.
+
+Values:
+
+| Value           | Behavior                  |
+| --------------- | ------------------------- |
+| `flex-start`    | Items at start            |
+| `center`        | Items centered            |
+| `flex-end`      | Items at end              |
+| `space-between` | Equal space between items |
+| `space-around`  | Equal space around items  |
+
+Example:
+
+```css
+.container {
+  display: flex;
+  justify-content: center;
+}
+```
+
+Items appear **centered horizontally**.
+
+
+## align-items
+
+Controls **alignment along the cross axis**.
+
+Values:
+
+| Value        | Behavior          |
+| ------------ | ----------------- |
+| `stretch`    | Default stretch   |
+| `center`     | Center vertically |
+| `flex-start` | Top alignment     |
+| `flex-end`   | Bottom alignment  |
+
+Example:
+
+```css
+.container {
+  display: flex;
+  align-items: center;
+}
+```
+
+Items become **vertically centered**.
+
+### flex-wrap
+
+Controls whether items **wrap onto the next line**.
+
+Values:
+
+| Value          | Behavior                        |
+| -------------- | ------------------------------- |
+| `nowrap`       | Default, items stay in one line |
+| `wrap`         | Items move to next line         |
+| `wrap-reverse` | Wrap in reverse order           |
+
+Example:
+
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+
+Items automatically move to the **next row if space runs out**.
+
+
+
+## CSS Grid
+
+CSS Grid is a **two-dimensional layout system** that works with **rows and columns simultaneously**.
+
+It is ideal for:
+
+* page layouts
+* dashboards
+* complex responsive grids
+
+To enable grid:
+
+```css
+.container {
+  display: grid;
+}
+```
+
+#### Key Grid Concepts
+
+### Grid Container
+
+The **parent element** that defines the grid layout.
+
+```css
+.container {
+  display: grid;
+}
+```
+
+### Grid Tracks
+
+Tracks are the **rows and columns of the grid**.
+
+Example:
+
+```
+Column1 | Column2 | Column3
+Row1
+Row2
+Row3
+```
+
+Tracks define the **structure of the grid**.
+
+### Grid Areas
+
+Grid areas define **specific sections of the layout**.
+
+Example:
+
+```
+Header
+Sidebar | Content
+Footer
+```
+
+Each area can be assigned to elements.
+
+#### Important Grid Properties
+
+### grid-template-columns
+
+Defines **number and size of columns**.
+
+Example:
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+```
+
+Creates **three columns of 200px each**.
+
+Another example:
+
+```css
+grid-template-columns: 1fr 1fr 1fr;
+```
+
+Creates **three equal columns**.
+
+(`fr` = fraction unit)
+
+### grid-template-rows
+
+Defines **height of rows**.
+
+Example:
+
+```css
+.container {
+  grid-template-rows: 100px 200px;
+}
+```
+
+Creates **two rows with defined heights**.
+
+### grid-gap (gap)
+
+Controls **space between grid cells**.
+
+Example:
+
+```css
+.container {
+  gap: 20px;
+}
+```
+
+Adds **20px space between rows and columns**.
+
+Older syntax:
+
+```css
+grid-gap: 20px;
+```
+
+#### Example Grid Layout
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+```
+
+This creates:
+
+```
+[Item] [Item] [Item]
+[Item] [Item] [Item]
+```
+
+A **three-column grid layout**.
+
+#### Flexbox vs Grid
+
+| Feature     | Flexbox         | Grid             |
+| ----------- | --------------- | ---------------- |
+| Layout type | One-dimensional | Two-dimensional  |
+| Direction   | Row OR Column   | Rows AND Columns |
+| Best for    | UI components   | Page layouts     |
+| Complexity  | Simple layouts  | Complex layouts  |
+
+#### Quick Summary
+
+| System      | Purpose                      |
+| ----------- | ---------------------------- |
+| Flexbox     | One-dimensional layouts      |
+| Grid        | Two-dimensional layouts      |
+| Main axis   | Primary direction in flexbox |
+| Cross axis  | Perpendicular direction      |
+| Grid tracks | Rows and columns             |
+| Grid gap    | Space between grid items     |
 
 ---
 
-### CSS Grid
 
-Used for **two-dimensional layouts**.
 
-Concepts:
 
-* Grid container
-* Grid tracks
-* Grid areas
 
-Properties:
 
-* grid-template-columns
-* grid-template-rows
-* grid-gap
 
----
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 15. CSS Effects
 
