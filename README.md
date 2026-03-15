@@ -1377,45 +1377,28 @@ Structure → Semantics → Accessibility → Performance.
 
 ## Table of Contents
 
-* [CSS Fundamentals](#css-Fundamentals)
-* [Selectors](#selectors)
-* [CSS Units & Measurements](#css-units--measurements)
-* [Typography & Text Styling](#typography--Text-Styling)
-* [Colors & Backgrounds](#colors--Backgrounds)
-* [Box Model](#box-model)
-* [Borders, Outline & Shadows](#Borders-Outline--Shadows)
-* [Box Shadow](#box-shadow)
-* [Display & Visibility](#display--visibility)
-* [Positioning](#positioning)
-* [Z-Index & Stacking Context](#z-index--stacking-context)
-* [Lists & Tables Styling](#lists--tables-styling)
-* [Images & Filters](#images--filters)
-* [Layouting Techniques](#layouting-techniques)
-* [Flow Layout](#flow-layout)
-* [Floating Elements](#floating-elements)
-* [Multicolumn Layout](#multicolumn-layout)
-* [Flexbox](#flexbox)
-* [CSS Grid](#css-grid)
-* [Transforms](#transforms)
-* [Transitions](#transitions)
-* [Animations](#animations)
-* [Keyframe Animations](#keyframe-animations)
-* [CSS Variables](#css-variables)
-* [Responsive Design](#responsive-design)
-* [Media Queries](#media-queries)
-* [Container Queries](#container-queries)
-* [Responsive Typography](#responsive-typography)
-* [Accessibility](#accessibility)
-* [Performance](#performance)
-* [CSS Best Practices](#css-best-practices)
-* [CSS Architecture & Methodologies](#css-architecture--methodologies)
-* [BEM](#bem)
-* [CSS Modules](#css-modules)
-* [CSS-in-JS](#css-in-js)
-* [CSS Preprocessors & Tools](#css-preprocessors--tools)
-* [Sass](#sass)
-* [PostCSS](#postcss)
-
+* [1. CSS Introduction](#css-Introduction)
+* [2. CSS Selectors](#CSS-Selectors)
+* [3. CSS Units & Measurements](#CSS-Units--Measurements)
+* [4. Typography & Text Styling](#Typography--Text-Styling)
+* [5. Colors & Backgrounds](#Colors--Backgrounds)
+* [6. Box Model](#Box-Model)
+* [7. Borders, Outline & Shadows](#Borders-Outline--Shadows)
+* [8. Display & Visibility](#Display--Visibility)
+* [9. Positioning](#Positioning)
+* [10. Z-Index & Stacking Context](#Z-Index--Stacking-Context)
+* [11. Lists & Tables Styling](#Styling-Lists--Tables)
+* [12. Images & Filters](#Images--Filters)
+* [13. Layouting Techniques](#Layouting-Techniques)
+* [14. Modern Layout Systems](#Modern-Layout-Systems)
+* [15. CSS Effects](#CSS-Effects)
+* [16. CSS Variables](#CSS-Variables)
+* [17. Responsive Design](#Responsive-Design)
+* [18. Accessibility A11Y](#Accessibility-A11Y)
+* [19. CSS Performance](#CSS-Performance)
+* [20. CSS Best Practices](#CSS-Best-Practices)
+* [21. CSS Architecture & Methodologies](#CSS-Architecture--Methodologies)
+* [22. CSS Preprocessors & Tools](#CSS-Preprocessors--Tools)
 
 
 
@@ -4351,7 +4334,7 @@ Example:
 
 
 
-# 9. Positioning
+# Positioning
 
 * [Static positioning](#Static-positioning)
 * [Relative positioning](#Relative-positioning)
@@ -5088,10 +5071,6 @@ This creates a **clean, readable table layout**.
 | `vertical-align`      | Vertical alignment                |
 
 ---
-
-
-
-
 
 
 
@@ -6903,7 +6882,7 @@ This button is:
 
 
 
-# 19. CSS Performance
+# CSS Performance
 
 CSS performance focuses on **writing efficient CSS so that webpages load faster and render smoothly**.
 Optimized CSS improves **website speed, user experience, and performance on slower devices**.
@@ -7408,7 +7387,7 @@ Usage:
 
 ---
 
-# 22. CSS Preprocessors & Tools
+# CSS Preprocessors & Tools
 
 - [Sass](#Sass)
 - [PostCSS](#PostCSS)
