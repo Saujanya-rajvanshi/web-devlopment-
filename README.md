@@ -1636,13 +1636,13 @@ Attributes:
 
 #### CSS Priority Hierarchy (Highest → Lowest)
 
-1️⃣ **`!important`**
-2️⃣ **Inline CSS**
-3️⃣ **ID Selector**
-4️⃣ **Class / Attribute / Pseudo-class Selectors**
-5️⃣ **Element (Tag) Selector**
-6️⃣ **Universal Selector (`*`)**
-7️⃣ **Browser Default Styles**
+* 1️⃣ **`!important`**
+* 2️⃣ **Inline CSS**
+* 3️⃣ **ID Selector**
+* 4️⃣ **Class / Attribute / Pseudo-class Selectors**
+* 5️⃣ **Element (Tag) Selector**
+* 6️⃣ **Universal Selector (`*`)**
+* 7️⃣ **Browser Default Styles**
 
 ### 1. `!important` (Highest Priority)
 
