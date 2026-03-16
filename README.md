@@ -1447,55 +1447,6 @@ CSS is used to:
 * Make websites responsive
 * Maintain consistent design across pages
 
-Example uses:
-
-* Changing text color
-* Adding spacing between elements
-* Creating responsive layouts
-* Adding animations
-
-### CSS vs HTML Responsibilities
-
-| HTML              | CSS                 |
-| ----------------- | ------------------- |
-| Defines structure | Defines style       |
-| Creates elements  | Controls appearance |
-| Adds content      | Controls layout     |
-| Semantic meaning  | Visual presentation |
-
-Example:
-
-HTML structure:
-
-```html
-<h1>Welcome</h1>
-<p>This is a paragraph</p>
-```
-
-CSS styling:
-
-```css
-h1 {
-  color: green;
-}
-
-p {
-  font-size: 16px;
-}
-```
-
-### Advantages of CSS
-
-1. **Separation of content and design**
-2. **Reusable styles across multiple pages**
-3. **Better maintainability**
-4. **Faster website performance**
-5. **Responsive design support**
-
-Example:
-
-One CSS file can style **multiple pages**.
-
 ```
 index.html
 about.html
