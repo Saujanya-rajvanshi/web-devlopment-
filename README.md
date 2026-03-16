@@ -1503,6 +1503,13 @@ contact.html
 style.css
 ```
 
+The cascading style sheets (CSS) depend on the following four properties to determine the final styles applied to an element on a web page when multiple conflicting rules are defined:
+1. **Source Order :** The order in which styles are defined in the CSS file or linked in the HTML document. The later rule will take precedence if two rules have the same specificity.
+2. **Specificity :** The weight of a CSS selector that targets an element. More specific selectors have a higher specificity value and are applied more often.
+Importance: Styles marked with !important take precedence over all other styles, even if they are less specific.
+3. **Source Order :** The order in which styles are defined in the CSS file or linked in the HTML document. The later rule will take precedence if two rules have the same specificity.
+These four properties work together to ensure that the correct styles are applied to the elements on the web page, providing a consistent and visually appealing presentation. 
+
 ## CSS Syntax Basics
 
 CSS follows a simple rule-based syntax.
