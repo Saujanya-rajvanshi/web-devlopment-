@@ -1465,15 +1465,6 @@ These four properties work together to ensure that the correct styles are applie
 
 CSS follows a simple rule-based syntax.
 
-Example:
-
-```css
-h1 {
-  color: red;
-  font-size: 32px;
-}
-```
-
 Structure:
 
 ```
@@ -1481,14 +1472,6 @@ selector {
   property: value;
 }
 ```
-
-### CSS Rule Structure
-
-A CSS rule consists of two main parts:
-
-1. **Selector**
-2. **Declaration block**
-
 Example:
 
 ```css
@@ -1496,14 +1479,10 @@ p {
   color: blue;
 }
 ```
+A CSS rule consists of two main parts:
 
-Breakdown:
-
-```
-p → selector
-color → property
-blue → value
-```
+1. **Selector**
+2. **Declaration block**
 
 ### Selectors, Properties, and Values
 
@@ -1653,6 +1632,170 @@ Attributes:
 | rel       | Relationship between HTML and CSS |
 | href      | Path to CSS file                  |
 
+### When **multiple CSS rules apply the same property to the same element**, the browser decides which one to apply using **CSS Priority (Cascade / Specificity)**.
+
+#### CSS Priority Hierarchy (Highest → Lowest)
+
+1️⃣ **`!important`**
+2️⃣ **Inline CSS**
+3️⃣ **ID Selector**
+4️⃣ **Class / Attribute / Pseudo-class Selectors**
+5️⃣ **Element (Tag) Selector**
+6️⃣ **Universal Selector (`*`)**
+7️⃣ **Browser Default Styles**
+
+### 1. `!important` (Highest Priority)
+
+Overrides almost every other rule.
+
+```css
+p {
+  color: red !important;
+}
+```
+
+Even if other selectors try to change the color, **this rule will win**.
+
+⚠️ Usually **avoid using `!important`** because it makes CSS harder to maintain.
+
+### 2. Inline CSS
+
+CSS written directly inside an HTML element.
+
+```html
+<p style="color: blue;">Hello</p>
+```
+
+Inline styles override:
+
+* class selectors
+* id selectors
+* element selectors
+
+But **`!important` can override inline CSS**.
+
+### 3. ID Selector
+
+Uses `#id`.
+
+```css
+#title {
+  color: green;
+}
+```
+
+Higher priority than **class selectors and element selectors**.
+
+### 4. Class / Attribute / Pseudo-class
+
+Includes:
+
+* `.class`
+* `[type="text"]`
+* `:hover`
+* `:focus`
+* `:nth-child()`
+
+Example:
+
+```css
+.button {
+  color: orange;
+}
+```
+
+### 5. Element (Tag) Selector
+
+Targets HTML tags.
+
+```css
+p {
+  color: purple;
+}
+```
+
+Lower priority than class or id selectors.
+
+### 6. Universal Selector
+
+Targets **all elements**.
+
+```css
+* {
+  margin: 0;
+}
+```
+
+Very low priority.
+
+#### Example
+
+```html
+<p id="text" class="box">Hello</p>
+```
+
+```css
+p { color: red; }        /* element */
+.box { color: blue; }    /* class */
+#text { color: green; }  /* id */
+```
+
+Final color → **green** (because **ID has higher priority**).
+
+#### Specificity Weight (Important Concept)
+
+Browsers calculate **specificity score**.
+
+| Selector                         | Weight |
+| -------------------------------- | ------ |
+| Inline                           | 1000   |
+| ID                               | 100    |
+| Class / Attribute / Pseudo-class | 10     |
+| Element                          | 1      |
+
+Example:
+
+```css
+#box .title p
+```
+
+Score:
+
+```
+ID = 100
+Class = 10
+Element = 1
+Total = 111
+```
+
+Higher score → **higher priority**.
+
+### Final Cascade Rule
+
+If **two selectors have same specificity**, the **last rule written in CSS wins**.
+
+Example:
+
+```css
+p { color: red; }
+p { color: blue; }
+```
+
+Final color → **blue**.
+
+#### Quick Summary
+
+Priority order:
+
+```
+!important
+Inline CSS
+ID Selector
+Class / Attribute / Pseudo-class
+Element Selector
+Universal Selector
+Browser Default
+```
 
 ## CSS Rules, Properties & Values
 
