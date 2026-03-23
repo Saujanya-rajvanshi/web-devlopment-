@@ -1386,19 +1386,20 @@ Structure → Semantics → Accessibility → Performance.
 * [7. Borders, Outline & Shadows](#Borders-Outline--Shadows)
 * [8. Display & Visibility](#Display--Visibility)
 * [9. Positioning](#Positioning)
-* [10. Z-Index & Stacking Context](#Z-Index--Stacking-Context)
-* [11. Lists & Tables Styling](#Styling-Lists--Tables)
-* [12. Images & Filters](#Images--Filters)
-* [13. Layouting Techniques](#Layouting-Techniques)
-* [14. Modern Layout Systems](#Modern-Layout-Systems)
-* [15. CSS Effects](#CSS-Effects)
-* [16. CSS Variables](#CSS-Variables)
-* [17. Responsive Design](#Responsive-Design)
-* [18. Accessibility A11Y](#Accessibility-A11Y)
-* [19. CSS Performance](#CSS-Performance)
-* [20. CSS Best Practices](#CSS-Best-Practices)
-* [21. CSS Architecture & Methodologies](#CSS-Architecture--Methodologies)
-* [22. CSS Preprocessors & Tools](#CSS-Preprocessors--Tools)
+* [10. CSS Sizes & Units](#CSS-Sizes--Units)
+* [11. Z-Index & Stacking Context](#Z-Index--Stacking-Context)
+* [12. Lists & Tables Styling](#Styling-Lists--Tables)
+* [13. Images & Filters](#Images--Filters)
+* [14. Layouting Techniques](#Layouting-Techniques)
+* [15. Modern Layout Systems](#Modern-Layout-Systems)
+* [16. CSS Effects](#CSS-Effects)
+* [17. CSS Variables](#CSS-Variables)
+* [18. Responsive Design](#Responsive-Design)
+* [19. Accessibility A11Y](#Accessibility-A11Y)
+* [20. CSS Performance](#CSS-Performance)
+* [21. CSS Best Practices](#CSS-Best-Practices)
+* [22. CSS Architecture & Methodologies](#CSS-Architecture--Methodologies)
+* [23. CSS Preprocessors & Tools](#CSS-Preprocessors--Tools)
 
 
 
@@ -4671,6 +4672,232 @@ Example:
 ```
 
 ---
+
+
+
+
+
+# CSS Sizes & Units
+
+## 1. Types of Units
+
+### Absolute Units (fixed, not responsive)
+
+| Unit | Meaning                  |
+| ---- | ------------------------ |
+| `px` | Pixels (most used)       |
+| `cm` | Centimeters              |
+| `mm` | Millimeters              |
+| `in` | Inches                   |
+| `pt` | Points (1pt = 1/72 inch) |
+| `pc` | Picas (1pc = 12pt)       |
+
+Example:
+
+```css
+p {
+  font-size: 16px;
+}
+```
+
+Fixed size, does NOT change with screen
+
+### Relative Units (responsive)
+
+| Unit   | Based On              |
+| ------ | --------------------- |
+| `%`    | Parent element        |
+| `em`   | Parent font-size      |
+| `rem`  | Root (html) font-size |
+| `vw`   | 1% of viewport width  |
+| `vh`   | 1% of viewport height |
+| `vmin` | smaller of vw & vh    |
+| `vmax` | larger of vw & vh     |
+
+## 2. Important Units Explained
+
+### `px`
+
+* Fixed unit
+* Most commonly used
+
+```css
+div {
+  width: 200px;
+}
+```
+
+### `%`
+
+* Relative to parent
+
+```css
+div {
+  width: 50%;
+}
+```
+
+### `em`
+
+* Relative to parent font-size
+
+```css
+.parent {
+  font-size: 20px;
+}
+.child {
+  font-size: 2em; /* 40px */
+}
+```
+
+Problem: **cascading effect**
+
+### `rem`
+
+* Relative to root (`html`)
+
+```css
+html {
+  font-size: 16px;
+}
+p {
+  font-size: 2rem; /* 32px */
+}
+```
+
+Better than em (no nesting issue)
+
+### `vw` & `vh`
+
+```css
+div {
+  width: 50vw;
+  height: 100vh;
+}
+```
+
+Fully responsive
+
+## 3. Font Size Keywords
+
+```css
+p {
+  font-size: small;
+}
+```
+
+Values:
+
+* `xx-small`
+* `x-small`
+* `small`
+* `medium` (default)
+* `large`
+* `x-large`
+* `xx-large`
+
+## 4. CSS Functions for Size
+
+### `calc()`
+
+```css
+div {
+  width: calc(100% - 50px);
+}
+```
+
+### `min()`
+
+```css
+width: min(50%, 300px);
+```
+
+### `max()`
+
+```css
+width: max(200px, 50%);
+```
+
+### `clamp()` (🔥 important)
+
+```css
+font-size: clamp(16px, 5vw, 40px);
+```
+
+Min – Preferred – Max
+Best for responsive text
+
+## 5. Line Height & Spacing
+
+```css
+p {
+  line-height: 1.5;
+}
+```
+
+Unitless is best (scales automatically)
+
+## 6. Width & Height Properties
+
+```css
+div {
+  width: 300px;
+  height: 200px;
+}
+```
+
+Other:
+
+* `min-width`
+* `max-width`
+* `min-height`
+* `max-height`
+
+## 7. Box Model Sizing
+
+```css
+box-sizing: border-box;
+```
+
+Includes padding & border inside width
+
+## 8. When to Use What (VERY IMPORTANT)
+
+| Use Case         | Unit       |
+| ---------------- | ---------- |
+| Fixed layout     | `px`       |
+| Responsive width | `%`        |
+| Font scaling     | `rem`      |
+| Nested elements  | avoid `em` |
+| Full screen      | `vh`, `vw` |
+| Responsive text  | `clamp()`  |
+
+## 9. Quick Summary
+
+* `px` → fixed
+* `%` → parent-based
+* `em` → parent font
+* `rem` → root font (best for fonts)
+* `vw/vh` → screen size
+* `clamp()` → modern responsive
+
+## 10. Interview Tips
+
+* Prefer **rem over em**
+* Use **clamp() for responsive design**
+* Avoid too many fixed `px`
+* Always use:
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+---
+
+
+
 
 
 
