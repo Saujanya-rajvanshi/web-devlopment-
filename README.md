@@ -1386,20 +1386,21 @@ Structure → Semantics → Accessibility → Performance.
 * [7. Borders, Outline & Shadows](#Borders-Outline--Shadows)
 * [8. Display & Visibility](#Display--Visibility)
 * [9. Positioning](#Positioning)
-* [10. CSS Sizes & Units](#CSS-Sizes--Units)
-* [11. Z-Index & Stacking Context](#Z-Index--Stacking-Context)
-* [12. Lists & Tables Styling](#Styling-Lists--Tables)
-* [13. Images & Filters](#Images--Filters)
-* [14. Layouting Techniques](#Layouting-Techniques)
-* [15. Modern Layout Systems](#Modern-Layout-Systems)
-* [16. CSS Effects](#CSS-Effects)
-* [17. CSS Variables](#CSS-Variables)
-* [18. Responsive Design](#Responsive-Design)
-* [19. Accessibility A11Y](#Accessibility-A11Y)
-* [20. CSS Performance](#CSS-Performance)
-* [21. CSS Best Practices](#CSS-Best-Practices)
-* [22. CSS Architecture & Methodologies](#CSS-Architecture--Methodologies)
-* [23. CSS Preprocessors & Tools](#CSS-Preprocessors--Tools)
+* [10. CSS Sizes & Units](#CSS-Sizes--Units
+* [11. CSS Float & Clear](#CSS-Float--Clear)
+* [12. Z-Index & Stacking Context](#Z-Index--Stacking-Context)
+* [13. Lists & Tables Styling](#Styling-Lists--Tables)
+* [14. Images & Filters](#Images--Filters)
+* [15. Layouting Techniques](#Layouting-Techniques)
+* [16. Modern Layout Systems](#Modern-Layout-Systems)
+* [17. CSS Effects](#CSS-Effects)
+* [18. CSS Variables](#CSS-Variables)
+* [19. Responsive Design](#Responsive-Design)
+* [20. Accessibility A11Y](#Accessibility-A11Y)
+* [21. CSS Performance](#CSS-Performance)
+* [22. CSS Best Practices](#CSS-Best-Practices)
+* [23. CSS Architecture & Methodologies](#CSS-Architecture--Methodologies)
+* [24. CSS Preprocessors & Tools](#CSS-Preprocessors--Tools)
 
 
 
@@ -4898,6 +4899,161 @@ Includes padding & border inside width
 
 
 
+
+
+
+
+
+
+
+
+## CSS Float & Clear
+
+### 1. `float`
+
+The `float` property is used to **position an element to the left or right** of its container, allowing **text or inline content to wrap around it**.
+
+#### Values
+
+```css
+float: left;
+float: right;
+float: none;
+```
+
+* `left` → element moves to left
+* `right` → element moves to right
+* `none` → default (no floating)
+
+#### Example
+
+```css
+img {
+  float: left;
+  margin-right: 10px;
+}
+```
+
+```html
+<img src="img.jpg">
+<p>This text wraps around the image.</p>
+```
+
+Result:
+
+```
+[IMG] Text flows around the image...
+```
+
+#### Key Behavior
+
+* Element is **taken out of normal document flow**
+* Other content **wraps around it**
+* Parent may **collapse (height = 0)** if only floated children exist
+
+#### Common Use Cases
+
+* Image with text wrapping
+* Old layout designs (before Flexbox/Grid)
+
+### 2. `clear`
+
+The `clear` property is used to **control behavior of elements next to floated elements**.
+
+It specifies **which sides of floating elements are not allowed**.
+
+#### Values
+
+```css
+clear: left;
+clear: right;
+clear: both;
+clear: none;
+```
+
+* `left` → no floating element on left
+* `right` → no floating element on right
+* `both` → clears both sides
+* `none` → default
+
+#### Example
+
+```css
+.box1 {
+  float: left;
+}
+
+.box2 {
+  clear: left;
+}
+```
+
+Result:
+
+```
+[box1]
+        (box2 moves below, not beside)
+[box2]
+```
+
+### 3. Float + Clear Together
+
+```css
+img {
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+```
+
+```html
+<img src="img.jpg">
+<p>Text wraps...</p>
+<div class="clearfix"></div>
+```
+
+This ensures the layout **does not break**.
+
+### 4. Clearfix Hack (Important)
+
+Used to fix **parent collapsing issue**.
+
+```css
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+```
+
+This makes the parent **properly contain floated children**.
+
+### 5. Problems with Float
+
+* Layout breaking issues
+* Parent height collapse
+* Hard to manage complex layouts
+
+👉 That’s why modern CSS uses:
+
+* Flexbox
+* CSS Grid
+
+| Property      | Purpose                                     |
+| ------------- | ------------------------------------------- |
+| `float`       | Moves element left/right and wraps content  |
+| `clear`       | Controls floating behavior of next elements |
+| `clear: both` | Most commonly used to fix layout            |
+| `clearfix`    | Fix parent collapse issue                   |
+
+## One Line Concept
+
+```
+float → moves element  
+clear → stops floating effects
+```
 
 
 
