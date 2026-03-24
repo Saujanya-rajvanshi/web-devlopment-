@@ -1386,8 +1386,9 @@ Structure → Semantics → Accessibility → Performance.
 * [7. Borders, Outline & Shadows](#Borders-Outline--Shadows)
 * [8. Display & Visibility](#Display--Visibility)
 * [9. Positioning](#Positioning)
-* [10. CSS Sizes & Units](#CSS-Sizes--Units
+* [10. CSS Sizes & Units](#CSS-Sizes--Units)
 * [11. CSS Float & Clear](#CSS-Float--Clear)
+* [12. Flexbox](#Flexbox)
 * [12. Z-Index & Stacking Context](#Z-Index--Stacking-Context)
 * [13. Lists & Tables Styling](#Styling-Lists--Tables)
 * [14. Images & Filters](#Images--Filters)
@@ -5055,6 +5056,248 @@ float → moves element
 clear → stops floating effects
 ```
 
+
+
+
+
+
+
+
+# Flexbox
+
+**Flexbox (Flexible Box Layout)** is used to create **one-dimensional layouts** (row OR column).
+It helps align, distribute, and space elements **easily and responsively**.
+
+# 1. Basic Concepts
+
+### Flex Container vs Flex Items
+
+```css
+.container {
+  display: flex;
+}
+```
+
+* **Flex Container** → parent (`display: flex`)
+* **Flex Items** → direct children
+
+# 2. Axes (Very Important)
+
+Flexbox works on two axes:
+
+* **Main Axis** → controlled by `flex-direction`
+* **Cross Axis** → perpendicular to main axis
+
+### Default
+
+```css
+flex-direction: row;
+```
+
+```text
+Main Axis → horizontal
+Cross Axis ↓ vertical
+```
+
+# 3. Flex Container Properties
+
+## 1. `display`
+
+```css
+display: flex;
+display: inline-flex;
+```
+
+## 2. `flex-direction`
+
+Defines direction of items.
+
+```css
+flex-direction: row;         /* default */
+flex-direction: row-reverse;
+flex-direction: column;
+flex-direction: column-reverse;
+```
+
+## 3. `justify-content` (Main Axis Alignment)
+
+```css
+justify-content: flex-start;
+justify-content: flex-end;
+justify-content: center;
+justify-content: space-between;
+justify-content: space-around;
+justify-content: space-evenly;
+```
+
+## 4. `align-items` (Cross Axis Alignment)
+
+```css
+align-items: stretch;   /* default */
+align-items: flex-start;
+align-items: flex-end;
+align-items: center;
+align-items: baseline;
+```
+
+## 5. `align-content` (Multiple Lines Only)
+
+Works when `flex-wrap` is enabled.
+
+```css
+align-content: flex-start;
+align-content: center;
+align-content: space-between;
+```
+
+## 6. `flex-wrap`
+
+Controls wrapping of items.
+
+```css
+flex-wrap: nowrap;      /* default */
+flex-wrap: wrap;
+flex-wrap: wrap-reverse;
+```
+
+## 7. `gap`
+
+Spacing between items.
+
+```css
+gap: 10px;
+```
+
+## 8. `flex-flow` (Shorthand)
+
+```css
+flex-flow: row wrap;
+```
+
+# 4. Flex Item Properties
+
+## 1. `flex-grow`
+
+Controls how much item **grows**.
+
+```css
+.item {
+  flex-grow: 1;
+}
+```
+
+## 2. `flex-shrink`
+
+Controls how much item **shrinks**.
+
+```css
+flex-shrink: 1;
+```
+
+## 3. `flex-basis`
+
+Initial size of item.
+
+```css
+flex-basis: 200px;
+```
+
+## 4. `flex` (Shorthand)
+
+```css
+flex: 1;          /* grow shrink basis */
+flex: 1 1 200px;
+```
+
+## 5. `align-self`
+
+Override alignment for single item.
+
+```css
+align-self: center;
+```
+
+## 6. `order`
+
+Controls order of items.
+
+```css
+.item {
+  order: 2;
+}
+```
+
+Lower value → appears first
+
+# 5. Example Layout
+
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+```
+
+```html
+<div class="container">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+```
+
+# 6. Centering (Very Important)
+
+### Perfect Centering
+
+```css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+# 7. Common Use Cases
+
+* Navbar
+* Centering elements
+* Cards layout
+* Responsive rows/columns
+
+# 8. Important Notes
+
+* Works in **1D (row OR column)**
+* Children become **flex items automatically**
+* Better than float for layout
+
+# 9. Flexbox vs Grid
+
+| Feature   | Flexbox       | Grid         |
+| --------- | ------------- | ------------ |
+| Dimension | 1D            | 2D           |
+| Use       | Row/Column    | Full layout  |
+| Control   | Content-based | Layout-based |
+
+# 10. Quick Summary
+
+```text
+display: flex → enable flexbox
+flex-direction → direction
+justify-content → main axis
+align-items → cross axis
+flex-wrap → wrapping
+gap → spacing
+```
+
+# One Line Concept
+
+```text
+Flexbox = Align + Distribute + Space elements easily
+```
+
+---
 
 
 
