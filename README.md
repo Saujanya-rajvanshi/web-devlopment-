@@ -14,12 +14,407 @@
 ---
 
 
+# Building Real Website
 
+## ! boiler plate code
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
 
+## change title
+```html
+    <title>korean lanuage learning</title>
+```
 
+## add title logo
+```html
+    <link rel="icon" type="image/png" href="kicon.ico">
+```
 
+## add header
+```html
+<!-- Header -->
+    <header class="navbar">
+    <div class="logo">SAUJANYA</div>
+    <nav>
+        <ul>
+            <li><a href="#hangul">hangul</a></li>
+            <li><a href="#grammer">grammer</a></li>
+            <li><a href="#vocabulary">vocabulary</a></li>
+        </ul>
+    </nav>
+   </header>
+```
 
+## link css
 
+inside head tag
+
+```html
+    <link rel="stylesheet" href="style.css">
+```
+
+## style header
+
+Here are **complete, clean notes to style a full header/navbar in CSS** (from basic → professional level). Keep it concise but practical.
+
+---
+
+# 🔥 1. Basic Header Structure (HTML)
+
+```html
+<header class="navbar">
+    <div class="logo">SAUJANYA</div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Hangul</a></li>
+            <li><a href="#">Grammar</a></li>
+            <li><a href="#">Vocabulary</a></li>
+        </ul>
+    </nav>
+</header>
+```
+
+---
+
+# 🎯 2. Core Styling (MUST KNOW)
+
+## ✅ Flexbox layout (most important)
+
+```css
+.navbar {
+    display: flex;                    /* main layout */
+    justify-content: space-between;  /* logo left, menu right */
+    align-items: center;             /* vertical alignment */
+
+    padding: 15px 8%;
+    background: black;
+    color: white;
+}
+```
+
+👉 This alone fixes **90% header alignment problems**
+
+---
+
+# 🎨 3. Logo Styling
+
+```css
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+```
+
+---
+
+# 📌 4. Navigation Menu
+
+```css
+.navbar ul {
+    display: flex;     /* horizontal menu */
+    gap: 25px;         /* spacing */
+    list-style: none;  /* remove bullets */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.95rem;
+}
+```
+
+---
+
+# ✨ 5. Hover Effects (important for UI)
+
+```css
+.navbar a {
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #12ca12;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+```
+
+👉 Gives modern underline animation
+
+---
+
+# 📍 6. Fixed Header (very common)
+
+```css
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+```
+
+👉 Keeps navbar always visible
+
+---
+
+# ⚠️ 7. Fix content overlapping
+
+```css
+body {
+    padding-top: 80px;
+}
+```
+
+👉 Prevents content going under navbar
+
+---
+
+# 🎭 8. Glass Effect (modern UI)
+
+```css
+.navbar {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+```
+
+---
+
+# 📱 9. Responsive (mobile)
+
+```css
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;   /* hide menu */
+    }
+}
+```
+
+👉 Later you can add hamburger menu
+
+---
+
+# 🎯 10. Full Professional Header CSS
+
+```css
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 8%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+/* hover effect */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #12ca12;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+```
+
+---
+
+# 🚀 Key Concepts to Remember
+
+* `display: flex` → layout
+* `justify-content` → horizontal alignment
+* `align-items` → vertical alignment
+* `gap` → spacing
+* `position: fixed` → sticky header
+* `::after` → animations
+
+---
+
+# 💡 Interview Tip
+
+If asked:
+👉 “How do you design a navbar?”
+
+Say:
+
+* Use **Flexbox for layout**
+* Use **position fixed for sticky behavior**
+* Add **hover animations**
+* Ensure **responsive design**
+
+```css
+/* ================= HEADER ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+    background: rgba(249, 157, 198, 0.315);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+/* hover effect */
+
+.navbar a:hover {
+    color: #f7cdee;
+    text-shadow: 0 0 8px #f4ecaf,
+                 0 0 16px #f4ecaf;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+```
+
+## create button / add center text
+```html
+    <div class = "centertext">
+        안녕하세요!
+        <button id="exploreBtn">Star learning</button>
+    </div>
+```
+
+## style button
+```css
+#exploreBtn {
+    display: block;
+    margin: 30px auto;
+
+    padding: 14px 40px;
+    border-radius: 40px;
+    border: none;
+
+    background: linear-gradient(45deg, #ff9ecf, #ffc3e3);
+    color: #4a0033;
+
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    /* base glow */
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+/* 🔥 HOVER GLOW */
+#exploreBtn:hover {
+    transform: scale(1.08);
+
+    box-shadow: 
+        0 0 15px #ff4da6,
+        0 0 30px #ff4da6,
+        0 0 60px #ff4da6,
+        0 0 100px rgba(255, 77, 166, 0.7);
+
+    background: linear-gradient(45deg, #ff4da6, #ff9ecf);
+    color: white;
+}
+```
+
+## add footer
+```html
+    <!-- footer -->
+    <footer>
+        <p>korean language learning</p>
+        <p>By - saujanya</p>
+    </footer>
+```
+
+## style footer
+```css
+/* ================= FOOTER ================= */
+footer {
+    width : 100%;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: auto;
+
+    background : rgba(59, 8, 31, 0.515);
+    color: white;
+
+    border-top: 1px solid rgba(212,175,122,0.3);
+}
+
+footer p {
+    font-size: 1.2rem;   /* increase size */
+    font-weight: 700;    /* bold */
+    color: white;
+}
+```
 
 
 
