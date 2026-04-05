@@ -44,7 +44,7 @@
 
 ## add header
 ```html
-<!-- Header -->
+<!---====----=== Header ===---====--->
     <header class="navbar">
     <div class="logo">SAUJANYA</div>
     <nav>
@@ -54,7 +54,7 @@
             <li><a href="#vocabulary">vocabulary</a></li>
         </ul>
     </nav>
-   </header>
+    </header>
 ```
 
 ## link css
@@ -65,11 +65,17 @@ inside head tag
     <link rel="stylesheet" href="style.css">
 ```
 
+## style body 
+
+```css
+/* ================= BODY ================= */
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+```
+
 ## style header
-
-Here are **complete, clean notes to style a full header/navbar in CSS** (from basic → professional level). Keep it concise but practical.
-
----
 
 # 🔥 1. Basic Header Structure (HTML)
 
@@ -86,8 +92,6 @@ Here are **complete, clean notes to style a full header/navbar in CSS** (from ba
     </nav>
 </header>
 ```
-
----
 
 # 🎯 2. Core Styling (MUST KNOW)
 
@@ -107,8 +111,6 @@ Here are **complete, clean notes to style a full header/navbar in CSS** (from ba
 
 👉 This alone fixes **90% header alignment problems**
 
----
-
 # 🎨 3. Logo Styling
 
 ```css
@@ -118,8 +120,6 @@ Here are **complete, clean notes to style a full header/navbar in CSS** (from ba
     letter-spacing: 1px;
 }
 ```
-
----
 
 # 📌 4. Navigation Menu
 
@@ -136,8 +136,6 @@ Here are **complete, clean notes to style a full header/navbar in CSS** (from ba
     font-size: 0.95rem;
 }
 ```
-
----
 
 # ✨ 5. Hover Effects (important for UI)
 
@@ -164,8 +162,6 @@ Here are **complete, clean notes to style a full header/navbar in CSS** (from ba
 
 👉 Gives modern underline animation
 
----
-
 # 📍 6. Fixed Header (very common)
 
 ```css
@@ -179,8 +175,6 @@ Here are **complete, clean notes to style a full header/navbar in CSS** (from ba
 
 👉 Keeps navbar always visible
 
----
-
 # ⚠️ 7. Fix content overlapping
 
 ```css
@@ -191,8 +185,6 @@ body {
 
 👉 Prevents content going under navbar
 
----
-
 # 🎭 8. Glass Effect (modern UI)
 
 ```css
@@ -201,8 +193,6 @@ body {
     backdrop-filter: blur(10px);
 }
 ```
-
----
 
 # 📱 9. Responsive (mobile)
 
@@ -215,8 +205,6 @@ body {
 ```
 
 👉 Later you can add hamburger menu
-
----
 
 # 🎯 10. Full Professional Header CSS
 
@@ -271,33 +259,9 @@ body {
 }
 ```
 
----
-
-# 🚀 Key Concepts to Remember
-
-* `display: flex` → layout
-* `justify-content` → horizontal alignment
-* `align-items` → vertical alignment
-* `gap` → spacing
-* `position: fixed` → sticky header
-* `::after` → animations
-
----
-
-# 💡 Interview Tip
-
-If asked:
-👉 “How do you design a navbar?”
-
-Say:
-
-* Use **Flexbox for layout**
-* Use **position fixed for sticky behavior**
-* Add **hover animations**
-* Ensure **responsive design**
 
 ```css
-/* ================= HEADER ================= */
+/* ================= NAVBAR ================= */
 .navbar {
     position: fixed;
     top: 0;
@@ -306,7 +270,6 @@ Say:
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 50px;
     background: rgba(249, 157, 198, 0.315);
     backdrop-filter: blur(8px);
     z-index: 1000;
@@ -314,6 +277,7 @@ Say:
 
 .logo {
     font-size: 1.5rem;
+    font-style :inherit;
     font-weight: bold;
     color: white;
 }
@@ -325,7 +289,8 @@ Say:
 }
 
 .navbar a {
-    text-decoration: none;
+    text-decoration : none ;
+    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(255, 255, 255);
     position: relative;
 }
@@ -345,10 +310,40 @@ Say:
 
 ## create button / add center text
 ```html
-    <div class = "centertext">
-        안녕하세요!
-        <button id="exploreBtn">Star learning</button>
+    <!---====----=== center text and button ===---====--->
+    <section>
+    <div class="hero">
+        <h1 class="centertext">안녕하세요!</h1>
+        <button id="exploreBtn">Start Learning</button>
     </div>
+    </section>
+```
+
+## style center text 
+```css
+/* ================= HERO ================= */
+.hero {
+    min-height: 100vh;
+
+    background-image: url("kbackimg.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding-top: 80px;
+}
+
+.centertext {
+    font-size: 120px;
+    font-weight: bold;
+    color: rgb(8, 125, 21);
+}
 ```
 
 ## style button
@@ -371,7 +366,7 @@ Say:
     box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
 }
 
-/* 🔥 HOVER GLOW */
+/* HOVER GLOW */
 #exploreBtn:hover {
     transform: scale(1.08);
 
@@ -388,34 +383,110 @@ Say:
 
 ## add footer
 ```html
-    <!-- footer -->
+<!---====----=== footer ===---====--->
     <footer>
         <p>korean language learning</p>
         <p>By - saujanya</p>
     </footer>
+
+    <script src="script.js"></script>
 ```
 
 ## style footer
 ```css
 /* ================= FOOTER ================= */
 footer {
-    width : 100%;
     text-align: center;
-    padding: 25px 0;
-    margin-top: auto;
-
-    background : rgba(59, 8, 31, 0.515);
-    color: white;
-
-    border-top: 1px solid rgba(212,175,122,0.3);
-}
-
-footer p {
-    font-size: 1.2rem;   /* increase size */
-    font-weight: 700;    /* bold */
+    padding: 20px;
+    background: black;
     color: white;
 }
 ```
+
+## create buttona atach section 
+
+#### html
+```html
+#about {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(aboutimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 40px 20px;
+}
+
+.about-container {
+    max-width: 800px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff9ecf;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+```
+
+#### css
+```css
+/* ================= ABOUT ================= */
+#about {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(aboutimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 40px 20px;
+}
+
+.about-container {
+    max-width: 800px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff9ecf;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+```
+
+#### javascript 
+```css
+document.getElementById("exploreBtn").addEventListener("click", function () {
+    document.getElementById("about").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+```
+
+
+
+
+
+
+
 
 
 
